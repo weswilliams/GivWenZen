@@ -1,0 +1,26 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+Step methods are methods in a step class that are annotated with @!-DomainStep-! with a string value that is a regular expression that will be used to do matches against the text in the test.
+
+e.g.
+
+the test:
+
+|given|i have entered 50 into the calculator|
+
+would be annotated like
+{{{
+   @DomainStep("i have entered (\\d+) into the calculator")
+   public void enterNumber(int number) {
+      numbers.add(number);
+   }
+}}}
+the captures ((\\d+) in this example) form the match or passed as [[parameter][.UserGuide.StepMethods.ParameterConversion]] to the method
+
+!-GivWenZen-! throws an exception when steps are redundant.
+
+!-GivWenZen-! does not throw an exception, at this point, when there are ambiguous steps.  
+
+see the !-org.givwenzen.ExampleSteps-! class in the givwenzen_test.jar and the [[!-Slim-!][.SlimExamples]] examples
+
+!contents -R2 -g -p -f -h

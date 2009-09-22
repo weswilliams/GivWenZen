@@ -1,0 +1,7 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+If a step is failing and you want to see what the actual valueis, you can add a step to show it:
+
+|show|then|what the total is|
+
+!contents -R2 -g -p -f -h

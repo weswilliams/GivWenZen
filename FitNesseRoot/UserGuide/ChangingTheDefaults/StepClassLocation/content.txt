@@ -1,0 +1,24 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+By default steps are located in the bdd.steps package and any of it's sub-packages.  There are times when you might want to change this are look for them in multiple locations.
+
+An example of this is having a set of steps that operate against the business logic and the gui.  It would be nice to keep the same wording in each but perform different actions.  One way would be to have a different state object that is passed to the step classes combined with a unique application startup step for the business logic and gui.  In this case you could have all your shared steps in bdd.steps and your business logic specific startup steps in businesslogic.bdd.steps and for the gui in gui.bdd.steps.
+
+!5 Customizing the step package location(s)
+
+To do this you will need to create the !-GivWenZenExecutor-! with an instance of !-DomainStepFinder-! using the constructor that takes a String.
+To use this custom implementation you must create the !-GivWenZenExecutor-! with the constructor:
+{{{
+   public DomainStepFinder(String basePackageForSteps)
+}}}
+The package string can contain one or more package names separated by commas.  Each package name should be written with a trailing "." like "bdd.steps."
+
+To use this custom instance you must create the !-GivWenZenExecutor-! with the constructor:
+{{{
+   public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder)
+}}}
+ * If you have no stepState object to pass to your steps then this parameter can be null.
+ * and pass the instance of !-DomainStepFinder-! you created as the second parameter.
+
+
+!contents -R2 -g -p -f -h

@@ -1,0 +1,15 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+!3 Cucumber Background
+Using Suites and !-SuiteSetUp-! can give you the equivalent of a background or at least a similar idea.
+
+!3 Cucumber Feature
+!-GivWenZen-! does not have features at this point.  Since I originally wanted to use it with !-FitNesse-! the closest idea to a Feature would be a suite.  I try to organize a suite of tests around a feature.  Suites can have a !-SuiteSetUp-! and a !-SuiteTearDown-! to have state that is shared between scenarios (test pages) in !-FitNesse-!
+
+!3 Cucumber Scenario
+!-GivWenZen-! does not have the idea of a scenario at this point.  If you use it with !-FitNesse-! the closest idea to a is a test page.  I try to organize such that each test page contains a single scenario.  Each page can have a !-SetUp-! and !-TearDown-! page similar to a scenario in Cucumber.
+
+!3 Cucumber Tags
+!-GivWenZen-! does not have the idea of a tag at this point.  If you use it with !-FitNesse-! you can use the !-FitNesse's-! built tag support found in the properties of a page.
+
+!contents -R2 -g -p -f -h

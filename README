@@ -1,0 +1,19 @@
+gwz4j license - MIT.
+
+Libraries used:
+
+required for main classes:
+
+commons-logging.jar - Apache License 2.0.
+google-collect-snapshot-20080530.jar - Apache License 2.0.
+javassist.jar - Mozilla Public License 1.1. 
+log4j-1.2.9.jar - Apache License 2.0.
+reflections-0.9.2.jar - GNU Lesser General Public License
+
+To see more detailed guide start a fitnesse server from the root directory from svn.
+
+java -jar ./lib/fitnesse.jar
+
+Open http://localhost/FrontPage in the browser of your choice.
+
+Here you will find an example test and a user guide for GivWenZen.

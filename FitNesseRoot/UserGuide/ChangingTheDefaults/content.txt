@@ -1,0 +1,12 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+Where as we tried to follow the idea of convention over configuration we also gave the ability to change the defaults.
+
+Defaults:
+
+ * [[Step class location][.UserGuide.ChangingTheDefaults.StepClassLocation]] = bdd.steps package and all sub packages
+ * [[Calling steps that are in another step classes][.UserGuide.ChangingTheDefaults.CallingOtherSteps]]
+ * [[Instantiate steps with some custom state][.UserGuide.ChangingTheDefaults.CustomStateForSteps]]
+ * [[Step class instantiation strategy][.UserGuide.ChangingTheDefaults.StepClassInstantiation]]
+
+!contents -R2 -g -p -f -h

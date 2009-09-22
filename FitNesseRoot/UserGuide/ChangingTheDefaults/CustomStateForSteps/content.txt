@@ -1,0 +1,12 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+Similar to the ability to call other steps inside your step classes you can have a step class that is instantiated with a custom state object.
+
+To use a custom state object you must create the !-GivWenZenExecutor-! with the constructor:
+{{{
+   public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder)
+}}}
+ * Pass in your custom state object instance as the first parameter
+ * and create a !-DomainStepFinder-! with either the default constructor to use the default step package or the constructor that takes a String to use a [[custom step package][.UserGuide.ChangingTheDefaults.StepClassLocation]].
+
+!contents -R2 -g -p -f -h

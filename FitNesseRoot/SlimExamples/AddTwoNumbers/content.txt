@@ -1,0 +1,16 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+|import|
+|org.givwenzen|
+
+|script|
+|start|giv wen zen for slim|
+
+!2 Scenario: Adding 2 numbers show the correct total
+
+|script|
+|given|i have entered 50 into the calculator|
+|and|i have entered 75 into the calculator |
+|when|i press add|
+|then|the total is 125|
+|show|then|what is the total|

@@ -1,0 +1,16 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+Step Classes or plain old java classes (POJOs) that are annotated with the @!-DomainSteps.-!
+
+By default the !-GivWenZen-! executor looks for the steps in the package bdd.steps and any sub-packages.
+
+Example:
+{{{
+   @DomainStep
+   public class DomainSteps {
+   }
+}}}
+
+See http://wiki.github.com/aslakhellesoy/cucumber/step-organisation
+
+!contents -R2 -g -p -f -h

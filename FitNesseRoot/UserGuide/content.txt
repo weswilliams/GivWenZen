@@ -1,0 +1,35 @@
+[[!-GivWenZen-!][.FrontPage]] 
+
+BDD Step Executor allows a user to use the [[BDD][http://behaviour-driven.org/]] [[Given When Then][http://wiki.github.com/aslakhellesoy/cucumber/given-when-then]] vocabulary and plain text sentences to help a team [[get the words right][http://behaviour-driven.org/GettingTheWordsRight]] and create a [[ubiquitous language][http://behaviour-driven.org/UbiquitousLanguage]] to describe and test a business domain.  
+
+The idea was taken from [[Cucumber][http://cukes.info/]] and my desire to create [[Cucumber][http://cukes.info/]] like specifications and tests in [[!-FitNesse-!][http://fitnesse.org/]].  Like [[Cucumber][http://cukes.info/]], !-GivWenZen-! does not distinguish between [[given when then or and][http://wiki.github.com/aslakhellesoy/cucumber/given-when-then]] but you should.   Regular expression parsing is used to determine what step method should be executed for each given when then step in a test.  Regular expression parsing is also used to find parameters to the step method. Also see [[how other ideas from Cucumber map to fitnesse][.UserGuide.CucumberAndFitnesse]].
+
+Example:
+
+|given|the date is tomorrow|
+
+This step could execute a method like:
+{{{
+@BDDStep(“the date is (.*)”
+public void theDateIs(Today today) {
+   // do something
+}
+}}}
+!contents -R2 -g -p -f -h
+
+
+!**> setup test system
+
+!define TEST_SYSTEM {slim}
+
+!path .\givwenzen.jar
+!path .\givwenzen_test.jar
+#!path .\classes
+!path .\lib\commons-logging.jar
+!path .\lib\fitnesse.jar
+!path .\lib\google-collect-snapshot-20080820.jar
+!path .\lib\javassist.jar
+!path .\lib\log4j-1.2.9.jar
+!path .\lib\reflections-0.9.2.jar
+
+*!
