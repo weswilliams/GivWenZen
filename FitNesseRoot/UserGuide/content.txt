@@ -10,7 +10,7 @@ Example:
 
 This step could execute a method like:
 {{{
-@BDDStep(“the date is (.*)”
+@BDDStep("the date is (.*)")
 public void theDateIs(Today today) {
    // do something
 }
