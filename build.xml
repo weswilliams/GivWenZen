@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="compile.givwenzen">
+<project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
 
 	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
 	
@@ -69,7 +69,7 @@
 		</dirset>
 	</path>
 
-	<target name="compile.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,jar.givwenzen,jar.givwenzen.test" />
+	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,jar.givwenzen,jar.givwenzen.test" />
 
 	<target name="clean.givwenzen" description="cleanup module">
 		<delete dir="${givwenzen.output.dir}" />
@@ -81,7 +81,7 @@
 
 	<target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
 		<mkdir dir="${givwenzen.output.dir}" />
-		<javac destdir="${givwenzen.output.dir}" debug="false" nowarn="false" fork="true" executable="${jdk.bin.givwenzen}/javac">
+		<javac destdir="${givwenzen.output.dir}" debug="false" target="1.5" nowarn="false" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<bootclasspath refid="givwenzen.bootclasspath" />
 			<classpath refid="givwenzen.classpath" />
 			<src refid="givwenzen.sourcepath" />
@@ -90,7 +90,7 @@
 
 	<target name="compile.givwenzen.tests" depends="compile.givwenzen.production" description="compile givwenzen; test classes" unless="skip.tests">
 		<mkdir dir="${givwenzen.testoutput.dir}" />
-		<javac destdir="${givwenzen.testoutput.dir}" debug="false" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
+		<javac destdir="${givwenzen.testoutput.dir}" debug="false" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<classpath refid="givwenzen.test.classpath" />
 			<src refid="givwenzen.test.sourcepath" />
 		</javac>
@@ -135,7 +135,7 @@
 		<stop-fitnesse fitnesseport="81" />
 	</target>
 
-	<target name="maven.deploy" depends="jar.givwenzen">
+	<target name="maven.deploy" depends="build.givwenzen">
 		<artifact:remoteRepository url="${maven.releases.repo}" id="nexus.releases">
 			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
 		</artifact:remoteRepository>
