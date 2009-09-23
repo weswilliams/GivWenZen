@@ -9,15 +9,16 @@
 	<property name="jdk.home.givwenzen" value="${project.jdk.home}" />
 	<property name="jdk.bin.givwenzen" value="${project.jdk.bin}" />
 
-	<property name="givwenzen.baseoutput.dir" value="${givwenzen.basedir}/classes" />
-	<property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main" />
-	<property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test" />
-	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
+    <property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
+	<property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes" />
+	<property name="givwenzen.output.dir" value="${givwenzen.target.dir}/main" />
+	<property name="givwenzen.testoutput.dir" value="${givwenzen.target.dir}/test" />
+    <property name="reports.tests" value="${givwenzen.target.dir}/reports" />
 
-	<property name="givwenzen.main.src.dir" value="src/main/java" />
-	<property name="givwenzen.test.src.dir" value="src/test/java" />
+    <property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
 
-	<property name="reports.tests" value="${givwenzen.basedir}/reports" />
+    <property name="givwenzen.main.src.dir" value="src/main/java" />
+    <property name="givwenzen.test.src.dir" value="src/test/java" />
 
 	<tstamp>
 		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />
@@ -72,10 +73,7 @@
 	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,jar.givwenzen,jar.givwenzen.test" />
 
 	<target name="clean.givwenzen" description="cleanup module">
-		<delete dir="${givwenzen.output.dir}" />
-		<delete dir="${givwenzen.testoutput.dir}" />
-		<delete dir="${givwenzen.baseoutput.dir}" />
-		<delete dir="${reports.tests}" />
+		<delete dir="${givwenzen.target.dir}" />
 		<mkdir dir="${reports.tests}" />
 	</target>
 
@@ -109,14 +107,14 @@
 	</target>
 
 	<target name="jar.givwenzen">
-		<jar destfile="${givwenzen.basedir}/${jar.file.name}">
+		<jar destfile="${givwenzen.target.dir}/${jar.file.name}">
 			<fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class" />
 			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
 		</jar>
 	</target>
 
 	<target name="jar.givwenzen.test">
-		<jar destfile="${givwenzen.basedir}/${jar.test.file.name}" basedir="${givwenzen.testoutput.dir}" />
+		<jar destfile="${givwenzen.target.dir}/${jar.test.file.name}" basedir="${givwenzen.testoutput.dir}" />
 	</target>
 
 	<path id="fitnesse.classpath">
