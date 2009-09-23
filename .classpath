@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="src" output="classes/test" path="src/test/java"/>
+	<classpathentry kind="src" output="ide-output/classes/test" path="src/test/java"/>
 	<classpathentry kind="lib" path="lib/commons-logging.jar"/>
 	<classpathentry kind="lib" path="lib/fitnesse.jar"/>
 	<classpathentry kind="lib" path="lib/hamcrest-core-1.1.jar"/>
@@ -13,5 +13,5 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/reflections-0.9.2.jar"/>
 	<classpathentry kind="lib" path="lib/google-collect-snapshot-20080820.jar"/>
-	<classpathentry kind="output" path="classes/main"/>
+	<classpathentry kind="output" path="ide-output/classes/main"/>
 </classpath>
