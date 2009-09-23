@@ -9,8 +9,19 @@
 !2 Scenario: Adding 2 numbers show the correct total
 
 |script|
-|given|i have entered 50 into the calculator|
+|given|i turn on the calculator|
+|and|i have entered 50 into the calculator|
 |and|i have entered 75 into the calculator |
 |when|i press add|
 |then|the total is 125|
 |show|then|what is the total|
+
+!2 Scenario: Adding 3 numbers and making assertion
+
+|script|
+|given|i turn on the calculator|
+|and|i have entered 20 into the calculator|
+|and|i have entered 30 into the calculator|
+|and|i have entered 40 into the calculator|
+|when|i press add|
+|check|then|what is the total|90|

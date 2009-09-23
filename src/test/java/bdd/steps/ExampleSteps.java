@@ -31,6 +31,11 @@ public class ExampleSteps {
       return exepectedTotal == total;
    }
 
+   @DomainStep("i turn on the calculator")
+   public void reset() {
+      numbers.clear();
+   }
+
    @DomainStep("what is the total")
    public Integer getTotal() {
       return total;
