@@ -9,16 +9,16 @@
 	<property name="jdk.home.givwenzen" value="${project.jdk.home}" />
 	<property name="jdk.bin.givwenzen" value="${project.jdk.bin}" />
 
-    <property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
+	<property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
 	<property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes" />
-	<property name="givwenzen.output.dir" value="${givwenzen.target.dir}/main" />
-	<property name="givwenzen.testoutput.dir" value="${givwenzen.target.dir}/test" />
-    <property name="reports.tests" value="${givwenzen.target.dir}/reports" />
+	<property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main" />
+	<property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test" />
+	<property name="reports.tests" value="${givwenzen.target.dir}/reports" />
 
-    <property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
+	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
 
-    <property name="givwenzen.main.src.dir" value="src/main/java" />
-    <property name="givwenzen.test.src.dir" value="src/test/java" />
+	<property name="givwenzen.main.src.dir" value="src/main/java" />
+	<property name="givwenzen.test.src.dir" value="src/test/java" />
 
 	<tstamp>
 		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />

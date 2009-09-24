@@ -1,7 +1,8 @@
+|SlimExamples||09:40:15 Thu, Sep 24, 2009|
+|UserGuide||09:40:00 Thu, Sep 24, 2009|
 |UserGuide.CucumberAndFitnesse||17:48:01 Fri, Sep 18, 2009|
 |UserGuide.StepClases||17:42:31 Fri, Sep 18, 2009|
 |UserGuide.StepMethods||17:41:14 Fri, Sep 18, 2009|
-|UserGuide||16:55:00 Fri, Sep 18, 2009|
 |UserGuideCucumberAndFitnesse||16:54:32 Fri, Sep 18, 2009|
 |UserGuide.ChangingTheDefaults.CustomStateForSteps||16:42:52 Fri, Sep 18, 2009|
 |UserGuide.ChangingTheDefaults||16:35:37 Fri, Sep 18, 2009|
@@ -18,7 +19,6 @@
 |FrontPage||18:22:00 Thu, Sep 17, 2009|
 |UserGuide.ParameterConversion.ExampleBadStepParameter||12:23:25 Thu, Sep 17, 2009|
 |SlimExamples.AddTwoNumbers||12:20:13 Thu, Sep 17, 2009|
-|SlimExamples||23:53:29 Wed, Sep 16, 2009|
 |UserGuide.StepClases.CommonStepsInTheSameStepClasss||22:27:37 Wed, Sep 16, 2009|
 |UserGuide.DisplayingValueReturnedByStep||22:07:25 Wed, Sep 16, 2009|
 |StepExecutor.UserGuide||17:33:07 Wed, Sep 16, 2009|

@@ -22,9 +22,8 @@ public void theDateIs(Today today) {
 
 !define TEST_SYSTEM {slim}
 
-!path .\givwenzen.jar
-!path .\givwenzen_test.jar
-#!path .\classes
+!path .\target\classes\main
+!path .\target\classes\test
 !path .\lib\commons-logging.jar
 !path .\lib\fitnesse.jar
 !path .\lib\google-collect-snapshot-20080820.jar
