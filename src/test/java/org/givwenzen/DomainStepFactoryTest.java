@@ -30,10 +30,10 @@ public class DomainStepFactoryTest {
       assertStepDefinitionsCanBeCreatedFrom(StepsClassWithObjectConstructorForUnitTesting.class);
    }
 
-   public List assertStepDefinitionsCanBeCreatedFrom(Class<?> aClass){
+   public List<Object> assertStepDefinitionsCanBeCreatedFrom(Class<?> aClass){
       Set<MarkedClass> classes = createMarkedClasses(aClass);
       Object[] adapters = new Object[]{this};
-      List list = domainStepFactory.createStepDefinitions(classes, adapters);
+      List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
       assertEquals(1, list.size());
       assertTrue(aClass.isInstance(list.get(0)));
       return list;
@@ -41,7 +41,7 @@ public class DomainStepFactoryTest {
 
    @Test
    public void testFindStepsWithInterfaceParameterConstructor() throws Exception {
-       List list = createStepDefinitions(StepClassWithInterfaceConstructorForUnitTesting.class);
+       List<Object> list = createStepDefinitions(StepClassWithInterfaceConstructorForUnitTesting.class);
       assertTrue(list.get(0) instanceof StepClassWithInterfaceConstructorForUnitTesting);
    }
 
@@ -49,7 +49,7 @@ public class DomainStepFactoryTest {
    public void testFindStepsWithDomainStepsParameterConstructor() throws Exception {
       Set<MarkedClass> classes = createMarkedClasses(StepsClassWithDomainStepNamesConstructor.class);
       Object[] adapters = new Object[]{new SerializableClassForConstructorTest(), mock(GivWenZen.class)};
-      List list = domainStepFactory.createStepDefinitions(classes, adapters);
+      List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
       assertEquals(1, list.size());
       assertTrue(list.get(0) instanceof StepsClassWithDomainStepNamesConstructor);
       assertNotNull(((StepsClassWithDomainStepNamesConstructor) list.get(0)).getDomainStepNames());
@@ -58,14 +58,14 @@ public class DomainStepFactoryTest {
    @Test
    public void testWhatHappensWhenOnlyStepClassIsUnusable() throws Exception {
        Class<?> aClass = StepClassWhoseOnlyConstructorIsUnrelatedToAnythingStepFinderKnowsAbout.class;
-       List list = createStepDefinitions(aClass);
+       List<Object> list = createStepDefinitions(aClass);
       assertTrue(list.get(0) instanceof MarkedClass.DummyMarkedClass);
    }
 
-    private List createStepDefinitions(Class<?> aClass) {
+    private List<Object> createStepDefinitions(Class<?> aClass) {
         Set<MarkedClass> classes = createMarkedClasses(aClass);
         Object[] adapters = new Object[]{new SerializableClassForConstructorTest()};
-        List list = domainStepFactory.createStepDefinitions(classes, adapters);
+        List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
         assertEquals(1, list.size());
         return list;
     }
@@ -97,13 +97,13 @@ public class DomainStepFactoryTest {
    }
 
    private Set<MarkedClass> createMarkedClasses(Class<?> aClass) {
-      Class[] markedClasses = new Class[]{aClass};
+      Class<?>[] markedClasses = new Class[]{aClass};
       return getMarkedClasses(markedClasses);
    }
 
-   private Set<MarkedClass> getMarkedClasses(Class... markedClasses) {
+   private Set<MarkedClass> getMarkedClasses(Class<?>... markedClasses) {
       Set<MarkedClass> stepsClasses = new HashSet<MarkedClass>();
-      for (Class markedClass : markedClasses) {
+      for (Class<?> markedClass : markedClasses) {
          stepsClasses.add(new MarkedClass(markedClass));
       }
       return stepsClasses;
@@ -119,5 +119,7 @@ public class DomainStepFactoryTest {
    }
 
    public class SerializableClassForConstructorTest implements Serializable {
+
+    private static final long serialVersionUID = -8578525041848530267L;
    }
 }

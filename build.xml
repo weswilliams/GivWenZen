@@ -79,7 +79,7 @@
 
 	<target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
 		<mkdir dir="${givwenzen.output.dir}" />
-		<javac destdir="${givwenzen.output.dir}" debug="false" target="1.5" nowarn="false" fork="true" executable="${jdk.bin.givwenzen}/javac">
+		<javac destdir="${givwenzen.output.dir}" debug="false" source="1.5" target="1.5" nowarn="false" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<bootclasspath refid="givwenzen.bootclasspath" />
 			<classpath refid="givwenzen.classpath" />
 			<src refid="givwenzen.sourcepath" />
@@ -88,7 +88,7 @@
 
 	<target name="compile.givwenzen.tests" depends="compile.givwenzen.production" description="compile givwenzen; test classes" unless="skip.tests">
 		<mkdir dir="${givwenzen.testoutput.dir}" />
-		<javac destdir="${givwenzen.testoutput.dir}" debug="false" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
+		<javac destdir="${givwenzen.testoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<classpath refid="givwenzen.test.classpath" />
 			<src refid="givwenzen.test.sourcepath" />
 		</javac>

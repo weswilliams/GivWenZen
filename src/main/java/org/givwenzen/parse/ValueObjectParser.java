@@ -3,7 +3,7 @@ package org.givwenzen.parse;
 import java.lang.reflect.Method;
 
 public class ValueObjectParser  implements MethodParameterParser {
-   public boolean canParse(Class paramType) {
+   public boolean canParse(Class<?> paramType) {
       try {
          return getParseMethod(paramType) != null;
       } catch (NoSuchMethodException e) {
@@ -11,7 +11,7 @@ public class ValueObjectParser  implements MethodParameterParser {
       }
    }
 
-   public Object parse(Object param, Class paramType) {
+   public Object parse(Object param, Class<?> paramType) {
       try {
          return getParseMethod(paramType).invoke(paramType, param.toString());
       } catch (Exception e) {

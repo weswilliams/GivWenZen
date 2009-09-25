@@ -13,9 +13,9 @@ public class StringToObjectParser {
       parserInDesiredOrder[2] = new ValueObjectParser();
    }
 
-   public Object[] convertParamertersToTypes(Object[] params, Class[] paramTypes) throws Exception {
+   public Object[] convertParamertersToTypes(Object[] params, Class<?>[] paramTypes) throws Exception {
 
-      List convertedParams = new ArrayList();
+      List<Object> convertedParams = new ArrayList<Object>();
       for (int index = 0; index < paramTypes.length; index++) {
          convertedParams.add(convertStringToParamType(params[index], paramTypes[index]));
       }
