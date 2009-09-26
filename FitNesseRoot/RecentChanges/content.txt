@@ -1,3 +1,4 @@
+|UserGuide.ChangingTheDefaults.StepClassInstantiation||15:25:49 Sat, Sep 26, 2009|
 |SlimExamples||09:40:15 Thu, Sep 24, 2009|
 |UserGuide||09:40:00 Thu, Sep 24, 2009|
 |UserGuide.CucumberAndFitnesse||17:48:01 Fri, Sep 18, 2009|
@@ -10,7 +11,6 @@
 |UserGuide.CallingOtherSteps||16:28:15 Fri, Sep 18, 2009|
 |UserGuide.StepMethods.ParameterConversion.ExampleBadStepParameter||16:25:56 Fri, Sep 18, 2009|
 |UserGuide.StepClases.ExampleMissingStepMethod||16:23:53 Fri, Sep 18, 2009|
-|UserGuide.ChangingTheDefaults.StepClassInstantiation||16:16:51 Fri, Sep 18, 2009|
 |UserGuide.ChangingTheDefaults.StepClassLocation||16:13:53 Fri, Sep 18, 2009|
 |UserGuide.StepMethods.ConstantsForRegExCaptures||14:41:16 Fri, Sep 18, 2009|
 |UserGuide.ParameterConversion||14:30:47 Fri, Sep 18, 2009|

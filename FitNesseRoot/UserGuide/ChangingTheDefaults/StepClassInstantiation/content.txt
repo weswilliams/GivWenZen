@@ -9,13 +9,11 @@ The step classes are instantiated by looking for constructor in the following or
 
 !5 Custom Instantiation Strategy
 
-To do this you will need to have create an implementation of !-org.givwenzen.annotations.InstantiationStrategy-!.
-
 Implement the method:
 {{{
-   Object instantiate(Class markedClass, Object parameter)
+   InstantiationState instantiate(Class markedClass, Object parameter)
 }}}
-If the step Class that is passed in as the first parameter can be created using your custom strategy then create and return the object.  If it cannot be created by your strategy then return null.  (I would like to change this.)
+If the step Class that is passed in as the first parameter can be created using your custom strategy then create and return the object in an instance of the {{{org.givwenzen.annotations.InstantiationState}}} interface (see {{{org.givwenzen.annotations.DefaultInstantiationState}}}).  If it cannot be created by your strategy then return {{{org.givwenzen.annotations.DefaultInstantiationState.UNINSTANTIATED}}}.
 To use this custom implementation you must create the !-GivWenZenExecutor-! with the constructor:
 {{{
 public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder, DomainStepFactory factory)
