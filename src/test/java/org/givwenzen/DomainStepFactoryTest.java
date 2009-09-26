@@ -118,7 +118,7 @@ public class DomainStepFactoryTest {
 
    }
 
-   public class SerializableClassForConstructorTest implements Serializable {
+   public static class SerializableClassForConstructorTest implements Serializable {
 
     private static final long serialVersionUID = -8578525041848530267L;
    }

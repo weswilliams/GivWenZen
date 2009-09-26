@@ -28,7 +28,7 @@ public class DomainStepMethodLocatorTest {
       }
    }
 
-   class StepsWithDuplicateAnnotatedMethod {
+   static class StepsWithDuplicateAnnotatedMethod {
 
       @DomainStep("duplicate")
       public void method1() {}
