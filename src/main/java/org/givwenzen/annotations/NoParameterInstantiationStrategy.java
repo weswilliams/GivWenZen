@@ -4,7 +4,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class NoParameterInstantiationStrategy implements InstantiationStrategy {
-  public Object instantiate(Class<?> markedClass, Object parameter) throws InvocationTargetException,
+  public InstantiationState instantiate(Class<?> markedClass, Object parameter) throws InvocationTargetException,
       InstantiationException, IllegalAccessException {
     Constructor<?> constructor;
     try {
@@ -12,6 +12,6 @@ public class NoParameterInstantiationStrategy implements InstantiationStrategy {
     } catch (NoSuchMethodException e) {
       constructor = null;
     }
-    return constructor == null ? null : constructor.newInstance();
+    return constructor == null ? DefaultInstantiationState.UNINSTANTIATED : new DefaultInstantiationState(true, constructor.newInstance());
   }
 }

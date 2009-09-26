@@ -1,16 +1,16 @@
 package org.givwenzen.annotations;
 
 public class ObjectInterfacesInstantiationStrategy implements InstantiationStrategy {
-  public Object instantiate(Class<?> markedClass, Object parameter) {
+  public InstantiationState instantiate(Class<?> markedClass, Object parameter) {
     try {
       for (Class<?> interfaceClass : parameter.getClass().getInterfaces()) {
-        Object object = new ObjectInterfaceInstantiationStrategy(interfaceClass).instantiate(markedClass, parameter);
-        if (object != null)
-          return object;
+        InstantiationState state = new ObjectInterfaceInstantiationStrategy(interfaceClass).instantiate(markedClass, parameter);
+        if (state.couldInstantiate())
+          return new DefaultInstantiationState(true, state.getInstantiation());
       }
     } catch (Exception e) {
-      return null;
+      return DefaultInstantiationState.UNINSTANTIATED;
     }
-    return null;
+    return DefaultInstantiationState.UNINSTANTIATED;
   }
 }

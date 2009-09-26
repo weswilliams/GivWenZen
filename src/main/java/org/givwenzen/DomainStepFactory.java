@@ -5,11 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.givwenzen.annotations.InstantiationStrategy;
-import org.givwenzen.annotations.MarkedClass;
-import org.givwenzen.annotations.NoParameterInstantiationStrategy;
-import org.givwenzen.annotations.ObjectInterfacesInstantiationStrategy;
-import org.givwenzen.annotations.ObjectParameterInstantiationStrategy;
+import org.givwenzen.annotations.*;
 
 public class DomainStepFactory {
    private List<InstantiationStrategy> instantiationStrategies = new ArrayList<InstantiationStrategy>();
@@ -41,8 +37,8 @@ public class DomainStepFactory {
       try {
          for (Object adapter : adapters) {
             for (InstantiationStrategy instantiationStrategy : instantiationStrategies) {
-               Object stepDef = instantiationStrategy.instantiate(markedClass.getTargetClass(), adapter);
-               if (stepDef != null) return stepDef;
+               InstantiationState state = instantiationStrategy.instantiate(markedClass.getTargetClass(), adapter);
+               if (state.couldInstantiate()) return state.getInstantiation();
             }
          }
       } catch (Exception e) {

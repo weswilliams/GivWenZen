@@ -10,7 +10,7 @@ public class ObjectInterfaceInstantiationStrategy implements InstantiationStrate
     this.interfaceClass = interfaceClass;
   }
 
-  public Object instantiate(Class<?> markedClass, Object parameter) throws InvocationTargetException,
+  public InstantiationState instantiate(Class<?> markedClass, Object parameter) throws InvocationTargetException,
       InstantiationException, IllegalAccessException {
     Constructor<?> constructor;
     try {
@@ -18,6 +18,8 @@ public class ObjectInterfaceInstantiationStrategy implements InstantiationStrate
     } catch (Exception e) {
       constructor = null;
     }
-    return constructor == null ? null : constructor.newInstance(parameter);
+    return constructor == null ? 
+        DefaultInstantiationState.UNINSTANTIATED : 
+        new DefaultInstantiationState(true, constructor.newInstance(parameter));
   }
 }
