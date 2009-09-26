@@ -71,7 +71,7 @@
 		</dirset>
 	</path>
 
-	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,execute_fitnesse_tests,jar.givwenzen,jar.givwenzen.test,jar.givwenzen.with.dependencies" />
+	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,jar.givwenzen,jar.givwenzen.test,jar.givwenzen.with.dependencies" />
 
 	<target name="clean.givwenzen" description="cleanup module">
 		<delete dir="${givwenzen.target.dir}" />
