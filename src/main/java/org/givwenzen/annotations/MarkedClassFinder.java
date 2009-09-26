@@ -1,6 +1,9 @@
 package org.givwenzen.annotations;
 
-import com.google.common.collect.Sets;
+import java.lang.annotation.Annotation;
+import java.net.URL;
+import java.util.*;
+
 import org.reflections.Configuration;
 import org.reflections.Reflections;
 import org.reflections.filters.IncludePrefix;
@@ -8,12 +11,6 @@ import org.reflections.scanners.ClassAnnotationsScanner;
 import org.reflections.scanners.SubTypesScanner;
 import org.reflections.util.AbstractConfiguration;
 import org.reflections.util.ClasspathHelper;
-
-import java.lang.annotation.Annotation;
-import java.net.URL;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.StringTokenizer;
 
 public class MarkedClassFinder {
   private Class<? extends Annotation> markerAnnotation = DomainSteps.class;
@@ -23,8 +20,7 @@ public class MarkedClassFinder {
     this.markerAnnotation = markerAnnotation;
     Configuration configuration = new AbstractConfiguration() {
       {
-        Set<URL> allUrls = getUrlsFromString(basePackage);
-
+        Collection<URL> allUrls = getUrlsFromString(basePackage);
         setUrls(allUrls);
         setScanners(new SubTypesScanner(), new ClassAnnotationsScanner());
         setFilter(new IncludePrefix(markerAnnotation.getName()));
@@ -33,8 +29,8 @@ public class MarkedClassFinder {
     findClasses(configuration);
   }
 
-  private Set<URL> getUrlsFromString(String basePackage) {
-    Set<URL> allUrls = Sets.newHashSet();
+  private Collection<URL> getUrlsFromString(String basePackage) {
+    Collection<URL> allUrls = new ArrayList<URL>();
     StringTokenizer tokenizer = new StringTokenizer(basePackage, ",");
     while (tokenizer.hasMoreTokens()) {
       allUrls.addAll(ClasspathHelper.getUrlsForPackagePrefix(tokenizer.nextToken().trim()));
