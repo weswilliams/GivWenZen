@@ -14,6 +14,6 @@ To see more detailed guide start a fitnesse server from the root directory from 
 
 java -jar ./lib/fitnesse.jar
 
-Open http://localhost/FrontPage in the browser of your choice.
+Open http://localhost/ in the browser of your choice.
 
 Here you will find an example test and a user guide for GivWenZen.
