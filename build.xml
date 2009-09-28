@@ -38,7 +38,6 @@
 
 	<path id="givwenzen.classpath">
 		<path path="${givwenzen.lib.dir}/commons-logging.jar" />
-		<path path="${givwenzen.lib.dir}/fitnesse.jar" />
 		<path path="${givwenzen.lib.dir}/google-collect-snapshot-20080820.jar" />
 		<path path="${givwenzen.lib.dir}/hamcrest-core-1.1.jar" />
 		<path path="${givwenzen.lib.dir}/javassist.jar" />
@@ -119,7 +118,6 @@
 			<fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class" />
 			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
 			<zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/fitnesse.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/google-collect-snapshot-20080820.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/hamcrest-core-1.1.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*" />
