@@ -8,7 +8,7 @@
 !define TEST_SYSTEM {slim}
 
 !path .\target\classes\main
-!path .\target\classes\test
+!path .\target\classes\examples
 !path .\lib\commons-logging.jar
 !path .\lib\fitnesse.jar
 !path .\lib\google-collect-snapshot-20080820.jar

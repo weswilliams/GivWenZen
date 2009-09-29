@@ -10,22 +10,26 @@
 	<property name="jdk.bin.givwenzen" value="${project.jdk.bin}" />
 
 	<property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
+	
 	<property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes" />
 	<property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main" />
 	<property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test" />
+	<property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples" />
+	
 	<property name="reports.tests" value="${givwenzen.target.dir}/reports" />
 
 	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
 
 	<property name="givwenzen.main.src.dir" value="src/main/java" />
 	<property name="givwenzen.test.src.dir" value="src/test/java" />
+	<property name="givwenzen.examples.src.dir" value="src/examples/java" />
 
 	<tstamp>
 		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />
 	</tstamp>
 
 	<property name="jar.file.name" value="${ant.project.name}-${build_date}.jar" />
-	<property name="jar.test.file.name" value="${ant.project.name}-test-${build_date}.jar" />
+	<property name="jar.examples.file.name" value="${ant.project.name}-examples-${build_date}.jar" />
 	<property name="jar.with.dependencies.file.name" value="${ant.project.name}-with-dependencies-${build_date}.jar" />
 
 	<property file="${givwenzen.basedir}/${ant.project.name}.properties" />
@@ -46,6 +50,11 @@
 		<path path="${givwenzen.lib.dir}/mockito-core-1.7.jar" />
 		<path path="${givwenzen.lib.dir}/objenesis-1.0.jar" />
 		<path path="${givwenzen.lib.dir}/reflections-0.9.2.jar" />
+	</path>
+
+	<path id="givwenzen.examples.classpath">
+		<path refid="givwenzen.classpath" />
+		<path location="${givwenzen.output.dir}" />
 	</path>
 
 	<path id="givwenzen.test.classpath">
@@ -70,7 +79,15 @@
 		</dirset>
 	</path>
 
-	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,givwenzen.test,jar.givwenzen,jar.givwenzen.test,jar.givwenzen.with.dependencies" />
+	<path id="givwenzen.examples.sourcepath">
+		<dirset dir="${givwenzen.basedir}">
+			<include name="${givwenzen.examples.src.dir}" />
+		</dirset>
+	</path>
+
+	<target name="build.givwenzen" description="Compile givwenzen" 
+		depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
 
 	<target name="clean.givwenzen" description="cleanup module">
 		<delete dir="${givwenzen.target.dir}" />
@@ -91,6 +108,14 @@
 		<javac destdir="${givwenzen.testoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<classpath refid="givwenzen.test.classpath" />
 			<src refid="givwenzen.test.sourcepath" />
+		</javac>
+	</target>
+
+	<target name="compile.givwenzen.examples" depends="compile.givwenzen.production" description="compile givwenzen example classes" >
+		<mkdir dir="${givwenzen.examplesoutput.dir}" />
+		<javac destdir="${givwenzen.examplesoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
+			<classpath refid="givwenzen.examples.classpath" />
+			<src refid="givwenzen.examples.sourcepath" />
 		</javac>
 	</target>
 
@@ -119,18 +144,14 @@
 			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
 			<zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/google-collect-snapshot-20080820.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/hamcrest-core-1.1.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/junit-4.5.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/log4j-1.2.9.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/mockito-core-1.7.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/objenesis-1.0.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/reflections-0.9.2.jar" excludes="**/meta-inf/*.*" />
 		</jar>
 	</target>
 
-	<target name="jar.givwenzen.test">
-		<jar destfile="${givwenzen.target.dir}/${jar.test.file.name}" basedir="${givwenzen.testoutput.dir}" />
+	<target name="jar.givwenzen.examples">
+		<jar destfile="${givwenzen.target.dir}/${jar.examples.file.name}" basedir="${givwenzen.examplesoutput.dir}" />
 	</target>
 
 	<path id="fitnesse.classpath">

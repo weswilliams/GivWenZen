@@ -1,7 +1,7 @@
+|SlimExamples||20:50:45 Tue, Sep 29, 2009|
 |FrontPage||11:52:30 Sun, Sep 27, 2009|
 |UserGuide||11:41:43 Sun, Sep 27, 2009|
 |UserGuide.ChangingTheDefaults.StepClassInstantiation||15:25:49 Sat, Sep 26, 2009|
-|SlimExamples||09:40:15 Thu, Sep 24, 2009|
 |UserGuide.CucumberAndFitnesse||17:48:01 Fri, Sep 18, 2009|
 |UserGuide.StepClases||17:42:31 Fri, Sep 18, 2009|
 |UserGuide.StepMethods||17:41:14 Fri, Sep 18, 2009|
