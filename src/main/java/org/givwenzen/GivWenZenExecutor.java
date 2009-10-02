@@ -23,7 +23,7 @@ public class GivWenZenExecutor implements GivWenZen {
       Object[] adapters = new Object[]{this.stepState, this};
       Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
       List<Object> stepDefinitions = factory.createStepDefinitions(classes, adapters);
-      stepDefinitions.add(this.stepState);
+      stepDefinitions.add(0, this.stepState);
       methodLocator = new DomainStepMethodLocator(stepDefinitions);
    }
 
