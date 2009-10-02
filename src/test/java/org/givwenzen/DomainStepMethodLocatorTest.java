@@ -3,10 +3,11 @@ package org.givwenzen;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.givwenzen.GWZForJUnit.*;
+import static org.junit.Assert.*;
+import static org.junit.matchers.JUnitMatchers.*;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 import org.givwenzen.annotations.DomainStep;
 import org.givwenzen.annotations.DomainSteps;
@@ -17,6 +18,7 @@ import org.junit.Test;
 public class DomainStepMethodLocatorTest {
   private DomainStepMethodLocator locator;
   private GivWenZenException retrieveMethodsError;
+  private MethodAndInvocationTarget methodWithAnnotatedPatternMatching;
 
   @Before
   public void setup() {
@@ -24,43 +26,73 @@ public class DomainStepMethodLocatorTest {
   }
   
   @Test
+  public void stepClassWithValidStepMethodIsFoundSuccessfully() throws Exception {
+    given ( "a valid step class with a valid step method" );
+    when  ( "the annotated method is retrieved for 'valid step'" );
+    then  ( "valid step method is found" );
+  }
+  
+  @Test
   public void testGetMethodWithAnnotatedPatternMatching() throws Exception {
-    given("a class exists with two methods that have duplicate DomainStep annotations");
-    when("the annotated method is retrieved for 'duplicate'");
-    then("a GivWenZenException is thrown");
+    given ( "a class exists with two methods that have duplicate DomainStep annotations" );
+    when  ( "the annotated method is retrieved for 'duplicate'" );
+    then  ( "a GivWenZenException is thrown" );
+    and   ( "GivWenZenException message contains first definition" );
+    and   ( "GivWenZenException message contains second definition" );
   }
 
   @Test
   public void testWhenAnInstanceOfTheSameClassIsInTheListOfAnnotatatedObjectsMoreThanOnceThenTheExactDuplicatesAreIgnored() throws Exception {
-    given("a method locator is created with a list containing multiple instances of the same class");
-    when("the annotated method is retrieved for 'dummy step'");
-    then("duplicates for the exact same class are ignored and no duplicate exception is thrown");
+    given ( "a method locator is created with a list containing multiple instances of the same class" );
+    when  ( "the annotated method is retrieved for 'dummy step'" );
+    then  ( "duplicates for the exact same class are ignored and no duplicate exception is thrown" );
   }
   
   @DomainStep("a method locator is created with a list containing multiple instances of the same class")
   public void createStepLocatorWithMulitpleInstancesOfAStepClass() {
-    List<Object> stepDefinitions = new ArrayList<Object>();
-    stepDefinitions.add(new DomainStepMethodLocatorTest());
-    stepDefinitions.add(new DomainStepMethodLocatorTest());
-    createStepLocator(stepDefinitions);    
+    createStepLocator(createStepObjectsList(new DomainStepMethodLocatorTest(), new DomainStepMethodLocatorTest()));    
   }
   
   @DomainStep("a class exists with two methods that have duplicate DomainStep annotations")
   public void createStepLocatorWithClassContatiningDuplicateAnnotations() {
-    List<Object> stepDefinitions = new ArrayList<Object>();
-    stepDefinitions.add(new StepsWithDuplicateAnnotatedMethod());
-    createStepLocator(stepDefinitions);    
+    createStepLocator(createStepObjectsList(new StepsWithDuplicateAnnotatedMethod()));    
+  }
+  
+  @DomainStep("a valid step class with a valid step method")
+  public void createStepLocatorWithValidStepClass() {
+    createStepLocator(createStepObjectsList(new ValidSteps()));
   }
   
   @DomainStep("the annotated method is retrieved for (.*)")
-  public void retrieveAnnotatedMethodAndSaveErrorIfAny(String annotationString) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+  public void retrieveAnnotatedMethodAndSaveMethodOrError(String annotationString) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
     try {
       System.out.println("retrieve methods");
-      locator.getMethodWithAnnotatedPatternMatching(annotationString);
+      methodWithAnnotatedPatternMatching = locator.getMethodWithAnnotatedPatternMatching(annotationString);
       retrieveMethodsError = null;
     } catch (GivWenZenException e) {
       retrieveMethodsError = e;
     }    
+  }
+  
+  @DomainStep("(.*) method is found")
+  public void verifyMethodWasFound(String methodName) {
+    methodName = methodName.replaceAll(" ", "");
+    assertThat(methodName, methodWithAnnotatedPatternMatching.getMethodAsString(), containsString("." + methodName));
+  }
+  
+  @DomainStep("GivWenZenException message contains (.*)")
+  public void verifyGivWenZenExceptionMessageContains(String messagePart) {
+    assertThat(retrieveMethodsError.getMessage(), containsString(messagePart));
+  }
+  
+  @DomainStep("duplicates for the exact same class are ignored and no duplicate exception is thrown")
+  public void verifyNoExceptionOccuredRetrievingAnnotatedMethods() {
+    assertNull(retrieveMethodsError);
+  }
+  
+  @DomainStep("a GivWenZenException is thrown")
+  public void verifyGivWenZenExceptionWasThrown() {
+    assertNotNull(retrieveMethodsError);
   }
 
   @DomainStep("dummy step")
@@ -68,22 +100,28 @@ public class DomainStepMethodLocatorTest {
     
   }
   
-  @DomainStep("duplicates for the exact same class are ignored and no duplicate exception is thrown")
-  public void verifyNoErrorOccuredRetrievingAnnotatedMethods() {
-    assertNull(retrieveMethodsError);
-  }
-  
-  @DomainStep("a GivWenZenException is thrown")
-  public void verifyGivWenZenErrorWasThrown() {
-    assertNotNull(retrieveMethodsError);
-  }
-  
   private void createStepLocator(List<Object> stepDefinitions) {
     locator = new DomainStepMethodLocator(stepDefinitions);
   }
   
+  private List<Object> createStepObjectsList(Object... objects) {
+    List<Object> stepDefinitions = new ArrayList<Object>();
+    for (Object object : objects) {
+      stepDefinitions.add(object);
+    }
+    return stepDefinitions;
+  }
+  
   @DomainSteps
-  static class StepsWithDuplicateAnnotatedMethod {
+  static class ValidSteps {
+    @DomainStep("valid step")
+    public void validstep() {
+      
+    }
+  }
+  
+  @DomainSteps
+  class StepsWithDuplicateAnnotatedMethod {
 
     @DomainStep("duplicate")
     public void method1() {
