@@ -1,125 +1,200 @@
 package org.givwenzen;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.givwenzen.GWZForJUnit.*;
+import static org.junit.Assert.*;
 
-import org.givwenzen.DomainStepFactory;
-import org.givwenzen.GivWenZen;
-import org.givwenzen.annotations.DomainSteps;
-import org.givwenzen.annotations.MarkedClass;
+import java.beans.PropertyEditorManager;
+import java.beans.PropertyEditorSupport;
+import java.io.Serializable;
+import java.util.*;
+
+import org.givwenzen.annotations.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.mockito.Mockito.mock;
-
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 public class DomainStepFactoryTest {
-   private DomainStepFactory domainStepFactory;
+  private DomainStepFactory domainStepFactory;
+  private Class<?> domainStepClass;
+  private List<?> stepDefinitions;
+  private MarkedClass markedClass;
 
-   @Test
-   public void testFindStepsWithNoParameterConstructor() throws Exception {
-      assertStepDefinitionsCanBeCreatedFrom(StepsClassForUnitTest.class);
-   }
+  @Before
+  public void setUp() throws Exception {
+    GWZForJUnit.setUp(this);
+    PropertyEditorManager.registerEditor(Class.class, DomainStepFactoryTest.ClassPropertyEditor.class);
+    domainStepFactory = new DomainStepFactory();
+  }
 
-   @Test
-   public void testFindStepsWithObjectParameterConstructor() throws Exception {
-      assertStepDefinitionsCanBeCreatedFrom(StepsClassWithObjectConstructorForUnitTesting.class);
-   }
+  @Test
+  public void testFindStepsWithNoParameterConstructor() throws Exception {
+    String className = StepsClassForUnitTest.class.getName();
+    String constructorObjectClassName = DomainStepFactoryTest.class.getName();
 
-   public List<Object> assertStepDefinitionsCanBeCreatedFrom(Class<?> aClass){
-      Set<MarkedClass> classes = createMarkedClasses(aClass);
-      Object[] adapters = new Object[]{this};
-      List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
-      assertEquals(1, list.size());
-      assertTrue(aClass.isInstance(list.get(0)));
-      return list;
-   }
+    given ( "a step class " + className + " with only default construction" );
+    when  ( "step definitions are created with constructor object " + constructorObjectClassName );
+    then  ( "an instance of the class " + className + " is created" );
+  }
+  
+  @Test
+  public void testFindStepsWithObjectParameterConstructor() throws Exception {
+    String className = StepsClassWithObjectConstructorForUnitTesting.class.getName();
+    String constructorObjectClassName = DomainStepFactoryTest.class.getName();
 
-   @Test
-   public void testFindStepsWithInterfaceParameterConstructor() throws Exception {
-       List<Object> list = createStepDefinitions(StepClassWithInterfaceConstructorForUnitTesting.class);
-      assertTrue(list.get(0) instanceof StepClassWithInterfaceConstructorForUnitTesting);
-   }
+    given ( "a step class " + className + " with constructor that takes the test as a parameter" );
+    when  ( "step definitions are created with constructor object " + constructorObjectClassName);
+    then  ( "an instance of the class " + className + " is created");
+  }
 
-   @Test
-   public void testFindStepsWithDomainStepsParameterConstructor() throws Exception {
-      Set<MarkedClass> classes = createMarkedClasses(StepsClassWithDomainStepNamesConstructor.class);
-      Object[] adapters = new Object[]{new SerializableClassForConstructorTest(), mock(GivWenZen.class)};
-      List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
-      assertEquals(1, list.size());
-      assertTrue(list.get(0) instanceof StepsClassWithDomainStepNamesConstructor);
-      assertNotNull(((StepsClassWithDomainStepNamesConstructor) list.get(0)).getDomainStepNames());
-   }
+  @Test
+  public void testFindStepsWithInterfaceParameterConstructor() throws Exception {
+    String stepClassName = StepClassWithInterfaceConstructorForUnitTesting.class.getName();
+    String constructorObjectClassName = SerializableClassForConstructorTest.class.getName();
+    
+    given ( "a step class " + stepClassName + " with constructor that takes a Serializable as a parameter" );
+    when  ( "step definitions are created with constructor object " + constructorObjectClassName);
+    then  ( "an instance of the class " + stepClassName + " is created" );
+  }
 
-   @Test
-   public void testWhatHappensWhenOnlyStepClassIsUnusable() throws Exception {
-       Class<?> aClass = StepClassWhoseOnlyConstructorIsUnrelatedToAnythingStepFinderKnowsAbout.class;
-       List<Object> list = createStepDefinitions(aClass);
-      assertTrue(list.get(0) instanceof MarkedClass.DummyMarkedClass);
-   }
+  @Test
+  public void testFindStepsWithGivWenZenParameterConstructor() throws Exception {
+    String stepClassName = StepsClassWithGivWenZenConstructor.class.getName();
+    String constructorObjectClassName = GivWenZenDummy.class.getName();
+    
+    given ( "a step class " + stepClassName + " with constructor that takes a GivWenZen interface as a parameter" );
+    when  ( "step definitions are created with constructor object " + constructorObjectClassName);
+    then  ( "an instance of the class " + stepClassName + " is created" );
+  }
 
-    private List<Object> createStepDefinitions(Class<?> aClass) {
-        Set<MarkedClass> classes = createMarkedClasses(aClass);
-        Object[] adapters = new Object[]{new SerializableClassForConstructorTest()};
-        List<Object> list = domainStepFactory.createStepDefinitions(classes, adapters);
-        assertEquals(1, list.size());
-        return list;
+  @Test
+  public void testWhatHappensWhenOnlyStepClassIsUnusable() throws Exception {
+    String stepClassName = StepClassWhoseOnlyConstructorIsUnrelatedToAnythingStepFinderKnowsAbout.class.getName();
+    String constructorObjectClassName = DomainStepFactoryTest.class.getName();
+    String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
+    
+    given ( "a step class " + stepClassName + " with constructor that the domain step finder cannot handle" );
+    when  ( "step definitions are created with constructor object " + constructorObjectClassName);
+    then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
+  }
+
+  @Test
+  public void testCreateDoesNotScreamWhenClassThrowsAnException() throws Exception {
+    String stepClassName = TestMarkedClass.class.getName();
+    String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
+    
+    given ("a marked class " + stepClassName + " that the constructor throws an exception");
+    when  ("the marked class is created");
+    then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
+  }
+
+  @Test
+  public void testCreateDoesNotScreamWhenClassDoesNotHaveMatchConstructor() throws Exception {
+    String stepClassName = TestMarkedClassWithInvalidConstructor.class.getName();
+    String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
+    
+    given ("a marked class " + stepClassName + " that the constructor cannot be handled");
+    when  ("the marked class is created");
+    then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
+  }
+
+  @DomainStep("a marked class (.*) that the constructor (?:.*)")
+  public void createMarkedClass(Class<?> clazz) {
+    markedClass = new MarkedClass(clazz);
+  }
+  
+  @DomainStep("the marked class is created")
+  public void callCreate() {
+    stepDefinitions = Collections.singletonList(domainStepFactory.create(markedClass, this));
+  }
+  
+  @DomainStep("a step class (.*) with (?:.*)")
+  public void stepClassForDomainStepFactory(Class<?> clazz) {
+    this.domainStepClass = clazz;
+  }
+  
+  @DomainStep("step definitions are created with constructor object (.*)")
+  public void createStepDefinitions(Class<?> constructorObjectClass) throws InstantiationException, IllegalAccessException {
+    Set<MarkedClass> classes = createMarkedClasses(domainStepClass);
+    Object[] adapters = new Object[] { createObject(constructorObjectClass) };
+    stepDefinitions = domainStepFactory.createStepDefinitions(classes, adapters);
+  }
+
+  @DomainStep("an instance of the class (.*) is created")
+  public void verifyStepClassIsCreated(Class<?> aClass) {
+    assertEquals(1, stepDefinitions.size());
+    assertTrue(aClass.isInstance(stepDefinitions.get(0)));
+    assertNotNull(stepDefinitions.get(0));
+  }
+  
+  private Object createObject(Class<?> constructorObjectClass) {
+    try {
+      return constructorObjectClass.newInstance();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  private Set<MarkedClass> createMarkedClasses(Class<?> aClass) {
+    Class<?>[] markedClasses = new Class[] { aClass };
+    return getMarkedClasses(markedClasses);
+  }
+
+  private Set<MarkedClass> getMarkedClasses(Class<?>... markedClasses) {
+    Set<MarkedClass> stepsClasses = new HashSet<MarkedClass>();
+    for (Class<?> markedClass : markedClasses) {
+      stepsClasses.add(new MarkedClass(markedClass));
+    }
+    return stepsClasses;
+  }
+
+  public class TestMarkedClass {
+    public TestMarkedClass() {
+      throw new RuntimeException();
+    }
+  }
+
+  class TestMarkedClassWithInvalidConstructor {
+    TestMarkedClass forTheConstructor;
+
+    TestMarkedClassWithInvalidConstructor(TestMarkedClass forTheConstructor) {
+      this.forTheConstructor = forTheConstructor;
+    }
+  }
+
+  public static class ClassPropertyEditor extends PropertyEditorSupport {
+    @Override
+    public void setAsText(String methodName) throws IllegalArgumentException {
+      try {
+        setValue(Class.forName(methodName));
+      } catch (ClassNotFoundException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+  }
+  
+  @DomainSteps
+  public class StepsClassForUnitTest {
+  }
+
+  public static class SerializableClassForConstructorTest implements Serializable {
+    private static final long serialVersionUID = -8578525041848530267L;
+  }
+  
+  public static class GivWenZenDummy implements GivWenZen {
+    public Object and(String methodString) throws Exception {
+      return null;
     }
 
-    @Test
-   public void testCreateDoesNotScreamWhenClassThrowsAnException() throws Exception {
-      MarkedClass markedClass = new MarkedClass(TestMarkedClass.class);
-      assertTrue(domainStepFactory.create(markedClass, this) instanceof MarkedClass.DummyMarkedClass);
-   }
+    public Object given(String methodString) throws Exception {
+      return null;
+    }
 
-   @Test
-   public void testCreateDoesNotScreamWhenClassDoesNotHaveMatchConstructor() throws Exception {
-      MarkedClass markedClass = new MarkedClass(TestMarkedClassWithInvalidConstructor.class);
-      assertTrue(domainStepFactory.create(markedClass, this) instanceof MarkedClass.DummyMarkedClass);
-   }
+    public Object then(String methodString) throws Exception {
+      return null;
+    }
 
-   public class TestMarkedClass {
-      public TestMarkedClass() {
-         throw new RuntimeException();
-      }
-   }
-
-   class TestMarkedClassWithInvalidConstructor {
-      TestMarkedClass forTheConstructor;
-
-      TestMarkedClassWithInvalidConstructor(TestMarkedClass forTheConstructor) {
-         this.forTheConstructor = forTheConstructor;
-      }
-   }
-
-   private Set<MarkedClass> createMarkedClasses(Class<?> aClass) {
-      Class<?>[] markedClasses = new Class[]{aClass};
-      return getMarkedClasses(markedClasses);
-   }
-
-   private Set<MarkedClass> getMarkedClasses(Class<?>... markedClasses) {
-      Set<MarkedClass> stepsClasses = new HashSet<MarkedClass>();
-      for (Class<?> markedClass : markedClasses) {
-         stepsClasses.add(new MarkedClass(markedClass));
-      }
-      return stepsClasses;
-   }
-
-   @Before public void setUp() throws Exception {
-      domainStepFactory = new DomainStepFactory();
-   }
-
-   @DomainSteps
-   public class StepsClassForUnitTest {
-
-   }
-
-   public static class SerializableClassForConstructorTest implements Serializable {
-
-    private static final long serialVersionUID = -8578525041848530267L;
-   }
+    public Object when(String methodString) throws Exception {
+      return null;
+    }
+  }
 }

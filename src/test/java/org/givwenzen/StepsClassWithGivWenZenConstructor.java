@@ -5,10 +5,10 @@ import org.givwenzen.annotations.DomainSteps;
 
 
 @DomainSteps
-public class StepsClassWithDomainStepNamesConstructor {
+public class StepsClassWithGivWenZenConstructor {
    private GivWenZen givWenZen;
 
-   public StepsClassWithDomainStepNamesConstructor(GivWenZen givWenZen) {
+   public StepsClassWithGivWenZenConstructor(GivWenZen givWenZen) {
       this.givWenZen = givWenZen;
    }
 

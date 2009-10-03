@@ -1,3 +1,6 @@
+|SlimExamples.StepWithTable||19:15:40 Sat, Oct 03, 2009|
+|SlimExamples.StepsWithCustomState||18:50:59 Sat, Oct 03, 2009|
+|SlimExamples.StepsThatCallOtherSteps||18:33:20 Sat, Oct 03, 2009|
 |SlimExamples||20:50:45 Tue, Sep 29, 2009|
 |FrontPage||11:52:30 Sun, Sep 27, 2009|
 |UserGuide||11:41:43 Sun, Sep 27, 2009|
