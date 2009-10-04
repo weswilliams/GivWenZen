@@ -20,13 +20,11 @@ public class SimpleTestSteps {
 
   @DomainStep("a step annotated with '(.*)' (:?.*)")
   public void verifyStepExists(String step) throws Exception {
-    System.out.println("step annotated " + step);
     gwz.given(step);
   }
  
   @DomainStep("the step '(.*)' is called")
   public void callStep(String stepToCall) throws Exception {
-    System.out.println("step called " + stepToCall);
     gwz.when(stepToCall);
   }
   
@@ -37,19 +35,33 @@ public class SimpleTestSteps {
   
   @DomainStep("simple no parameter step")
   public void simpleNoParamStep() {
-    System.out.println("no param step");
     stepCalls.put("simple no parameter step", true);
   }
   
   @DomainStep("simple step with int parameter (\\d+)")
   public void simpleIntParamTest(int intParam) {
-    System.out.println("int step " + intParam);
     stepCalls.put("simple step with int parameter " + intParam, true);
     paramValue = intParam;
+  }
+  
+  @DomainStep("simple step with (.*) parameter")
+  public void simpleCustomTypeParamTest(CustomType customType) {
+    stepCalls.put("simple step with CustomType parameter", true);
+    paramValue = customType;
   }
   
   @DomainStep("the value (\\d+) is passed as a parameter")
   public boolean verifyParamValue(int paramValue) {
     return this.paramValue.equals(paramValue);
+  }
+  
+  @DomainStep("the value (.*) is passed as a parameter")
+  public void domainStep(CustomType customType) {
+    customType.equals(paramValue);
+  }
+  
+  @DomainStep("the CustomType has a CustomTypeEditor in the same package as the CustomType")
+  public void checkTheCustomTypeHasAPropertyEditor() {
+    assert(CustomType.class.getPackage().equals(CustomTypeEditor.class.getPackage()));
   }
 }

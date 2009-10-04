@@ -19,7 +19,6 @@ public class DomainStepFinder {
 
    public DomainStepFinder(String basePackageForSteps) {
       packageForSteps = basePackageForSteps;
-      System.err.println("DSF package - " + packageForSteps);
       finder = new MarkedClassFinder(DomainSteps.class, packageForSteps);
    }
 
@@ -28,7 +27,6 @@ public class DomainStepFinder {
    }
 
    public String getPackage() {
-      System.err.println("getPackage " + packageForSteps);
       return packageForSteps;
    }
 }

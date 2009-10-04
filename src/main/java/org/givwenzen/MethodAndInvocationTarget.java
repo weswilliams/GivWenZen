@@ -40,16 +40,24 @@ public class MethodAndInvocationTarget {
 
    public boolean methodStringMatchesMethodPatern(String methodString)
       throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
-      Pattern pattern = getMethodDescriptionPattern();
-      Matcher matcher = pattern.matcher(methodString);
-      return matcher.matches();
+      return matches(getMatcherFor(methodString));
    }
+
+  private boolean matches(Matcher matcher) {
+    return matcher.matches();
+  }
+
+  private Matcher getMatcherFor(String methodString) throws NoSuchMethodException, InvocationTargetException,
+      IllegalAccessException {
+    Pattern pattern = getMethodDescriptionPattern();
+    Matcher matcher = pattern.matcher(methodString);
+    return matcher;
+  }
 
    public Object[] getParametersFromMethodString(String methodString) throws Exception {
       List<Object> params = new ArrayList<Object>();
-      Pattern methodPattern = getMethodDescriptionPattern();
-      Matcher matcher = methodPattern.matcher(methodString);
-      if (matcher.find()) {
+      Matcher matcher = getMatcherFor(methodString);
+      if (matches(matcher)) {
          MatchResult matchResult = matcher.toMatchResult();
          for (int index = 1; index <= matchResult.groupCount(); index++) {
             params.add(matchResult.group(index));

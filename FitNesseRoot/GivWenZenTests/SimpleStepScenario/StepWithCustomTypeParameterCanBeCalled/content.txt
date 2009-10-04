@@ -1,0 +1,6 @@
+|script|
+|given|a step annotated with 'simple step with !-CustomType-! parameter' that takes a !-CustomType-! as a parameter|
+|and|the !-CustomType-! has a !-CustomTypeEditor-! in the same package as the !-CustomType-!|
+|when|the step 'simple step with !-CustomType-! parameter' is called|
+|then|the step 'simple step with !-CustomType-! parameter' executes successfully|
+|and|the value !-CustomType-! is passed as a parameter|

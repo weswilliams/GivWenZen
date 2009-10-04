@@ -24,7 +24,6 @@ public class PropertyEditorParser implements MethodParameterParser {
   }
 
   public static PropertyEditor getPropertyEditorFor(Class<?> paramType) {
-    PropertyEditorManager.setEditorSearchPath(new String[] { EDITOR_SEARCH_PATH });
     return PropertyEditorManager.findEditor(paramType);
   }
 
