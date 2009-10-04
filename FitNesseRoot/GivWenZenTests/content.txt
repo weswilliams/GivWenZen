@@ -6,6 +6,7 @@
 
 !path .\target\classes\main
 !path .\target\classes\test
+!path .\lib\junit-4.5.jar
 !path .\lib\commons-logging.jar
 !path .\lib\fitnesse.jar
 !path .\lib\google-collect-snapshot-20080820.jar

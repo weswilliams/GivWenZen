@@ -1,5 +1,10 @@
+|GivWenZenTests||18:38:25 Sun, Oct 04, 2009|
+|GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy||18:26:33 Sun, Oct 04, 2009|
+|GivWenZenTests.ComplexStepScenario.UseCustomStateObject||18:16:35 Sun, Oct 04, 2009|
+|GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:58:18 Sun, Oct 04, 2009|
+|GivWenZenTests.ComplexStepScenario.SetUp||17:28:29 Sun, Oct 04, 2009|
+|GivWenZenTests.ComplexStepScenario||17:20:56 Sun, Oct 04, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithCustomTypeParameterCanBeCalled||14:07:52 Sun, Oct 04, 2009|
-|GivWenZenTests||11:32:33 Sun, Oct 04, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithNativeTypeParameterCanBeCalled||20:10:21 Sat, Oct 03, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithNoParameterCanBeCalledTest||20:04:09 Sat, Oct 03, 2009|
 |GivWenZenTests.SimpleStepScenario.SetUp||19:35:21 Sat, Oct 03, 2009|
