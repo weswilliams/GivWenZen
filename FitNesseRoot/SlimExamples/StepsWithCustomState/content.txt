@@ -1,0 +1,11 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+|import|
+|org.givwenzen|
+
+|script|
+|start|giv wen zen with custom state|
+
+!note see the class {{{GivWenZenWithCustomState and StepsWithCustomState}}}
+|script|
+|then|the custom state is some value|

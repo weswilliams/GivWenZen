@@ -40,7 +40,9 @@ public class MethodAndInvocationTarget {
 
    public boolean methodStringMatchesMethodPatern(String methodString)
       throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
-      return getMethodDescriptionPattern().matcher(methodString).find();
+      Pattern pattern = getMethodDescriptionPattern();
+      Matcher matcher = pattern.matcher(methodString);
+      return matcher.matches();
    }
 
    public Object[] getParametersFromMethodString(String methodString) throws Exception {

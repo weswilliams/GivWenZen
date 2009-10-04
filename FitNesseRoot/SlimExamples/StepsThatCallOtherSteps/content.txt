@@ -1,0 +1,12 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+|import|
+|org.givwenzen|
+
+|script|
+|start|giv wen zen for slim|
+
+!note this test has a step class that has the ability to call other steps.  See the step class bdd.steps.CallingStepsFromSteps.
+|script|
+|when|i call the steps to add 50 and 60|
+|then|the total is 110|

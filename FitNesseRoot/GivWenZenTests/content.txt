@@ -1,0 +1,16 @@
+!contents -R2 -g -p -f -h
+
+!**> setup test system
+
+!define TEST_SYSTEM {slim}
+
+!path .\target\classes\main
+!path .\target\classes\test
+!path .\lib\commons-logging.jar
+!path .\lib\fitnesse.jar
+!path .\lib\google-collect-snapshot-20080820.jar
+!path .\lib\javassist.jar
+!path .\lib\log4j-1.2.9.jar
+!path .\lib\reflections-0.9.2.jar
+
+*!

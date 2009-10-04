@@ -1,13 +1,12 @@
 package org.givwenzen;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.givwenzen.GWZForJUnit.*;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.*;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.givwenzen.annotations.DomainStep;
 import org.givwenzen.annotations.DomainSteps;
@@ -24,7 +23,7 @@ public class DomainStepMethodLocatorTest {
   public void setup() {
     setUp(this);
   }
-  
+
   @Test
   public void stepClassWithValidStepMethodIsFoundSuccessfully() throws Exception {
     given ( "a valid step class with a valid step method" );
@@ -63,10 +62,9 @@ public class DomainStepMethodLocatorTest {
     createStepLocator(createStepObjectsList(new ValidSteps()));
   }
   
-  @DomainStep("the annotated method is retrieved for (.*)")
+  @DomainStep("the annotated method is retrieved for '(.*)'")
   public void retrieveAnnotatedMethodAndSaveMethodOrError(String annotationString) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
     try {
-      System.out.println("retrieve methods");
       methodWithAnnotatedPatternMatching = locator.getMethodWithAnnotatedPatternMatching(annotationString);
       retrieveMethodsError = null;
     } catch (GivWenZenException e) {
