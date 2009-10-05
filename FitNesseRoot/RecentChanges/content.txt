@@ -1,4 +1,5 @@
-|GivWenZenTests||18:38:25 Sun, Oct 04, 2009|
+|GivWenZenTests||17:59:34 Mon, Oct 05, 2009|
+|SlimExamples||17:57:58 Mon, Oct 05, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy||18:26:33 Sun, Oct 04, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStateObject||18:16:35 Sun, Oct 04, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:58:18 Sun, Oct 04, 2009|
@@ -14,7 +15,6 @@
 |SlimExamples.StepWithTable||19:15:40 Sat, Oct 03, 2009|
 |SlimExamples.StepsWithCustomState||18:50:59 Sat, Oct 03, 2009|
 |SlimExamples.StepsThatCallOtherSteps||18:33:20 Sat, Oct 03, 2009|
-|SlimExamples||20:50:45 Tue, Sep 29, 2009|
 |UserGuide||11:41:43 Sun, Sep 27, 2009|
 |UserGuide.ChangingTheDefaults.StepClassInstantiation||15:25:49 Sat, Sep 26, 2009|
 |UserGuide.CucumberAndFitnesse||17:48:01 Fri, Sep 18, 2009|

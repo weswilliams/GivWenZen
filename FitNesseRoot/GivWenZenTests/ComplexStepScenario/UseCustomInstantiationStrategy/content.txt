@@ -1,0 +1,5 @@
+|script|
+|given|a custom instantiation strategy for creating custom step classes|
+|and|a step class that is created by the custom instantiation strategy|
+|when|a step is called that exists in the step class created by the custom instantiation strategy|
+|then|the step in the step class created by the custom instantiation strategy is executed successfully|

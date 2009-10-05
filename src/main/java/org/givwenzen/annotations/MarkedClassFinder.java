@@ -6,11 +6,12 @@ import java.util.*;
 
 import org.reflections.Configuration;
 import org.reflections.Reflections;
-import org.reflections.filters.IncludePrefix;
+import org.reflections.adapters.SingleThreadedParallelStrategy;
 import org.reflections.scanners.ClassAnnotationsScanner;
 import org.reflections.scanners.SubTypesScanner;
-import org.reflections.util.AbstractConfiguration;
-import org.reflections.util.ClasspathHelper;
+import org.reflections.util.*;
+
+import com.google.common.base.Predicate;
 
 public class MarkedClassFinder {
   private Class<? extends Annotation> markerAnnotation = DomainSteps.class;
@@ -20,10 +21,10 @@ public class MarkedClassFinder {
     this.markerAnnotation = markerAnnotation;
     Configuration configuration = new AbstractConfiguration() {
       {
-        Collection<URL> allUrls = getUrlsFromString(basePackage);
-        setUrls(allUrls);
-        setScanners(new SubTypesScanner(), new ClassAnnotationsScanner());
-        setFilter(new IncludePrefix(markerAnnotation.getName()));
+        setUrls(getUrlsFromString(basePackage));
+        Predicate<String> annotationFilter = new FilterBuilder().include(DomainSteps.class.getName());
+        setScanners(new SubTypesScanner(), new ClassAnnotationsScanner().filterBy(annotationFilter));
+        setParallelStrategy(new SingleThreadedParallelStrategy());
       }
     };
     findClasses(configuration);

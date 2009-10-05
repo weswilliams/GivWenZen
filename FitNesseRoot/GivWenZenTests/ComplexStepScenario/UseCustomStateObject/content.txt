@@ -1,0 +1,4 @@
+|script|
+|given|a custom state object is used|
+|when|calling a step that sets VALUE in the custom state|
+|then|another step has access to VALUE in the custom state|
