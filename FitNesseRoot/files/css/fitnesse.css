@@ -1,1 +1,20 @@
 @import url( "/files/css/fitnesse_base.css" );
+
+table, td, th {
+  border: none;
+}
+
+tr > td:first-child { 
+  font-weight: bold; 
+  font-style: italic;
+  text-transform : capitalize;
+}
+
+tr > td:first-child + td {
+  font-style: normal;
+}
+
+tr:first-child { 
+  background-color: #FAFAFE; 
+  color: #FAFAFE; 
+} 
