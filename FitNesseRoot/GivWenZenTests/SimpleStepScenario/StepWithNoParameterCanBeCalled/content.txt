@@ -2,3 +2,6 @@
 |given|a step annotated with 'simple no parameter step' that does not take a parameter|
 |when|the step 'simple no parameter step' is called|
 |then|the step 'simple no parameter step' executes successfully|
+
+!3 See also:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/SimpleTestSteps.java

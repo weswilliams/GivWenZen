@@ -3,3 +3,8 @@
 |and|a step 'in custom package' defined in a class in the custom package|
 |when|the step in the custom package 'in custom package' is called|
 |then|the step in the custom package 'in custom package' is found and executed successfully|
+
+
+!3 See:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/custom/steps/CustomSteps.java

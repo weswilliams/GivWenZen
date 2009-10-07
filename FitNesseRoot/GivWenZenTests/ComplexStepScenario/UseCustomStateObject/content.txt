@@ -2,3 +2,7 @@
 |given|a custom state object is used|
 |when|calling a step that sets VALUE in the custom state|
 |then|another step has access to VALUE in the custom state|
+
+!3 See:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/TestCustomState.java

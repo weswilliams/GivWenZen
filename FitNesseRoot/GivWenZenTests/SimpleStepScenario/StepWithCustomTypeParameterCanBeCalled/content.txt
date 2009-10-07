@@ -4,3 +4,8 @@
 |when|the step 'simple step with !-CustomType-! parameter' is called|
 |then|the step 'simple step with !-CustomType-! parameter' executes successfully|
 |and|the custom value !-CustomType-! is passed as a parameter|
+
+!3 See also:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/SimpleTestSteps.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/CustomType.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/CustomTypeEditor.java

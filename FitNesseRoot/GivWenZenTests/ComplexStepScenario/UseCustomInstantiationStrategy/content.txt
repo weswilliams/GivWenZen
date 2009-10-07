@@ -3,3 +3,8 @@
 |and|a step class that is created by the custom instantiation strategy|
 |when|a step is called that exists in the step class created by the custom instantiation strategy|
 |then|the step in the step class created by the custom instantiation strategy is executed successfully|
+
+!3 See:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/CustomInstantiationSteps.java
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java
