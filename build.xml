@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
 
+
 	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
 
 	<property environment="env" />
