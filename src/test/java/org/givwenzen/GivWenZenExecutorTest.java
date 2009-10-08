@@ -27,7 +27,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
    public static final
    String
       METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE =
-      "method with int of 1 parameter and with return value";
+      "method taking int of 1 parameter and with return value";
    public static final
    String
       METHOD_WITH_MYSIMPLECLASS_PARAMETER_AND_WITH_RETURN_VALUE =
@@ -87,7 +87,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
    public void testShouldScreamWhenAnnotationContainsInvalidParameters()
       throws Exception {
       try {
-         executor.given("method with int of " + Integer.MAX_VALUE
+         executor.given("method taking int of " + Integer.MAX_VALUE
                         + "0 parameter and with return value");
          fail("Should scream when annotaion contains invalid parameters");
       } catch (InvalidDomainStepParameterException e) {
@@ -97,7 +97,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
    public void testInvalidStepParameterExceptionShouldDisplayExpectedParameters()
       throws Exception {
       try {
-         executor.given("method with int of " + Integer.MAX_VALUE
+         executor.given("method taking int of " + Integer.MAX_VALUE
                         + "0 parameter and with return value");
       } catch (InvalidDomainStepParameterException e) {
 
@@ -106,7 +106,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
 
    public void testShouldScreamWhenAnnotatedMethodIsNotFound()
       throws Exception {
-      String method = "method with int of " + Integer.MAX_VALUE
+      String method = "method taking int of " + Integer.MAX_VALUE
                       + "0 parameter and with return value";
       try {
          executor.given(method);
@@ -116,7 +116,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
             "Invalid step parameters in method pattern: " + method, e
                .getMessage().split("\\n")[1]);
          assertEquals(
-            "  found matching method annotated with: method with int of (\\d+) parameter and with return value",
+            "  found matching method annotated with: method taking int of (\\d+) parameter and with return value",
             e.getMessage().split("\\n")[2]);
          assertEquals(
             "  method signature is: public java.lang.String org.givwenzen.GivWenZenExecutorTest$FakeSteps2.methodWithIntParameterAndWithReturnValue(int)",
@@ -273,7 +273,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
          getExecutor().methodWithOutParametersAndWithoutReturnValueCalled = true;
       }
 
-      @DomainStep("method with int of (\\d+) parameter and with return value")
+      @DomainStep("method taking int of (\\d+) parameter and with return value")
       public String methodWithIntParameterAndWithReturnValue(int param) {
          getExecutor().intParamValue = param;
          return METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE;

@@ -33,12 +33,16 @@ public class MethodAndInvocationTarget {
 
    public Pattern getMethodDescriptionPattern()
       throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-      Annotation annotation = method.getAnnotation(DomainStep.class);
-      Method patternMethod = annotation.getClass().getMethod("value");
-      return Pattern.compile(String.valueOf(patternMethod.invoke(annotation)));
+     return Pattern.compile(getDomainStepPattern());
    }
 
-   public boolean methodStringMatchesMethodPatern(String methodString)
+  public String getDomainStepPattern() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+    Annotation annotation = method.getAnnotation(DomainStep.class);
+    Method patternMethod = annotation.getClass().getMethod("value");
+    return String.valueOf(patternMethod.invoke(annotation));
+  }
+
+  public boolean methodStringMatchesMethodPatern(String methodString)
       throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
       return matches(getMatcherFor(methodString));
    }

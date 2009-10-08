@@ -21,11 +21,34 @@ public class DomainStepMethodLocator {
 
   public MethodAndInvocationTarget getMethodWithAnnotatedPatternMatching(String methodString)
       throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+
+    List<MethodAndInvocationTarget> possibleAmbiguities = findPossibleAmbiguities(methodString);
+
+    if (possibleAmbiguities.size() > 1)
+      return handleAmbiguousStepDefinitions(methodString, possibleAmbiguities);
+
+    if (possibleAmbiguities.isEmpty())
+      return null;
+
+    return possibleAmbiguities.get(0);
+  }
+
+  private List<MethodAndInvocationTarget> findPossibleAmbiguities(String methodString) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+    List<MethodAndInvocationTarget> possibleAmbiguities = new ArrayList<MethodAndInvocationTarget>();
     for (MethodAndInvocationTarget methodAndTarget : getSteps()) {
       if (methodAndTarget.methodStringMatchesMethodPatern(methodString))
-        return methodAndTarget;
+        possibleAmbiguities.add(methodAndTarget);
     }
-    return null;
+    return possibleAmbiguities;
+  }
+
+  private MethodAndInvocationTarget handleAmbiguousStepDefinitions(String methodString,
+                                                                   List<MethodAndInvocationTarget> matches) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+    String message = "Multiple step definitions match \"" + methodString + "\"\n";
+    for (MethodAndInvocationTarget match : matches) {
+      message += match.getMethodAsString() + " \"" + match.getDomainStepPattern() + "\"\n";
+    }
+    throw new GivWenZenException(message);
   }
 
   private Collection<MethodAndInvocationTarget> getSteps() throws InvocationTargetException, NoSuchMethodException,

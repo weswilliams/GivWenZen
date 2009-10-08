@@ -44,14 +44,14 @@ public class SimpleTestSteps {
     paramValue = intParam;
   }
 
-  @DomainStep("simple step with (.*) parameter")
+  @DomainStep("simple step with custom type parameter (.*)")
   public void simpleCustomTypeParamTest(CustomType customType) {
-    stepCalls.put("simple step with CustomType parameter", true);
+    stepCalls.put("simple step with custom type parameter CustomType", true);
     paramValue = customType;
   }
 
-  @DomainStep("the value (\\d+) is passed as a parameter")
-  public boolean verifyParamValue(int paramValue) {
+  @DomainStep("the int value (\\d+) is passed as a parameter")
+  public Boolean verifyParamValue(int paramValue) {
     return this.paramValue.equals(paramValue);
   }
 

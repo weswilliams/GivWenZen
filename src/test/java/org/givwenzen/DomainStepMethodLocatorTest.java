@@ -46,15 +46,29 @@ public class DomainStepMethodLocatorTest {
     when  ( "the annotated method is retrieved for 'dummy step'" );
     then  ( "duplicates for the exact same class are ignored and no duplicate exception is thrown" );
   }
-  
+
+  @Test
+  public void testAmbiguousStepDefinitionsCauseAnException() throws Exception {
+    given ( "a class exists with two methods that have ambiguous DomainStep annotations" );
+    when  ( "the annotated method is retrieved for 'the value 5 is passed as a parameter'" );
+    then  ( "a GivWenZenException is thrown" );
+    and   ( "GivWenZenException message contains StepsWithAmbiguousAnnotatedMethod.method1" );
+    and   ( "GivWenZenException message contains StepsWithAmbiguousAnnotatedMethod.method2" );
+  }
+
   @DomainStep("a method locator is created with a list containing multiple instances of the same class")
   public void createStepLocatorWithMulitpleInstancesOfAStepClass() {
     createStepLocator(createStepObjectsList(new DomainStepMethodLocatorTest(), new DomainStepMethodLocatorTest()));    
   }
-  
+
   @DomainStep("a class exists with two methods that have duplicate DomainStep annotations")
   public void createStepLocatorWithClassContatiningDuplicateAnnotations() {
-    createStepLocator(createStepObjectsList(new StepsWithDuplicateAnnotatedMethod()));    
+    createStepLocator(createStepObjectsList(new StepsWithDuplicateAnnotatedMethod()));
+  }
+
+  @DomainStep("a class exists with two methods that have ambiguous DomainStep annotations")
+  public void createStepLocatorWithClassContatiningAmbiguousAnnotations() {
+    createStepLocator(createStepObjectsList(new StepsWithAmbiguousAnnotatedMethod()));
   }
   
   @DomainStep("a valid step class with a valid step method")
@@ -127,6 +141,17 @@ public class DomainStepMethodLocatorTest {
 
     @DomainStep("duplicate")
     public void method2() {
+    }
+  }
+
+  @DomainSteps
+  class StepsWithAmbiguousAnnotatedMethod {
+    @DomainStep("the value (\\d+) is passed as a parameter")
+    public void method1(int value) {
+    }
+
+    @DomainStep("the value (.*) is passed as a parameter")
+    public void method2(long value) {
     }
   }
 }

@@ -16,5 +16,5 @@ tr > td:first-child + td {
 
 tr:first-child { 
   background-color: #FAFAFE; 
-  color: #FAFAFE; 
+  color: #F1F1F0; 
 } 
