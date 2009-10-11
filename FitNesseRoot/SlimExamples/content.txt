@@ -19,5 +19,6 @@
 !path .\lib\google-collect-1.0-rc2.jar
 !path .\lib\dom4j-1.6.1.jar
 !path .\lib\commons-vfs-1.0.jar
+!path C:\java_tools\apache-ant-1.7.0\lib\clover-2.6.1.jar
 
 *!

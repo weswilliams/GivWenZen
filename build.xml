@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
 
+        <taskdef resource="cloverlib.xml" />
 
 	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
 
@@ -65,6 +66,7 @@
 		<path path="${givwenzen.lib.dir}/junit-4.5.jar" />
 		<path path="${givwenzen.lib.dir}/mockito-core-1.7.jar" />
 		<path path="${givwenzen.lib.dir}/objenesis-1.0.jar" />
+		<path path="${ant.home}/lib/clover-2.6.1.jar" />
 	</path>
 
 	<path id="givwenzen.run.test.classpath">
@@ -94,9 +96,37 @@
 		depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
 		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
 
+	<target name="build.clover.givwenzen" description="Compile givwenzen" 
+		depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
+		  compile.givwenzen.examples,givwenzen.test,execute_fitnesse_tests,clover.report,clover.html" />
+
+	<target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" 
+		depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
+
+        <target name="with.clover">
+          <clover-setup/>
+        </target>
+
+        <target name="clover.html">
+          <clover-html-report outdir="${reports.tests}/clover_html" title="${ant.project.name}"/>
+        </target>
+
+        <target name="clover.report">
+          <clover-report>
+            <current outfile="${reports.tests}/coverage.xml">
+              <format type="xml"/>
+            </current>
+          </clover-report>
+        </target>
+
 	<target name="clean.givwenzen" description="cleanup module">
 		<delete dir="${givwenzen.target.dir}" />
 		<mkdir dir="${reports.tests}" />
+	</target>
+
+	<target name="clean.givwenzen.classes" description="cleanup compiled classes">
+		<delete dir="${givwenzen.baseoutput.dir}" />
 	</target>
 
 	<target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
