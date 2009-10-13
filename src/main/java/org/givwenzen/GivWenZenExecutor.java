@@ -10,7 +10,6 @@ import org.givwenzen.annotations.MarkedClass;
 public class GivWenZenExecutor implements GivWenZen {
    private Object stepState;
    private DomainStepMethodLocator methodLocator;
-   private DomainStepFinder domainStepFinder;
 
    public GivWenZenExecutor() {
       this(null, new DomainStepFinder(), new DomainStepFactory());
@@ -18,7 +17,6 @@ public class GivWenZenExecutor implements GivWenZen {
 
    public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder, DomainStepFactory factory) {
       super();
-      this.domainStepFinder = domainStepFinder;
       this.stepState = stepState == null ? this : stepState;
       Object[] adapters = new Object[]{this.stepState, this};
       Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
@@ -48,7 +46,7 @@ public class GivWenZenExecutor implements GivWenZen {
    }
 
    private Object executeMethodWithMatchingAnnotation(String methodString) throws Exception {
-      MethodAndInvocationTarget method = getMethod(methodString);
+      MethodAndInvocationTarget method = methodLocator.getMethodWithAnnotatedPatternMatching(methodString);
       Object returnValue;
       try {
          returnValue = method.invoke(methodString);
@@ -56,6 +54,8 @@ public class GivWenZenExecutor implements GivWenZen {
          System.err.println("Exception executing step " + methodString);
          e.getCause().printStackTrace(System.err);
          throw e;
+      } catch (DomainStepNotFoundException e) {
+        throw e;
       } catch (Exception e) {
          throw new InvalidDomainStepParameterException(
             "\nInvalid step parameters in method pattern: " + methodString + "\n" +
@@ -65,26 +65,5 @@ public class GivWenZenExecutor implements GivWenZen {
 
       }
       return returnValue == null ? stepState : returnValue;
-   }
-
-   private MethodAndInvocationTarget getMethod(String methodString) throws
-                                                                    NoSuchMethodException,
-                                                                    InvocationTargetException,
-                                                                    IllegalAccessException {
-      MethodAndInvocationTarget method = methodLocator.getMethodWithAnnotatedPatternMatching(methodString);
-      if (method == null) {
-         throw new DomainStepNotFoundException(
-            "\nYou need a step class with an annotated method matching this pattern: '" + methodString + "'\n" +
-            "The step class should be placed in the package or sub-package of " + domainStepFinder.getPackage() + "\n" +
-            "Example:\n" +
-            "  @DomainSteps\n" +
-            "  public class StepClass {\n" +
-            "    @DomainStep(\"" + methodString + "\")\n" +
-            "    public void domainStep() {\n" +
-            "      // TODO implement step\n" +
-            "    }" +
-            "  }");
-      }
-      return method;
    }
 }

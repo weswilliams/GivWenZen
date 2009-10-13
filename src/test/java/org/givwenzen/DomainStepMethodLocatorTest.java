@@ -18,6 +18,7 @@ public class DomainStepMethodLocatorTest {
   private DomainStepMethodLocator locator;
   private GivWenZenException retrieveMethodsError;
   private MethodAndInvocationTarget methodWithAnnotatedPatternMatching;
+  private Exception executeException;
 
   @Before
   public void setup() {
@@ -55,7 +56,27 @@ public class DomainStepMethodLocatorTest {
     and   ( "GivWenZenException message contains StepsWithAmbiguousAnnotatedMethod.method1" );
     and   ( "GivWenZenException message contains StepsWithAmbiguousAnnotatedMethod.method2" );
   }
+  
+  @Test
+  public void whenAMethodSDoesNotExistsAStepNotFoundMethodIsReturned() throws Exception {
+    given ( "no annotated method exists that matches 'step method does not exists'" );
+    when  ( "the annotated method is retrieved for 'step method does not exists'" );
+    then  ( "step not found method is found" );
+  }
+  
+  @Test
+  public void whenAMethodSDoesNotExistsAExceptionProducingMethodIsReturned() throws Exception {
+    given ( "no annotated method exists that matches 'step method does not exists'" );
+    when  ( "the annotated method is retrieved for 'step method does not exists'" );
+    and   ( "the annotated method is executed for 'step method does not exists'" );
+    then  ( "DomainStepNotFoundException message contains '@DomainStep(\"step method does not exists\")'" );
+  }
 
+  @DomainStep("no annotated method exists that matches '(:?.*)'")
+  public void createStepLocatorWithNoSteps() {
+    createStepLocator(new ArrayList<Object>());
+  }
+  
   @DomainStep("a method locator is created with a list containing multiple instances of the same class")
   public void createStepLocatorWithMulitpleInstancesOfAStepClass() {
     createStepLocator(createStepObjectsList(new DomainStepMethodLocatorTest(), new DomainStepMethodLocatorTest()));    
@@ -86,10 +107,25 @@ public class DomainStepMethodLocatorTest {
     }    
   }
   
+  @DomainStep("the annotated method is executed for '(.*)'")
+  public void executeAnnotatedMethodAndSaveMethodOrError(String annotationString) {
+    try {
+      methodWithAnnotatedPatternMatching.invoke(annotationString);
+      executeException = null;
+    } catch (Exception e) {
+      executeException = e;
+    }
+  }
+  
   @DomainStep("(.*) method is found")
   public void verifyMethodWasFound(String methodName) {
     methodName = methodName.replaceAll(" ", "");
     assertThat(methodName, methodWithAnnotatedPatternMatching.getMethodAsString(), containsString("." + methodName));
+  }
+  
+  @DomainStep("DomainStepNotFoundException message contains '(.*)'")
+  public void verifyDomainStepNotFoundException(String messagePart) {
+    assertThat(executeException.getMessage(), containsString(messagePart));
   }
   
   @DomainStep("GivWenZenException message contains (.*)")

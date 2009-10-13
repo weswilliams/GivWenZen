@@ -27,23 +27,25 @@ public class DomainStepMethodLocator {
     if (possibleAmbiguities.size() > 1)
       return handleAmbiguousStepDefinitions(methodString, possibleAmbiguities);
 
-    if (possibleAmbiguities.isEmpty())
-      return null;
-
     return possibleAmbiguities.get(0);
   }
 
-  private List<MethodAndInvocationTarget> findPossibleAmbiguities(String methodString) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+  private List<MethodAndInvocationTarget> findPossibleAmbiguities(String methodString)
+      throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
     List<MethodAndInvocationTarget> possibleAmbiguities = new ArrayList<MethodAndInvocationTarget>();
     for (MethodAndInvocationTarget methodAndTarget : getSteps()) {
       if (methodAndTarget.methodStringMatchesMethodPatern(methodString))
         possibleAmbiguities.add(methodAndTarget);
     }
+    if (possibleAmbiguities.isEmpty()) {
+      possibleAmbiguities.add(new MissingStepMethodAndInvocationTarget());
+    }
     return possibleAmbiguities;
   }
 
   private MethodAndInvocationTarget handleAmbiguousStepDefinitions(String methodString,
-                                                                   List<MethodAndInvocationTarget> matches) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+      List<MethodAndInvocationTarget> matches) throws NoSuchMethodException, IllegalAccessException,
+      InvocationTargetException {
     String message = "Multiple step definitions match \"" + methodString + "\"\n";
     for (MethodAndInvocationTarget match : matches) {
       message += match.getMethodAsString() + " \"" + match.getDomainStepPattern() + "\"\n";

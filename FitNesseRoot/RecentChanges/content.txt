@@ -1,3 +1,4 @@
+|SlimExamples.AddTwoNumbers||17:41:13 Tue, Oct 13, 2009|
 |GivWenZenTests||16:24:21 Sat, Oct 10, 2009|
 |SlimExamples||16:24:13 Sat, Oct 10, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:54:28 Wed, Oct 07, 2009|
@@ -8,7 +9,6 @@
 |GivWenZenTests.SimpleStepScenario.StepWithCustomTypeParameterCanBeCalled||15:23:19 Wed, Oct 07, 2009|
 |SlimExamples.StepsWithCustomState||15:19:01 Wed, Oct 07, 2009|
 |SlimExamples.StepsThatCallOtherSteps||15:16:44 Wed, Oct 07, 2009|
-|SlimExamples.AddTwoNumbers||15:16:34 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.SetUp||17:28:29 Sun, Oct 04, 2009|
 |GivWenZenTests.ComplexStepScenario||17:20:56 Sun, Oct 04, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithNoParameterCanBeCalledTest||20:04:09 Sat, Oct 03, 2009|
