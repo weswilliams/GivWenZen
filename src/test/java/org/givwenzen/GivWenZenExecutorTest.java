@@ -1,21 +1,17 @@
 package org.givwenzen;
 
-import junit.framework.TestCase;
+import static org.junit.Assert.*;
 
 import java.beans.PropertyEditorSupport;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-import org.givwenzen.GivWenZenException;
-import org.givwenzen.GivWenZenExecutor;
-import org.givwenzen.DomainStepFinder;
-import org.givwenzen.GivWenZen;
-import org.givwenzen.DomainStepNotFoundException;
-import org.givwenzen.InvalidDomainStepParameterException;
 import org.givwenzen.annotations.DomainStep;
 import org.givwenzen.annotations.DomainSteps;
+import org.junit.Before;
+import org.junit.Test;
 
-public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
+public class GivWenZenExecutorTest implements GivWenZen {
    public static final
    String
       METHOD_WITHOUT_PARAMETERS_AND_WITH_RETURN_VALUE =
@@ -55,16 +51,18 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       bddMethods[3] = AND;
    }
 
-   protected void setUp() throws Exception {
-      super.setUp();
+   @Before
+   public void setUp() throws Exception {
       executor = new GivWenZenExecutor(this, new DomainStepFinder("org.givwenzen."));
    }
 
+   @Test
    public void testFindAppropriateStepDefinitionWhenDuplicationIsNeeded() throws Exception {
       assertCorrectStepDefinitionIsUsed("org.givwenzen.steps.gui.", "gui");
       assertCorrectStepDefinitionIsUsed("org.givwenzen.steps.businesslogic.", "business");
    }
 
+   @Test
    public void testDuplicateStepDefinitionCauseException() throws Exception {
       ArrayList<String> list = new ArrayList<String>();
       executor = new GivWenZenExecutor(list, new DomainStepFinder("steps.gui.,steps.businesslogic."));
@@ -84,6 +82,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       assertEquals(expected, list.get(0));
    }
 
+   @Test
    public void testShouldScreamWhenAnnotationContainsInvalidParameters()
       throws Exception {
       try {
@@ -94,6 +93,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testInvalidStepParameterExceptionShouldDisplayExpectedParameters()
       throws Exception {
       try {
@@ -104,6 +104,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testShouldScreamWhenAnnotatedMethodIsNotFound()
       throws Exception {
       String method = "method taking int of " + Integer.MAX_VALUE
@@ -124,6 +125,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testStepNotFoundExceptionShouldHaveAClearStackTrace()
       throws Exception {
       try {
@@ -133,6 +135,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testStepNotFoundExceptionShouldGiveAnExampleMethodSignature()
       throws Exception {
       try {
@@ -144,6 +147,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testMethodWithOutParametersAndWithReturnValueIsCalled()
       throws Exception {
       for (String bddMethod : bddMethods) {
@@ -154,6 +158,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testMethodWithOutParametersAndWithoutReturnValueIsCalled()
       throws Exception {
       for (String bddMethod : bddMethods) {
@@ -165,6 +170,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testMethodWithIntegerParameterAndReturnValueIsCalled()
       throws Exception {
       for (String bddMethod : bddMethods) {
@@ -178,6 +184,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testMethodWithMySimpleClassParameterAndReturnValueIsCalled()
       throws Exception {
       for (String bddMethod : bddMethods) {
@@ -191,6 +198,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testMethodWithMySimpleClass3ParameterWithAObjectParseAndReturnValueIsCalled()
       throws Exception {
       for (String bddMethod : bddMethods) {
@@ -204,6 +212,7 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       }
    }
 
+   @Test
    public void testAnnotatedClassesAreFoundAndStepsAreAvailable()
       throws Exception {
       // this method is available in FakeSteps.java
@@ -212,6 +221,11 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
          .given("my step in class requiring access to the adapter"));
    }
 
+   @Test(expected=GivWenZenExecutionException.class)
+   public void whenStepMethodThrowsAnExceptionThenAGivWenZenExcecutionExceptionShouldBeThrown() throws Exception {
+     executor.given("this method throws an exception every time");
+   }
+   
    private Object executeStringMethodOnAdapter(String methodPatten,
                                                String givenWhenOrThen) throws Exception {
       try {
@@ -246,6 +260,11 @@ public class GivWenZenExecutorTest extends TestCase implements GivWenZen {
       @DomainStep("my step")
       public boolean myStep() {
          return true;
+      }
+      
+      @DomainStep("this method throws an exception every time")
+      public void throwAnException() {
+        throw new RuntimeException("exception in step method");
       }
    }
 

@@ -1,7 +1,6 @@
 package org.givwenzen;
 
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Set;
 
@@ -50,15 +49,11 @@ public class GivWenZenExecutor implements GivWenZen {
       Object returnValue;
       try {
          returnValue = method.invoke(methodString);
-      } catch (InvocationTargetException e) {
-         System.err.println("Exception executing step " + methodString);
-         e.getCause().printStackTrace(System.err);
-         throw e;
-      } catch (DomainStepNotFoundException e) {
+      } catch (GivWenZenException e) {
         throw e;
       } catch (Exception e) {
-         throw new InvalidDomainStepParameterException(
-            "\nInvalid step parameters in method pattern: " + methodString + "\n" +
+         throw new GivWenZenException(
+            "\nSomething went drastically wrong while exectuing the step for: " + methodString + "\n" +
             "  found matching method annotated with: " + method.getMethodDescriptionPattern().pattern() + "\n" +
             "  method signature is: " + method.getMethodAsString() + "\n" +
             "  step class is: " + method.getTargetAsString(), e);

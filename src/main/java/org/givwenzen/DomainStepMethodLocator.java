@@ -110,7 +110,7 @@ public class DomainStepMethodLocator {
     Method[] methods = target.getClass().getMethods();
     for (Method method : methods) {
       if (method.isAnnotationPresent(DomainStep.class)) {
-        targetMethods.add(new MethodAndInvocationTarget(method, target, null));
+        targetMethods.add(new MethodAndInvocationTarget(method, target));
       }
     }
     return targetMethods;

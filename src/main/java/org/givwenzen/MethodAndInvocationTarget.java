@@ -18,14 +18,28 @@ public class MethodAndInvocationTarget {
    private Method method;
    private Object target;
 
-   public MethodAndInvocationTarget(Method method, Object target, String methodString) {
+   public MethodAndInvocationTarget(Method method, Object target) {
       this.method = method;
       this.target = target;
    }
 
    public Object invoke(String methodString) throws Exception {
-      return method.invoke(target, getParametersFromMethodString(methodString));
+      try {
+        return method.invoke(target, getParametersFromMethodString(methodString));
+      } catch (InvocationTargetException e) {
+        throw new GivWenZenExecutionException(buildExceptionMessage("Error while executing step", methodString), e);      
+      } catch (Exception e) {
+        throw new InvalidDomainStepParameterException (buildExceptionMessage("Invalid step parameters in method pattern", methodString), e);
+      }
    }
+
+  private String buildExceptionMessage(String messageHeader, String methodString) throws NoSuchMethodException, InvocationTargetException,
+      IllegalAccessException {
+    return "\n" + messageHeader + ": " + methodString + "\n" +
+      "  found matching method annotated with: " + getMethodDescriptionPattern().pattern() + "\n" +
+      "  method signature is: " + getMethodAsString() + "\n" +
+      "  step class is: " + getTargetAsString();
+  }
 
    public String getMethodAsString() {
       return method.toString();
@@ -69,14 +83,6 @@ public class MethodAndInvocationTarget {
       }
       return converter.convertParamertersToTypes(
          params.toArray(new Object[params.size()]), method.getParameterTypes());
-   }
-
-   public Annotation getAnnotation(Class<DomainStep> bddClass) {
-      return method.getAnnotation(bddClass);
-   }
-
-   public Class<?>[] getParameterTypes() {
-      return method.getParameterTypes();
    }
 
    public String getTargetAsString() {
