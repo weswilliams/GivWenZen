@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
 
-        <taskdef resource="cloverlib.xml" />
+  <taskdef resource="cloverlib.xml" />
+	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
 
 	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
 
@@ -26,6 +27,8 @@
 	<property name="givwenzen.test.src.dir" value="src/test/java" />
 	<property name="givwenzen.examples.src.dir" value="src/examples/java" />
 
+	<property name="findbugs.home" value="/java_tools/findbugs-1.3.9" />
+	
 	<tstamp>
 		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />
 	</tstamp>
@@ -210,6 +213,14 @@
 		<stop-fitnesse fitnesseport="81" />
 	</target>
 
+	<target name="findbugs" depends="jar.givwenzen">
+    <findbugs home="${findbugs.home}" output="xml:withMessages" outputFile="${reports.tests}/findbugs.xml" >
+    	<auxClasspath refid="givwenzen.classpath"  />
+      <sourcePath path="${givwenzen.main.src.dir}" />
+      <class location="${givwenzen.target.dir}/${jar.file.name}" />
+    </findbugs>
+  </target>
+	
 	<target name="maven.deploy" depends="build.givwenzen">
 		<artifact:remoteRepository url="${maven.releases.repo}" id="nexus.releases">
 			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
