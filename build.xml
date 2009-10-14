@@ -69,7 +69,7 @@
 		<path path="${givwenzen.lib.dir}/junit-4.5.jar" />
 		<path path="${givwenzen.lib.dir}/mockito-core-1.7.jar" />
 		<path path="${givwenzen.lib.dir}/objenesis-1.0.jar" />
-		<path path="${ant.home}/lib/clover-2.6.1.jar" />
+		<path path="${givwenzen.lib.dir}/clover-2.6.1.jar" />
 	</path>
 
 	<path id="givwenzen.run.test.classpath">

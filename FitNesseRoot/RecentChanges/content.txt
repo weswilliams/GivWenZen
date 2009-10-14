@@ -1,6 +1,6 @@
+|GivWenZenTests||19:19:13 Wed, Oct 14, 2009|
+|SlimExamples||19:19:00 Wed, Oct 14, 2009|
 |SlimExamples.AddTwoNumbers||17:41:13 Tue, Oct 13, 2009|
-|GivWenZenTests||16:24:21 Sat, Oct 10, 2009|
-|SlimExamples||16:24:13 Sat, Oct 10, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:54:28 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStateObject||17:53:18 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy||17:52:01 Wed, Oct 07, 2009|
