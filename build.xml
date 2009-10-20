@@ -17,7 +17,8 @@
 	<property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples" />
 	
 	<property name="reports.tests" value="${givwenzen.target.dir}/reports" />
-
+  <property name="fitnesse.port" value="8001" />
+	
 	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
 
 	<property name="givwenzen.main.src.dir" value="src/main/java" />
@@ -205,10 +206,10 @@
 	</target>
 
 	<target name="execute_fitnesse_tests" depends="load_fitnesse_taskdef" description="Executes the Fitnesse Acceptance Test Suite. This target starts fitnesse, executes the Accetpance test suite, publishes the test results and stops fitnesse">
-		<start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="81" />
-		<execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="81" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml" classpathref="fitnesse.classpath" />
-		<execute-fitnesse-tests suitepage="SlimExamples" fitnesseport="81" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-examples-results.xml" classpathref="fitnesse.classpath" />
-		<stop-fitnesse fitnesseport="81" />
+		<start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="${fitnesse.port}" />
+		<execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml" classpathref="fitnesse.classpath" />
+		<execute-fitnesse-tests suitepage="SlimExamples" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-examples-results.xml" classpathref="fitnesse.classpath" />
+		<stop-fitnesse fitnesseport="${fitnesse.port}" />
 	</target>
 
 	<target name="findbugs" depends="jar.givwenzen">

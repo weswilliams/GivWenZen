@@ -4,19 +4,19 @@
 
 !define TEST_SYSTEM {slim}
 
-!path .\target\classes\main
-!path .\target\classes\test
-!path .\lib\junit-4.5.jar
-!path .\lib\commons-logging.jar
-!path .\lib\fitnesse.jar
-!path .\lib\log4j-1.2.9.jar
-!path .\lib\slf4j-simple-1.5.6.jar
-!path .\lib\slf4j-api-1.5.6.jar
-!path .\lib\reflections-0.9.4.jar
-!path .\lib\javassist.jar
-!path .\lib\google-collect-1.0-rc2.jar
-!path .\lib\dom4j-1.6.1.jar
-!path .\lib\commons-vfs-1.0.jar
-!path .\lib\clover-2.6.1.jar
+!path ./target/classes/main
+!path ./target/classes/test
+!path ./lib/junit-4.5.jar
+!path ./lib/commons-logging.jar
+!path ./lib/fitnesse.jar
+!path ./lib/log4j-1.2.9.jar
+!path ./lib/slf4j-simple-1.5.6.jar
+!path ./lib/slf4j-api-1.5.6.jar
+!path ./lib/reflections-0.9.4.jar
+!path ./lib/javassist.jar
+!path ./lib/google-collect-1.0-rc2.jar
+!path ./lib/dom4j-1.6.1.jar
+!path ./lib/commons-vfs-1.0.jar
+!path ./lib/clover-2.6.1.jar
 
 *!
