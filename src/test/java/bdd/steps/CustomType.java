@@ -9,6 +9,11 @@ public class CustomType {
   }
 
   @Override
+  public int hashCode() {
+    return 31 + ((arg0 == null) ? 0 : arg0.hashCode());
+  }
+
+  @Override
   public boolean equals(Object obj) {
     if (this == obj)
       return true;

@@ -12,6 +12,10 @@ import java.util.regex.Pattern;
 import org.givwenzen.annotations.DomainStep;
 
 public class DomainStepMethodLocator {
+
+  private static String MULTI_STEP_DEF_MSG_PATTERN = "Multiple step definitions match \"%1$s\"\n";
+  private static String MULTI_STEP_DEF_METHOD_MSG_PATTERN = "%1$s\"%2$s\"\n";
+
   private Collection<Object> stepDefinitions;
   private Map<String, MethodAndInvocationTarget> steps;
 
@@ -46,11 +50,13 @@ public class DomainStepMethodLocator {
   private MethodAndInvocationTarget handleAmbiguousStepDefinitions(String methodString,
       List<MethodAndInvocationTarget> matches) throws NoSuchMethodException, IllegalAccessException,
       InvocationTargetException {
-    String message = "Multiple step definitions match \"" + methodString + "\"\n";
+    StringBuilder msgBuiler = new StringBuilder();
+    msgBuiler.append(String.format(MULTI_STEP_DEF_MSG_PATTERN, methodString));
     for (MethodAndInvocationTarget match : matches) {
-      message += match.getMethodAsString() + " \"" + match.getDomainStepPattern() + "\"\n";
+      msgBuiler.append(String.format(MULTI_STEP_DEF_METHOD_MSG_PATTERN, 
+          match.getMethodAsString(), match.getDomainStepPattern()));
     }
-    throw new GivWenZenException(message);
+    throw new GivWenZenException(msgBuiler.toString());
   }
 
   private Collection<MethodAndInvocationTarget> getSteps() throws InvocationTargetException, NoSuchMethodException,

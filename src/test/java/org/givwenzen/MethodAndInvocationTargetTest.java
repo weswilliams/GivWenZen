@@ -14,7 +14,7 @@ public class MethodAndInvocationTargetTest {
     invocation.invoke("method takes an int " + Integer.MAX_VALUE + "0");
   }
   
-  class TestTarget {
+  static class TestTarget {
     
     @DomainStep("method takes an int (\\d+)")
     public int methodTakesAnInt(int value) {

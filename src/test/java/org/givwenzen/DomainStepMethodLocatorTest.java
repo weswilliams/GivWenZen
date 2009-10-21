@@ -119,8 +119,8 @@ public class DomainStepMethodLocatorTest {
   
   @DomainStep("(.*) method is found")
   public void verifyMethodWasFound(String methodName) {
-    methodName = methodName.replaceAll(" ", "");
-    assertThat(methodName, methodWithAnnotatedPatternMatching.getMethodAsString(), containsString("." + methodName));
+    String tempMethodName = methodName.replaceAll(" ", "");
+    assertThat(tempMethodName, methodWithAnnotatedPatternMatching.getMethodAsString(), containsString("." + tempMethodName));
   }
   
   @DomainStep("DomainStepNotFoundException message contains '(.*)'")
@@ -169,7 +169,7 @@ public class DomainStepMethodLocatorTest {
   }
   
   @DomainSteps
-  class StepsWithDuplicateAnnotatedMethod {
+  static class StepsWithDuplicateAnnotatedMethod {
 
     @DomainStep("duplicate")
     public void method1() {
@@ -181,7 +181,7 @@ public class DomainStepMethodLocatorTest {
   }
 
   @DomainSteps
-  class StepsWithAmbiguousAnnotatedMethod {
+  static class StepsWithAmbiguousAnnotatedMethod {
     @DomainStep("the value (\\d+) is passed as a parameter")
     public void method1(int value) {
     }

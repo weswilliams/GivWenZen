@@ -1,5 +1,6 @@
 package org.givwenzen.annotations;
 
+
 public class ObjectInterfacesInstantiationStrategy implements InstantiationStrategy {
   public InstantiationState instantiate(Class<?> markedClass, Object parameter) {
     try {
@@ -8,6 +9,8 @@ public class ObjectInterfacesInstantiationStrategy implements InstantiationStrat
         if (state.couldInstantiate())
           return new DefaultInstantiationState(true, state.getInstantiation());
       }
+    } catch (RuntimeException e) {
+      return DefaultInstantiationState.UNINSTANTIATED;
     } catch (Exception e) {
       return DefaultInstantiationState.UNINSTANTIATED;
     }

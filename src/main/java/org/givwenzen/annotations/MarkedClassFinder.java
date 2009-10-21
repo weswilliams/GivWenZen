@@ -32,9 +32,9 @@ public class MarkedClassFinder {
 
   private Collection<URL> getUrlsFromString(String basePackage) {
     Collection<URL> allUrls = new ArrayList<URL>();
-    StringTokenizer tokenizer = new StringTokenizer(basePackage, ",");
-    while (tokenizer.hasMoreTokens()) {
-      allUrls.addAll(ClasspathHelper.getUrlsForPackagePrefix(tokenizer.nextToken().trim()));
+    String[] packages = basePackage.split(",");
+    for (String packageName : packages) {
+      allUrls.addAll(ClasspathHelper.getUrlsForPackagePrefix(packageName.trim()));
     }
     return allUrls;
   }
