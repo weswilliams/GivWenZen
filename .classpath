@@ -18,5 +18,7 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-simple-1.5.6.jar"/>
 	<classpathentry kind="lib" path="lib/clover-2.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/fitlibrary.jar"/>
+	<classpathentry kind="lib" path="lib/fitnesse.jar"/>
 	<classpathentry kind="output" path="target/classes/main"/>
 </classpath>

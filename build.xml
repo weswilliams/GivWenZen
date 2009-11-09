@@ -57,6 +57,8 @@
 
 	<path id="givwenzen.examples.classpath">
 		<path refid="givwenzen.classpath" />
+		<path path="${givwenzen.lib.dir}/fitlibrary.jar" />
+		<path path="${givwenzen.lib.dir}/fitnesse.jar" />
 		<path location="${givwenzen.output.dir}" />
 	</path>
 

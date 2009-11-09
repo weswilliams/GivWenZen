@@ -1,20 +1,5 @@
 |!2 [[!-UserGuide-!][http://code.google.com/p/givwenzen/wiki/GettingStarted]]|!3 !-How to use GivWenZen-!|
-|!2 [[!-SlimExamples-!][.SlimExamples]]|!3 !-Examples of using the GivWenZen with the Slim-!|
 |!2 [[!-GWZTests-!][.GivWenZenTests]]|!3 !-Examples of using the GivWenZen with the Slim-!|
+|!2 [[!-SlimExamples-!][.SlimExamples]]|!3 !-Examples of using the GivWenZen with the Slim-!|
+|!2 [[!-FitLibraryExamples-!][.FitLibraryExamples]]|!3 !-Examples of using the GivWenZen with the FitLibrary-!|
 
-
-!**> setup test system
-
-!define TEST_SYSTEM {slim}
-
-!path .\givwenzen.jar
-!path .\givwenzen_test.jar
-#!path .\classes
-!path .\lib\commons-logging.jar
-!path .\lib\fitnesse.jar
-!path .\lib\google-collect-snapshot-20080820.jar
-!path .\lib\javassist.jar
-!path .\lib\log4j-1.2.9.jar
-!path .\lib\reflections-0.9.2.jar
-
-*!

@@ -7,14 +7,14 @@ table, td, th {
 tr > td:first-child { 
   font-weight: bold; 
   font-style: italic;
-  text-transform : capitalize;
+//  text-transform : capitalize;
 }
 
 tr > td:first-child + td {
   font-style: normal;
 }
 
-tr:first-child { 
-  background-color: #FAFAFE; 
-  color: #F1F1F0; 
-} 
+//tr:first-child { 
+//  background-color: #FAFAFE; 
+//  color: #F1F1F0; 
+//} 
