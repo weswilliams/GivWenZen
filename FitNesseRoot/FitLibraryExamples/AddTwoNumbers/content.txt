@@ -1,9 +1,9 @@
 !|org.givwenzen.GivWenZenDoFixture|
 
-- given i have entered 50 into the calculator
-- and i have entered 75 into the calculator
-- when i press add
-- then the total is 125
+given i have entered 50 into the calculator
+and i have entered 75 into the calculator
+when i press add
+then the total is 125
 
 
 
