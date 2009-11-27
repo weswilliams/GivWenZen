@@ -357,8 +357,16 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteResponderTests/TestShutdown/cont
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteResponderTests/TestShutdown/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteResponderTests/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteResponderTests/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ErikPragtBug/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ErikPragtBug/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/HashTableTests/ShouldConvertHashWidgetToHashTable/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/HashTableTests/ShouldConvertHashWidgetToHashTable/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/HashTableTests/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/HashTableTests/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/MultiByteCharsInSlim/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/MultiByteCharsInSlim/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BlankCellsInNestedScenariosShouldWork/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BlankCellsInNestedScenariosShouldWork/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BrotherScenarioLibraryIsIncluded/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BrotherScenarioLibraryIsIncluded/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/DoesntFailIfScenariosIncludedTwice/content.txt
@@ -393,6 +401,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestPageWithInclude/In
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestPageWithInclude/IncludedPage/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestPageWithInclude/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestPageWithInclude/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSubsetQuery/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSubsetQuery/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSymbolsDontGetTurnedToStringsInTheOutput/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSymbolsDontGetTurnedToStringsInTheOutput/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTwoIdenticalTablesOnPageDontConflict/content.txt
@@ -513,6 +523,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/ContentsUsage/conten
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/ContentsUsage/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/SetUp/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/SetUp/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/ShouldNotBeAbleToIncludeParentPage/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/ShouldNotBeAbleToIncludeParentPage/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/SimpleWidgets/DavidHookersBug/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/SimpleWidgets/DavidHookersBug/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/SimpleWidgets/content.txt
@@ -553,6 +565,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestGtSubPageWidget/
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestGtSubPageWidget/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestGtSubPageWidgetInAlias/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestGtSubPageWidgetInAlias/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestHash/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestHash/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestHttpLinkWithVariable/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestHttpLinkWithVariable/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestHttpStatus/content.txt
@@ -687,6 +701,8 @@ FitNesseRoot/FitNesse/UserGuide/ColumnFixtureDesign/content.txt
 FitNesseRoot/FitNesse/UserGuide/ColumnFixtureDesign/properties.xml
 FitNesseRoot/FitNesse/UserGuide/CommandLineArguments/content.txt
 FitNesseRoot/FitNesse/UserGuide/CommandLineArguments/properties.xml
+FitNesseRoot/FitNesse/UserGuide/CommandLineRestCommands/content.txt
+FitNesseRoot/FitNesse/UserGuide/CommandLineRestCommands/properties.xml
 FitNesseRoot/FitNesse/UserGuide/CommandLineTestRunner/content.txt
 FitNesseRoot/FitNesse/UserGuide/CommandLineTestRunner/properties.xml
 FitNesseRoot/FitNesse/UserGuide/CommentTables/content.txt
@@ -1047,6 +1063,8 @@ FitNesseRoot/FitNesse/UserGuide/MarkupExpressions/content.txt
 FitNesseRoot/FitNesse/UserGuide/MarkupExpressions/properties.xml
 FitNesseRoot/FitNesse/UserGuide/MarkupExternalLink/content.txt
 FitNesseRoot/FitNesse/UserGuide/MarkupExternalLink/properties.xml
+FitNesseRoot/FitNesse/UserGuide/MarkupHashTable/content.txt
+FitNesseRoot/FitNesse/UserGuide/MarkupHashTable/properties.xml
 FitNesseRoot/FitNesse/UserGuide/MarkupHeaderAndFooter/content.txt
 FitNesseRoot/FitNesse/UserGuide/MarkupHeaderAndFooter/properties.xml
 FitNesseRoot/FitNesse/UserGuide/MarkupHeaders/content.txt
@@ -1137,6 +1155,8 @@ FitNesseRoot/FitNesse/UserGuide/RestfulServices/JsonProperties/content.txt
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/JsonProperties/properties.xml
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/PageHistoryXml/content.txt
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/PageHistoryXml/properties.xml
+FitNesseRoot/FitNesse/UserGuide/RestfulServices/RestfulSuiteXmlFormat/content.txt
+FitNesseRoot/FitNesse/UserGuide/RestfulServices/RestfulSuiteXmlFormat/properties.xml
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/TestHistoryXml/content.txt
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/TestHistoryXml/properties.xml
 FitNesseRoot/FitNesse/UserGuide/RestfulServices/content.txt
@@ -1207,6 +1227,8 @@ FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/PortManagement/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/PortManagement/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/properties.xml
+FitNesseRoot/FitNesse/UserGuide/SliM/SubsetQueryTable/content.txt
+FitNesseRoot/FitNesse/UserGuide/SliM/SubsetQueryTable/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/SymbolsInTables/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/SymbolsInTables/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/TableTable/ReportTables/content.txt
@@ -1317,3 +1339,7 @@ FitNesseRoot/FitNesse/UserGuide/content.txt
 FitNesseRoot/FitNesse/UserGuide/properties.xml
 FitNesseRoot/FitNesse/content.txt
 FitNesseRoot/FitNesse/properties.xml
+FitNesseRoot/PageFooter/content.txt
+FitNesseRoot/PageFooter/properties.xml
+FitNesseRoot/PageHeader/content.txt
+FitNesseRoot/PageHeader/properties.xml

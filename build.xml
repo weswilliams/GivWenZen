@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
-			
+
 	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
 
 	<property environment="env" />
@@ -10,15 +10,15 @@
 	<property name="jdk.bin.givwenzen" value="${project.jdk.bin}" />
 
 	<property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
-	
+
 	<property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes" />
 	<property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main" />
 	<property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test" />
 	<property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples" />
-	
+
 	<property name="reports.tests" value="${givwenzen.target.dir}/reports" />
-  <property name="fitnesse.port" value="8001" />
-	
+	<property name="fitnesse.port" value="8001" />
+
 	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
 
 	<property name="givwenzen.main.src.dir" value="src/main/java" />
@@ -26,7 +26,7 @@
 	<property name="givwenzen.examples.src.dir" value="src/examples/java" />
 
 	<property name="findbugs.home" value="/java_tools/findbugs-1.3.9" />
-	
+
 	<tstamp>
 		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />
 	</tstamp>
@@ -95,34 +95,31 @@
 		</dirset>
 	</path>
 
-	<target name="build.givwenzen" description="Compile givwenzen" 
-		depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
 		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
 
-	<target name="build.clover.givwenzen" description="Compile givwenzen" 
-		depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
+	<target name="build.clover.givwenzen" description="Compile givwenzen" depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
 		  compile.givwenzen.examples,givwenzen.test,execute_fitnesse_tests,clover.report,clover.html" />
 
-	<target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" 
-		depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+	<target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
 		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
 
-        <target name="with.clover">
-          <taskdef resource="cloverlib.xml" />
-          <clover-setup/>
-        </target>
+	<target name="with.clover">
+		<taskdef resource="cloverlib.xml" />
+		<clover-setup />
+	</target>
 
-        <target name="clover.html">
-          <clover-html-report outdir="${reports.tests}/clover_html" title="${ant.project.name}"/>
-        </target>
+	<target name="clover.html">
+		<clover-html-report outdir="${reports.tests}/clover_html" title="${ant.project.name}" />
+	</target>
 
-        <target name="clover.report">
-          <clover-report>
-            <current outfile="${reports.tests}/coverage.xml">
-              <format type="xml"/>
-            </current>
-          </clover-report>
-        </target>
+	<target name="clover.report">
+		<clover-report>
+			<current outfile="${reports.tests}/coverage.xml">
+				<format type="xml" />
+			</current>
+		</clover-report>
+	</target>
 
 	<target name="clean.givwenzen" description="cleanup module">
 		<delete dir="${givwenzen.target.dir}" />
@@ -150,7 +147,7 @@
 		</javac>
 	</target>
 
-	<target name="compile.givwenzen.examples" depends="compile.givwenzen.production" description="compile givwenzen example classes" >
+	<target name="compile.givwenzen.examples" depends="compile.givwenzen.production" description="compile givwenzen example classes">
 		<mkdir dir="${givwenzen.examplesoutput.dir}" />
 		<javac destdir="${givwenzen.examplesoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
 			<classpath refid="givwenzen.examples.classpath" />
@@ -215,15 +212,23 @@
 		<stop-fitnesse fitnesseport="${fitnesse.port}" />
 	</target>
 
+	<target name="new-execute-fitnesse-tests" description="NOT READY - DO NOT USE FOR BUILD MACHINE - SERVERLESS FITNESSE RUNNER">
+	    <java jar="lib/fitnesse.jar" failonerror="true" fork="true" 
+	    	output="${givwenzen.target.dir}/gwz-slim-examples-results.xml">
+	      <arg value="-c"/>
+	      <arg value="SlimExamples?suite&amp;format=xml"/>
+	    </java>
+	</target>
+
 	<target name="findbugs" depends="jar.givwenzen">
-    <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
-		<findbugs home="${findbugs.home}" output="xml:withMessages" outputFile="${reports.tests}/findbugs.xml" >
-    	<auxClasspath refid="givwenzen.classpath"  />
-      <sourcePath path="${givwenzen.main.src.dir}" />
-      <class location="${givwenzen.target.dir}/${jar.file.name}" />
-    </findbugs>
-  </target>
-	
+		<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
+		<findbugs home="${findbugs.home}" output="xml:withMessages" outputFile="${reports.tests}/findbugs.xml">
+			<auxClasspath refid="givwenzen.classpath" />
+			<sourcePath path="${givwenzen.main.src.dir}" />
+			<class location="${givwenzen.target.dir}/${jar.file.name}" />
+		</findbugs>
+	</target>
+
 	<target name="maven.deploy" depends="build.givwenzen">
 		<artifact:remoteRepository url="${maven.releases.repo}" id="nexus.releases">
 			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
