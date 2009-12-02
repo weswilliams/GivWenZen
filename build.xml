@@ -204,6 +204,8 @@
 		<taskdef classpathref="fitnesse.classpath" resource="tasks.properties" />
 	</target>
 
+	<target name="execute-fitnesse-tests" depends="execute_fitnesse_tests"/>
+	
 	<target name="execute_fitnesse_tests" depends="load_fitnesse_taskdef" description="Executes the Fitnesse Acceptance Test Suite. This target starts fitnesse, executes the Accetpance test suite, publishes the test results and stops fitnesse">
 		<start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="${fitnesse.port}" />
 		<execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml" classpathref="fitnesse.classpath" />

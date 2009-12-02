@@ -1,0 +1,6 @@
+[[!-GivWenZen-!][.FrontPage]]
+
+!3 [[Fixture class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/org/givwenzen/GivWenZenDoFixture.java]] for this story
+!3 [[Step class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/bdd/steps/StepsWithCustomState.java]] for this test
+
+|then|the custom state is some value|

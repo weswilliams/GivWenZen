@@ -1,4 +1,4 @@
-|script|
+#|script|
 |given|a custom package for step classes|
 |and|a step 'in custom package' defined in a class in the custom package|
 |when|the step in the custom package 'in custom package' is called|

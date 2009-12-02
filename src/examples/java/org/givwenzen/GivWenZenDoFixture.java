@@ -5,6 +5,6 @@ import fitlibrary.DoFixture;
 public class GivWenZenDoFixture extends DoFixture {
 
     public GivWenZenDoFixture() {
-        super(new GivWenZenExecutor());
+        super(new GivWenZenExecutor(new CustomState(), new DomainStepFinder()));
     }
 }

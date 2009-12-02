@@ -1,5 +1,9 @@
-|SlimExamples.AddTwoNumbers||10:55:11 Thu, Nov 26, 2009|
-|FitLibraryExamples.AddTwoNumbers||15:50:34 Fri, Nov 13, 2009|
+|FitLibraryExamples.StepsWithCustomState||11:44:35 Wed, Dec 02, 2009|
+|FitLibraryExamples.AddTwoNumbers||11:43:52 Wed, Dec 02, 2009|
+|FitLibraryExamples.StepsThatCallOtherSteps||11:43:07 Wed, Dec 02, 2009|
+|FitLibraryExamples.SetUp||11:38:06 Wed, Dec 02, 2009|
+|SlimExamples.SetUp||11:19:13 Wed, Dec 02, 2009|
+|SlimExamples.AddTwoNumbers||11:18:44 Wed, Dec 02, 2009|
 |FrontPage||10:37:41 Mon, Nov 09, 2009|
 |FitLibraryExample||10:35:13 Mon, Nov 09, 2009|
 |SlimExamples.FitLibraryExample||10:33:28 Mon, Nov 09, 2009|

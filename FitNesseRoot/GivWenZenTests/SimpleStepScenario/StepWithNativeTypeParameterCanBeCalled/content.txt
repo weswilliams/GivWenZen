@@ -1,4 +1,4 @@
-|script|
+#|script|
 |given|a step annotated with 'simple step with int parameter 5' that takes an int parameter|
 |when|the step 'simple step with int parameter 5' is called|
 |then|the step 'simple step with int parameter 5' executes successfully|
