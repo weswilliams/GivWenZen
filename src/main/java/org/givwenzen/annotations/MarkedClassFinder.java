@@ -4,12 +4,12 @@ import java.lang.annotation.Annotation;
 import java.net.URL;
 import java.util.*;
 
-import org.reflections.Configuration;
-import org.reflections.Reflections;
-import org.reflections.adapters.SingleThreadedParallelStrategy;
-import org.reflections.scanners.ClassAnnotationsScanner;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.util.*;
+import org.givwenzen.reflections.Configuration;
+import org.givwenzen.reflections.Reflections;
+import org.givwenzen.reflections.adapters.SingleThreadedParallelStrategy;
+import org.givwenzen.reflections.scanners.ClassAnnotationsScanner;
+import org.givwenzen.reflections.scanners.SubTypesScanner;
+import org.givwenzen.reflections.util.*;
 
 import com.google.common.base.Predicate;
 

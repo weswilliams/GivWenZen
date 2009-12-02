@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Reflections>
+  <FieldAnnotations>
+    <entry>
+      <key>org.reflections.TestModel$AF1</key>
+      <values>
+        <value>org.reflections.TestModel$C4.f1</value>
+        <value>org.reflections.TestModel$C4.f2</value>
+      </values>
+    </entry>
+  </FieldAnnotations>
+  <MethodAnnotations>
+    <entry>
+      <key>org.reflections.TestModel$AM1</key>
+      <values>
+        <value>public void org.reflections.TestModel$C4.m1()</value>
+        <value>public java.lang.String org.reflections.TestModel$C4.m3()</value>
+        <value>public void org.reflections.TestModel$C4.m2(int, java.lang.String[])</value>
+      </values>
+    </entry>
+    <entry>
+      <key>org.junit.BeforeClass</key>
+      <values>
+        <value>public void org.reflections.ReflectionsTest.init()</value>
+      </values>
+    </entry>
+    <entry>
+      <key>org.junit.Test</key>
+      <values>
+        <value>public void org.reflections.util.ClasspathHelperTest.testGetUrlsForPackagePrefix()</value>
+        <value>public void org.reflections.util.ClasspathHelperTest.testGetUrlsForSourcesOnly()</value>
+        <value>public void org.reflections.ReflectionsTest.testMethodsAnnotatedWith()</value>
+        <value>public void org.reflections.util.ClasspathHelperTest.testGetUrlsForCurrentClasspath()</value>
+        <value>public void org.reflections.ReflectionsTest.writeCollect()</value>
+        <value>public void org.reflections.util.ClasspathHelperTest.testGetUrlForClass()</value>
+        <value>public void org.reflections.ReflectionsTest.collect()</value>
+        <value>public void org.reflections.ReflectionsTest.testFieldsAnnotatedWith()</value>
+        <value>public void org.reflections.ReflectionsTest.testSubTypesOf()</value>
+        <value>public void org.reflections.ReflectionsTest.testConverters()</value>
+        <value>public void org.reflections.ReflectionsTest.testTypesAnnotatedWith()</value>
+        <value>public void org.reflections.ReflectionsTest.testAll()</value>
+      </values>
+    </entry>
+  </MethodAnnotations>
+</Reflections>
