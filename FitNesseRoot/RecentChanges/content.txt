@@ -1,3 +1,6 @@
+|FitLibraryExamples||17:37:52 Wed, Dec 02, 2009|
+|SlimExamples||17:37:38 Wed, Dec 02, 2009|
+|GivWenZenTests||17:37:20 Wed, Dec 02, 2009|
 |FitLibraryExamples.StepsWithCustomState||11:44:35 Wed, Dec 02, 2009|
 |FitLibraryExamples.AddTwoNumbers||11:43:52 Wed, Dec 02, 2009|
 |FitLibraryExamples.StepsThatCallOtherSteps||11:43:07 Wed, Dec 02, 2009|
@@ -8,8 +11,6 @@
 |FitLibraryExample||10:35:13 Mon, Nov 09, 2009|
 |SlimExamples.FitLibraryExample||10:33:28 Mon, Nov 09, 2009|
 |SlimExamples.FitLibrary||10:12:46 Mon, Nov 09, 2009|
-|GivWenZenTests||17:33:00 Tue, Oct 20, 2009|
-|SlimExamples||17:32:32 Tue, Oct 20, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:54:28 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStateObject||17:53:18 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy||17:52:01 Wed, Oct 07, 2009|

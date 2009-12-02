@@ -47,7 +47,7 @@
 		<path path="${givwenzen.lib.dir}/commons-logging.jar" />
 		<path path="${givwenzen.lib.dir}/javassist.jar" />
 		<path path="${givwenzen.lib.dir}/log4j-1.2.9.jar" />
-		<path path="${givwenzen.lib.dir}/google-collect-1.0-rc2.jar" />
+		<path path="${givwenzen.lib.dir}/google-collect-1.0-rc4.jar" />
 		<path path="${givwenzen.lib.dir}/commons-vfs-1.0.jar" />
 		<path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar" />
 		<path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" />
@@ -178,7 +178,7 @@
 			<fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class" />
 			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
 			<zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/google-collect-1.0-rc2.jar" excludes="**/meta-inf/*.*" />
+			<zipfileset src="${givwenzen.lib.dir}/google-collect-1.0-rc4.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/log4j-1.2.9.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/commons-vfs-1.0.jar" excludes="**/meta-inf/*.*" />
