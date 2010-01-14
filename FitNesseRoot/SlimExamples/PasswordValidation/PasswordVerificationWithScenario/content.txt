@@ -1,0 +1,14 @@
+|when a new account is created with a bad password then it is rejected because|
+|password|reason|
+|1234!@$^|it does not have letters|
+|abcd!@$^|it does not have numbers|
+|abcd!@$^|it does not have numbers|
+|abcd1234|it does not have non-alphanumeric values|
+|!2c45|it does not have 6 or more characters|
+|!2c45678901234567|it has more than 16 characters|
+|!2c4 67|it has a space|
+
+|when a new account is created with password then it is accepted|
+|password|
+|!2c456|
+|!2c4567890123456|

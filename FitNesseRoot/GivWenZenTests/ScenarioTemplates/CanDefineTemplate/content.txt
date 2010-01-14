@@ -1,0 +1,8 @@
+#|script|
+|template|valid values|
+|when|i enter value @value|
+|then|the valid is valid @reason|
+
+#|script|
+|show|run|valid values|[abc123,because it is]|
+

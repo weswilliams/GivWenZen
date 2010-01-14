@@ -19,6 +19,5 @@
 |given|i turn on the calculator|
 |and|i have entered 20 into the calculator|
 |and|i have entered 30 into the calculator|
-|and|i have entered 40 into the calculator|
 |when|i press add|
-|check|then|what is the total|90|
+|check|then|what is the total|50|

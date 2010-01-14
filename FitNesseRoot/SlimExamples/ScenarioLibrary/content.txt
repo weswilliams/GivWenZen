@@ -1,0 +1,15 @@
+|scenario|given _ and _ are added then verify result is _|firstNum,secondNum,result|
+|given|i turn on the calculator|
+|and|i have entered @firstNum into the calculator|
+|and|i have entered @secondNum into the calculator |
+|when|i press add|
+|then|the total is @result|
+|show|then|what is the total|
+
+|scenario|given the user adds|firstNum||secondNum|then verify result is|result|
+|given|i turn on the calculator|
+|and|i have entered @firstNum into the calculator|
+|and|i have entered @secondNum into the calculator |
+|when|i press add|
+|then|the total is @result|
+|show|then|what is the total|

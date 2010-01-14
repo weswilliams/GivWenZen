@@ -1,0 +1,19 @@
+When you execute a test page, !-FitNesse-! gathers up the classpaths prior to running the test.  The classpaths are found in the !-!path-! widgets of the test page, and every ancestor of the test page.  The paths are ordered so that paths found on the subpages come before paths found on their parents.
+----
+
+!define PROPERTY_DISPLAY (
+!-!define TEST_SYSTEM {SLIM}-!
+!path classes
+!path fitnesse.jar
+
+!|Import|
+|fitnesse.fixtures|
+
+!|script|java properties|
+|show|property|java.class.path|
+)
+
+!|script|page driver|
+|given page|ParentPage|with content|!path parentPath|
+|given page|ParentPage.TestPage|with content|${PROPERTY_DISPLAY}|
+|page|ParentPage.TestPage?test|should contain|classes${path.separator}fitnesse.jar${path.separator}parentPath|

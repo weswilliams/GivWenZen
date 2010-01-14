@@ -1,0 +1,10 @@
+ [[!-GivWenZen-!][.FrontPage]]
+
+!3 [[Fixture class][http://code.google.com/p/givwenzen/source/browse/trunk/src/main/java/org/givwenzen/GivWenZenForSlim.java]] for this story
+!3 [[Step class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/bdd/steps/ExampleSteps.java]] for this test
+
+!2 Scenario: Adding 2 numbers show the correct total
+
+#|script|
+|given 50 and 75 are added then verify result is 125|
+|given 20 and 30 are added then verify result is 50|

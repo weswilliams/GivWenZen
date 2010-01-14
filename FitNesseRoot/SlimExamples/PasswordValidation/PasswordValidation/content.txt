@@ -1,0 +1,32 @@
+#|script|
+|when|a new account is created with a password of 1234!@$^|
+|then|the password is rejected because it does not have letters|
+
+#|script|
+|when|a new account is created with a password of abcd!@$^|
+|then|the password is rejected because it does not have numbers|
+
+#|script|
+|when|a new account is created with a password of abcd1234 |
+|then|the password is rejected because it does not have non-alphanumeric values|
+
+#|script|
+|when|a new account is created with a password of !2c45|
+|then|the password is rejected because it does not have 6 or more characters|
+
+#|script|
+|when|a new account is created with a password of !2c45678901234567|
+|then|the password is rejected because it has more than 16 characters|
+
+#|script|
+|when|a new account is created with a password of !2c4 67|
+|then|the password is rejected because it has a space|
+
+#|script|
+|when|a new account is created with a password of !2c456|
+|then|the password is accepted because it meets the security requirements|
+
+#|script|
+|when|a new account is created with a password of !2c4567890123456|
+|then|the password is accepted because it meets the security requirements|
+
