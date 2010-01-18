@@ -1,0 +1,8 @@
+#|script|
+|when|a new account is created with password 1234!@$^ then it is rejected because it does not have letters|
+|when|a new account is created with password abcd!@$^ then it is rejected because it does not have numbers|
+|when|a new account is created with password abcd!@$^ then it is rejected because it does not have numbers|
+|when|a new account is created with password abcd1234 then it is rejected because it does not have non-alphanumeric values|
+|when|a new account is created with password !2c45 then it is rejected because it does not have 6 or more characters|
+|when|a new account is created with password !2c45678901234567 then it is rejected because it has more than 16 characters|
+|when|a new account is created with password !2c4 67 then it is rejected because it has a space|

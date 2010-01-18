@@ -1,5 +1,7 @@
+!include PasswordRejectedScenario 
+
 |when a new account is created with a bad password then it is rejected because|
-|password|reason|
+|password|rejected reason|
 |1234!@$^|it does not have letters|
 |abcd!@$^|it does not have numbers|
 |abcd!@$^|it does not have numbers|
@@ -8,7 +10,9 @@
 |!2c45678901234567|it has more than 16 characters|
 |!2c4 67|it has a space|
 
-|when a new account is created with password then it is accepted|
-|password|
-|!2c456|
-|!2c4567890123456|
+!include PasswordAcceptedScenario 
+
+|when a new account is created with password then it is accepted because|
+|password|reason|
+|!2c456|it is the shortest valid set of characters|
+|!2c4567890123456|it is the longest valid set of characters|

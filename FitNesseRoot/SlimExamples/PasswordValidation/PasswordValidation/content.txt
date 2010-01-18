@@ -24,9 +24,9 @@
 
 #|script|
 |when|a new account is created with a password of !2c456|
-|then|the password is accepted because it meets the security requirements|
+|then|the password is accepted because it is the shortest valid set of characters|
 
 #|script|
 |when|a new account is created with a password of !2c4567890123456|
-|then|the password is accepted because it meets the security requirements|
+|then|the password is accepted because it is the longest valid set of characters|
 
