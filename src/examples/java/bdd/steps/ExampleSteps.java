@@ -18,6 +18,11 @@ public class ExampleSteps {
     this.givWenZen = givWenZen;
   }
 
+   @DomainStep("i turn on the calculator")
+   public void reset() {
+     numbers.clear();
+   }
+
   @DomainStep("i have entered " + SOME_NUMBER + " into the calculator")
   public void enterNumber(int number) throws Exception {
     numbers.add(number);
@@ -35,11 +40,6 @@ public class ExampleSteps {
   public boolean theTotalIs(int exepectedTotal) throws Exception {
     // simple example calling another step
     return givWenZen.then("what is the total").equals(exepectedTotal);
-  }
-
-  @DomainStep("i turn on the calculator")
-  public void reset() {
-    numbers.clear();
   }
 
   @DomainStep("what is the total")
