@@ -1,4 +1,4 @@
-#|script|
+-|script|
 |given|a step annotated with 'simple step with custom type parameter !-CustomType-!' that takes a !-CustomType-! as a parameter|
 |and|the !-CustomType-! has a !-CustomTypeEditor-! in the same package as the !-CustomType-!|
 |when|the step 'simple step with custom type parameter !-CustomType-!' is called|

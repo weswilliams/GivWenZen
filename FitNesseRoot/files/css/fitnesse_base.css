@@ -50,7 +50,7 @@ a:active {
 }
 
 table, td, th {
-  border: none;
+  border: solid #777777;
 }
 
 table {

@@ -3,5 +3,5 @@
 |import|
 |org.givwenzen|
 
-|script|
+-|script|
 |start|giv wen zen for slim|

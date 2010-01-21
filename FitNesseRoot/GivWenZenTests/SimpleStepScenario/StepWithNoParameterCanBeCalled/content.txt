@@ -1,4 +1,4 @@
-#|script|
+-|script|
 |given|a step annotated with 'simple no parameter step' that does not take a parameter|
 |when|the step 'simple no parameter step' is called|
 |then|the step 'simple no parameter step' executes successfully|

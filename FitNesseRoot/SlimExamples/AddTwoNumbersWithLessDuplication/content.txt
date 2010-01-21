@@ -1,0 +1,10 @@
+|scenario|add _ and _ then verify result is _|firstNum,secondNum,result|
+|given|i turn on the calculator|
+|and|i have entered @firstNum into the calculator|
+|and|i have entered @secondNum into the calculator |
+|when|i press add|
+|then|the total is @result|
+
+-|script|
+|add 50 and 75 then verify result is 125|
+|add 20 and 30 then verify result is 50|

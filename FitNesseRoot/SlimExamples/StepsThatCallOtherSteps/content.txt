@@ -4,6 +4,6 @@
 !3 [[Step class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/bdd/steps/ExampleSteps.java]] for this test
 
 !note this test has a step class that has the ability to call other steps.  See the step class [[bdd.steps.CallingStepsFromSteps][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/bdd/steps/CallingStepsFromStep.java]].
-#|script|
+-|script|
 |when|i call the steps to add 50 and 60|
 |then|the total is 110|

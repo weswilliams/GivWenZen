@@ -17,13 +17,6 @@ FitNesseRoot/files/images/stop.gif
 FitNesseRoot/files/images/virtualPage.jpg
 FitNesseRoot/files/css/fitnesse_base.css
 FitNesseRoot/files/css/jquery.autocomplete.css
-FitNesseRoot/files/javascript/jsunit/app/jsUnitCore.js
-FitNesseRoot/files/javascript/jsunit/app/jsUnitMockTimeout.js
-FitNesseRoot/files/javascript/jsunit/app/jsUnitTestManager.js
-FitNesseRoot/files/javascript/jsunit/app/jsUnitTestSuite.js
-FitNesseRoot/files/javascript/jsunit/app/jsUnitTracer.js
-FitNesseRoot/files/javascript/jsunit/app/jsUnitVersionCheck.js
-FitNesseRoot/files/javascript/jsunit/app/xbDebug.js
 FitNesseRoot/files/javascript/SpreadsheetTranslator.js
 FitNesseRoot/files/javascript/WikiFormatter.js
 FitNesseRoot/files/javascript/clientSideSort.js
@@ -666,6 +659,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/CreateSecureWiki
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/CreateSecureWiki/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/ScenarioLibrary/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/ScenarioLibrary/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/SetUp/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/SetUp/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/TestAutomaticUpdate/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/TestAutomaticUpdate/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWikiImportTests/TestCantImportFromSecureWiki/content.txt

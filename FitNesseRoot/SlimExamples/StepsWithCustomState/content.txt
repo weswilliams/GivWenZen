@@ -3,8 +3,8 @@
 !3 [[Fixture class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/org/givwenzen/GivWenZenWithCustomState.java]] for this test
 !3 [[Step class][http://code.google.com/p/givwenzen/source/browse/trunk/src/examples/java/bdd/steps/StepsWithCustomState.java]] for this test
 
-#|script|
+-|script|
 |start|giv wen zen with custom state|
 
-#|script|
+-|script|
 |then|the custom state is some value|
