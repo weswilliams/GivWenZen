@@ -1,6 +1,7 @@
 package org.givwenzen;
 
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Set;
 
@@ -9,6 +10,7 @@ import org.givwenzen.annotations.MarkedClass;
 public class GivWenZenExecutor implements GivWenZen {
    private Object stepState;
    private DomainStepMethodLocator methodLocator;
+   private DomainStepFinder domainStepFinder;
 
    public GivWenZenExecutor() {
       this(null, new DomainStepFinder(), new DomainStepFactory());
@@ -16,6 +18,7 @@ public class GivWenZenExecutor implements GivWenZen {
 
    public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder, DomainStepFactory factory) {
       super();
+      this.domainStepFinder = domainStepFinder;
       this.stepState = stepState == null ? this : stepState;
       Object[] adapters = new Object[]{this.stepState, this};
       Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
@@ -60,5 +63,9 @@ public class GivWenZenExecutor implements GivWenZen {
 
       }
       return returnValue == null ? stepState : returnValue;
+   }
+
+   public String getBaseStepClassPackge() {
+      return domainStepFinder.getPackage();
    }
 }

@@ -4,7 +4,7 @@ public class GivWenZenForSlim implements GivWenZen {
    private GivWenZenExecutor executor;
 
    public GivWenZenForSlim() {
-      this(new GivWenZenExecutor());
+      this(GivWenZenExecutorCreator.instance().create());
    }
 
    public GivWenZenForSlim(GivWenZenExecutor executor) {

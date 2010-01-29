@@ -1,0 +1,26 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-simple-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/maven-ant-tasks-2.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mockito-core-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/google-collect-1.0-rc4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javassist.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fitlibrary.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/clover-2.6.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fitnesse.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-vfs-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/objenesis-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fest-assert-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fest-util-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
