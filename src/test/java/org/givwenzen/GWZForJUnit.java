@@ -6,9 +6,11 @@ package org.givwenzen;
 public final class GWZForJUnit {
 
    private static Object unitTest;
+   private static GivWenZen gwz = null;
 
    public static void setUp(Object unitTest) {
       GWZForJUnit.unitTest = unitTest;
+      gwz = null;
    }
 
    public static Object and(String methodString) throws Exception {
@@ -31,10 +33,11 @@ public final class GWZForJUnit {
       String basePackageForSteps = DomainStepFinder.DEFAULT_STEP_PACKAGE;
       if (unitTest != null)
          basePackageForSteps += "," + unitTest.getClass().getPackage().getName() + ".";
-      return GivWenZenExecutorCreator.instance()
-         .customStepState(unitTest)
+      if (gwz == null)
+         gwz = GivWenZenExecutorCreator.instance()
          .stepClassBasePackage(basePackageForSteps)
          .create();
+      return gwz;
    }
 
 }

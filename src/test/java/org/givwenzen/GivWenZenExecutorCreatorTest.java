@@ -26,7 +26,7 @@ public class GivWenZenExecutorCreatorTest {
    public void shouldBeAbleToCreateGivWenZenExecutorWithStepSharedStateObject() throws Exception {
       String state = "my state object";
       GivWenZenExecutor executor = creator.customStepState(state).create();
-      assertThat(executor.getCustomStepState()).isEqualTo(state);
+      assertThat(executor.getCustomStepState()[0]).isEqualTo(state);
    }
 
    @Test

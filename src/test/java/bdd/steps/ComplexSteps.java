@@ -40,21 +40,21 @@ public class ComplexSteps {
       return calledSteps.contains(customStep);
    }
 
-   @DomainStep("a custom state object is used")
+   @DomainStep("custom state objects are used")
    public void createGWZWithCustomState() {
       gwz = GivWenZenExecutorCreator.instance()
-         .customStepState(new TestCustomState())
+         .customStepState(new TestCustomState(), new TestCustomState2())
          .create();
    }
 
-   @DomainStep("calling a step that sets (.*) in the custom state")
-   public void callAStepAndSetStateValue(String value) throws Exception {
-      gwz.when("set value " + value + " in custom state");
+   @DomainStep("calling a step that sets (.*) in the (.*) custom state")
+   public void callAStepAndSetFirstStateValue(String value, String whichState) throws Exception {
+      gwz.when("set value " + value + " in " + whichState + " custom state");
    }
 
-   @DomainStep("another step has access to (.*) in the custom state")
-   public boolean callAStepThatRetrieveStateValue(String value) throws Exception {
-      return gwz.then("retrieve custom state").equals(value);
+   @DomainStep("another step has access to (.*) in the (.*) custom state")
+   public boolean callAStepThatRetrieveStateValue(String value, String whichState) throws Exception {
+      return gwz.then("retrieve " + whichState + " custom state").equals(value);
    }
 
    @DomainStep("a custom instantiation strategy for creating custom step classes")

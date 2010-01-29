@@ -8,29 +8,37 @@ import org.givwenzen.annotations.InstantiationStrategy;
 import org.givwenzen.annotations.MarkedClass;
 
 public class GivWenZenExecutor implements GivWenZen {
-   private Object stepState;
+   private Object[] stepState;
    private DomainStepMethodLocator methodLocator;
    private DomainStepFinder domainStepFinder;
    private DomainStepFactory domainStepFactory;
 
    public GivWenZenExecutor() {
-      this(null, new DomainStepFinder(), new DomainStepFactory());
+      this(new DomainStepFinder(), new DomainStepFactory());
    }
 
-   public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder, DomainStepFactory factory) {
+   public GivWenZenExecutor(DomainStepFinder domainStepFinder, DomainStepFactory factory, Object... stepState) {
       super();
       this.domainStepFinder = domainStepFinder;
       this.domainStepFactory = factory;
-      this.stepState = stepState == null ? this : stepState;
-      Object[] adapters = new Object[]{this.stepState, this};
+//      this.stepState = stepState == null ? this : stepState;
+//      Object[] adapters = new Object[]{this.stepState, this};
+
+      this.stepState = stepState == null ? new Object[] {this} : stepState;
+      int adaptersLength = this.stepState.length + 1;
+      Object[] adapters = new Object[adaptersLength];
+      System.arraycopy(this.stepState, 0, adapters, 0, adaptersLength - 1);
+      adapters[adaptersLength - 1] = this;
+
+
       Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
       List<Object> stepDefinitions = factory.createStepDefinitions(classes, adapters);
       stepDefinitions.add(0, this.stepState);
       methodLocator = new DomainStepMethodLocator(stepDefinitions);
    }
 
-   public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder) {
-      this(stepState, domainStepFinder, new DomainStepFactory());
+   public GivWenZenExecutor(DomainStepFinder domainStepFinder, Object... stepState) {
+      this(domainStepFinder, new DomainStepFactory(), stepState);
    }
 
    public Object given(String methodString) throws Exception {
@@ -64,14 +72,14 @@ public class GivWenZenExecutor implements GivWenZen {
             "  step class is: " + method.getTargetAsString(), e);
 
       }
-      return returnValue == null ? stepState : returnValue;
+      return returnValue == null ? stepState[0] : returnValue;
    }
 
    public String getBaseStepClassPackge() {
       return domainStepFinder.getPackage();
    }
 
-   public Object getCustomStepState() {
+   public Object[] getCustomStepState() {
       return stepState;
    }
 

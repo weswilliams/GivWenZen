@@ -12,6 +12,7 @@ import org.givwenzen.annotations.*;
 import org.junit.Before;
 import org.junit.Test;
 
+@DomainSteps
 public class DomainStepFactoryTest {
   private DomainStepFactory domainStepFactory;
   private Class<?> domainStepClass;
@@ -22,7 +23,6 @@ public class DomainStepFactoryTest {
   public void setUp() throws Exception {
     GWZForJUnit.setUp(this);
     PropertyEditorManager.registerEditor(Class.class, DomainStepFactoryTest.ClassPropertyEditor.class);
-    domainStepFactory = new DomainStepFactory();
   }
 
   @Test
@@ -103,7 +103,7 @@ public class DomainStepFactoryTest {
   
   @DomainStep("the marked class is created")
   public void callCreate() {
-    stepDefinitions = Collections.singletonList(domainStepFactory.create(markedClass, this));
+    stepDefinitions = Collections.singletonList(getDSFactory().create(markedClass, this));
   }
   
   @DomainStep("a step class (.*) with (?:.*)")
@@ -115,7 +115,7 @@ public class DomainStepFactoryTest {
   public void createStepDefinitions(Class<?> constructorObjectClass) throws InstantiationException, IllegalAccessException {
     Set<MarkedClass> classes = createMarkedClasses(domainStepClass);
     Object[] adapters = new Object[] { createObject(constructorObjectClass) };
-    stepDefinitions = domainStepFactory.createStepDefinitions(classes, adapters);
+    stepDefinitions = getDSFactory().createStepDefinitions(classes, adapters);
   }
 
   @DomainStep("an instance of the class (.*) is created")
@@ -146,6 +146,11 @@ public class DomainStepFactoryTest {
     }
     return stepsClasses;
   }
+
+   private DomainStepFactory getDSFactory() {
+      if (domainStepFactory == null) domainStepFactory = new DomainStepFactory();
+      return domainStepFactory;
+   }
 
   public class TestMarkedClass {
     public TestMarkedClass() {

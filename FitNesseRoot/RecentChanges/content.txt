@@ -1,3 +1,4 @@
+|GivWenZenTests.ComplexStepScenario.UseCustomStateObject||18:13:14 Fri, Jan 29, 2010|
 |SlimExamples.SetUp||19:35:07 Mon, Jan 18, 2010|
 |SlimExamples||16:54:34 Mon, Jan 18, 2010|
 |SlimExamples.AddTwoNumbersWithoutDuplication2||15:40:47 Mon, Jan 18, 2010|
@@ -34,7 +35,6 @@
 |SlimExamples.FitLibraryExample||10:33:28 Mon, Nov 09, 2009|
 |SlimExamples.FitLibrary||10:12:46 Mon, Nov 09, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomStepPackage||17:54:28 Wed, Oct 07, 2009|
-|GivWenZenTests.ComplexStepScenario.UseCustomStateObject||17:53:18 Wed, Oct 07, 2009|
 |GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy||17:52:01 Wed, Oct 07, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithNoParameterCanBeCalled||15:29:26 Wed, Oct 07, 2009|
 |GivWenZenTests.SimpleStepScenario.StepWithNativeTypeParameterCanBeCalled||15:24:23 Wed, Oct 07, 2009|
