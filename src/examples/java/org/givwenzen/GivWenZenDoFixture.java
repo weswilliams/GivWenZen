@@ -4,7 +4,9 @@ import fitlibrary.DoFixture;
 
 public class GivWenZenDoFixture extends DoFixture {
 
-    public GivWenZenDoFixture() {
-        super(new GivWenZenExecutor(new CustomState(), new DomainStepFinder()));
-    }
+   public GivWenZenDoFixture() {
+      super(GivWenZenExecutorCreator.instance()
+         .customStepState(new CustomState())
+         .create());
+   }
 }

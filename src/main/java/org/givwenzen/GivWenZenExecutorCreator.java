@@ -2,18 +2,23 @@ package org.givwenzen;
 
 public class GivWenZenExecutorCreator {
    private String packageName;
+   private Object state;
+
+   public static GivWenZenExecutorCreator instance() {
+      return new GivWenZenExecutorCreator();
+   }
 
    public GivWenZenExecutorCreator stepClassBasePackage(String packageName) {
       this.packageName = packageName;
       return this;
    }
 
-   public static GivWenZenExecutorCreator instance() {
-      return new GivWenZenExecutorCreator();
+   public GivWenZenExecutorCreator customStepState(Object state) {
+      this.state = state;
+      return this;
    }
 
    public GivWenZenExecutor create() {
-      // null, new DomainStepFinder(), new DomainStepFactory()
       return new GivWenZenExecutor(getStepState(), createDomainStepFinder(), createDomainStepFactory());
    }
 
@@ -27,6 +32,6 @@ public class GivWenZenExecutorCreator {
    }
 
    private Object getStepState() {
-      return null;
+      return state;
    }
 }

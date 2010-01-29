@@ -1,7 +1,6 @@
 package org.givwenzen;
 
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.Set;
 
@@ -67,5 +66,9 @@ public class GivWenZenExecutor implements GivWenZen {
 
    public String getBaseStepClassPackge() {
       return domainStepFinder.getPackage();
+   }
+
+   public Object getCustomStepState() {
+      return stepState;
    }
 }
