@@ -1,7 +1,5 @@
 package bdd.steps;
 
-import org.givwenzen.DomainStepFactory;
-import org.givwenzen.DomainStepFinder;
 import org.givwenzen.GivWenZenExecutor;
 import org.givwenzen.GivWenZenExecutorCreator;
 import org.givwenzen.annotations.DomainStep;
@@ -62,7 +60,10 @@ public class ComplexSteps {
    @DomainStep("a custom instantiation strategy for creating custom step classes")
    public void createGWZWithCustomInstantiationStrategy() {
       InstantiationStrategy customStrategy = new TestCustomInstantiationStrategy();
-      gwz = new GivWenZenExecutor(this, new DomainStepFinder(), new DomainStepFactory(customStrategy));
+      gwz = GivWenZenExecutorCreator.instance()
+         .customStepState(this)
+         .customInstantiationStrategies(customStrategy)
+         .create();
    }
 
    @DomainStep("a step class that is created by the custom instantiation strategy")

@@ -4,12 +4,14 @@ package org.givwenzen;
 import java.util.List;
 import java.util.Set;
 
+import org.givwenzen.annotations.InstantiationStrategy;
 import org.givwenzen.annotations.MarkedClass;
 
 public class GivWenZenExecutor implements GivWenZen {
    private Object stepState;
    private DomainStepMethodLocator methodLocator;
    private DomainStepFinder domainStepFinder;
+   private DomainStepFactory domainStepFactory;
 
    public GivWenZenExecutor() {
       this(null, new DomainStepFinder(), new DomainStepFactory());
@@ -18,6 +20,7 @@ public class GivWenZenExecutor implements GivWenZen {
    public GivWenZenExecutor(Object stepState, DomainStepFinder domainStepFinder, DomainStepFactory factory) {
       super();
       this.domainStepFinder = domainStepFinder;
+      this.domainStepFactory = factory;
       this.stepState = stepState == null ? this : stepState;
       Object[] adapters = new Object[]{this.stepState, this};
       Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
@@ -70,5 +73,9 @@ public class GivWenZenExecutor implements GivWenZen {
 
    public Object getCustomStepState() {
       return stepState;
+   }
+
+   public List<InstantiationStrategy> getInstantiationStrategies() {
+      return domainStepFactory.getInstantiationStrategies();
    }
 }

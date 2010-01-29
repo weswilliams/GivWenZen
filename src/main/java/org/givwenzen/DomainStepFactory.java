@@ -58,4 +58,7 @@ public class DomainStepFactory {
       instantiationStrategies.add(strategy);
    }
 
+   public List<InstantiationStrategy> getInstantiationStrategies() {
+      return instantiationStrategies;
+   }
 }

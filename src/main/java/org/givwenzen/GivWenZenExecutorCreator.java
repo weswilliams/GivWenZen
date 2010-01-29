@@ -1,8 +1,11 @@
 package org.givwenzen;
 
+import org.givwenzen.annotations.InstantiationStrategy;
+
 public class GivWenZenExecutorCreator {
    private String packageName;
    private Object state;
+   private InstantiationStrategy[] instantiationStrategies = new InstantiationStrategy[0];
 
    public static GivWenZenExecutorCreator instance() {
       return new GivWenZenExecutorCreator();
@@ -18,12 +21,17 @@ public class GivWenZenExecutorCreator {
       return this;
    }
 
+   public GivWenZenExecutorCreator customInstantiationStrategies(InstantiationStrategy ... instantiationStrategy) {
+      this.instantiationStrategies = instantiationStrategy;
+      return this;
+   }
+
    public GivWenZenExecutor create() {
       return new GivWenZenExecutor(getStepState(), createDomainStepFinder(), createDomainStepFactory());
    }
 
    private DomainStepFactory createDomainStepFactory() {
-      return new DomainStepFactory();
+      return new DomainStepFactory(instantiationStrategies);
    }
 
    private DomainStepFinder createDomainStepFinder() {

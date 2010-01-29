@@ -1,7 +1,9 @@
 package org.givwenzen;
 
 import static org.fest.assertions.Assertions.*;
+import static org.mockito.Mockito.*;
 
+import org.givwenzen.annotations.InstantiationStrategy;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,5 +27,12 @@ public class GivWenZenExecutorCreatorTest {
       String state = "my state object";
       GivWenZenExecutor executor = creator.customStepState(state).create();
       assertThat(executor.getCustomStepState()).isEqualTo(state);
+   }
+
+   @Test
+   public void shouldBeAbleToCreateGivWenZenExecutorWithCustomStepClassInstantiationStrategy() throws Exception {
+      InstantiationStrategy instantiationStrategy = mock(InstantiationStrategy.class);
+      GivWenZenExecutor executor = GivWenZenExecutorCreator.instance().customInstantiationStrategies(instantiationStrategy).create();
+      assertThat(executor.getInstantiationStrategies()).contains(instantiationStrategy);
    }
 }
