@@ -53,8 +53,10 @@
 		<path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" />
 		<path path="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar" />
 		<path path="${givwenzen.lib.dir}/fitlibrary.jar" />
-		<path path="${givwenzen.lib.dir}/fitnesse.jar" />
-	</path>
+        <path path="${givwenzen.lib.dir}/fitnesse.jar" />
+        <path path="${givwenzen.lib.dir}/fest-assert-1.2.jar" />
+        <path path="${givwenzen.lib.dir}/fest-util-1.1.jar" />
+    </path>
 
 	<path id="givwenzen.examples.classpath">
 		<path refid="givwenzen.classpath" />
