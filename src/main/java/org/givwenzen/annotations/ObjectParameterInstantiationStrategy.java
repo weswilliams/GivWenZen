@@ -12,8 +12,9 @@ public class ObjectParameterInstantiationStrategy implements InstantiationStrate
     } catch (Exception e) {
       constructor = null;
     }
+     InstantiationStateCreator creator = new InstantiationStateCreator();
     return constructor == null ? 
-        DefaultInstantiationState.UNINSTANTIATED : 
-        new DefaultInstantiationState(true, constructor.newInstance(parameter));
+        creator.didNotInstantiate() :
+        creator.didInstantiate(constructor.newInstance(parameter));
   }
 }

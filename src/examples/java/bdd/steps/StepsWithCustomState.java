@@ -13,7 +13,7 @@ public class StepsWithCustomState {
   }
   
   @DomainStep("the custom state is (.*)")
-  public boolean domainStep(String customeState) {
+  public boolean verifyCustomState(String customeState) {
     return customeState.equals(state.someValue());
   }  
 }
