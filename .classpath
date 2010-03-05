@@ -19,5 +19,7 @@
 	<classpathentry kind="lib" path="lib/fitlibrary.jar"/>
 	<classpathentry kind="lib" path="lib/fitnesse.jar"/>
 	<classpathentry kind="lib" path="lib/google-collect-1.0-rc4.jar"/>
+	<classpathentry kind="lib" path="lib/fest-assert-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/fest-util-1.1.jar"/>
 	<classpathentry kind="output" path="target/classes/main"/>
 </classpath>
