@@ -24,7 +24,7 @@ public class GivWenZenExecutor implements GivWenZen {
 //      this.stepState = stepState == null ? this : stepState;
 //      Object[] adapters = new Object[]{this.stepState, this};
 
-      this.stepState = stepState == null ? new Object[] {this} : stepState;
+      this.stepState = stepState == null || stepState.length == 0 ? new Object[] {this} : stepState;
       int adaptersLength = this.stepState.length + 1;
       Object[] adapters = new Object[adaptersLength];
       System.arraycopy(this.stepState, 0, adapters, 0, adaptersLength - 1);
