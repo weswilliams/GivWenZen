@@ -1,6 +1,7 @@
 package org.givwenzen.parse;
 
 import org.junit.*;
+
 import static org.fest.assertions.Assertions.*;
 
 public class ArrayParserTest {
@@ -31,15 +32,15 @@ public class ArrayParserTest {
       assertThat(values[2]).isEqualTo("3");
    }
 
-//   @Test TODO
-//   public void shouldParseNativeArrayString() throws Exception {
-//      String arrayString = "1,2,3";
-//      int[] values = (int[]) parser.parse(arrayString, (new int[0]).getClass());
-//      assertThat(values.length).isEqualTo(3);
-//      assertThat(values[0]).isEqualTo(1);
-//      assertThat(values[1]).isEqualTo(2);
-//      assertThat(values[2]).isEqualTo(3);
-//   }
+   @Test
+   public void shouldParseNativeArrayString() throws Exception {
+      String arrayString = "1,2,3";
+      int[] values = (int[]) parser.parse(arrayString, (new int[0]).getClass());
+      assertThat(values.length).isEqualTo(3);
+      assertThat(values[0]).isEqualTo(1);
+      assertThat(values[1]).isEqualTo(2);
+      assertThat(values[2]).isEqualTo(3);
+   }
 
    class ForArrayParserTest {
       public void nativeArrayMethod(int[] integers) {

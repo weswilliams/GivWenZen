@@ -12,6 +12,7 @@ public class ExampleSteps {
    private List<Integer> numbers = new ArrayList<Integer>();
    private Integer total;
    private String[] values;
+   private int[] ints;
 
    public ExampleSteps(GivWenZen givWenZen) {
       this.givWenZen = givWenZen;
@@ -56,4 +57,14 @@ public class ExampleSteps {
       System.out.println("value[" + index + "]=" + values[index]);
       return values[index].equals(value);
    }
+
+   @DomainStep("a native array method (.*)")
+    public void nativeArrayParameterMethod(int[] ints) {
+      this.ints = ints;
+   }
+
+   @DomainStep("native array " + SOME_NUMBER + " has " + SOME_NUMBER)
+    public boolean verifyNativeArrayParameterMethod(int index, int value) {
+      return ints[index] == value;
+    }
 }

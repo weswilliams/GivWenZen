@@ -17,10 +17,10 @@ public class ArrayParser implements MethodParameterParser {
    @Override
    public Object parse(Object param, Class<?> paramType) throws Exception {
       String[] values = param.toString().split(",");
-      Object[] objects = (Object[]) Array.newInstance(paramType.getComponentType(), values.length);
+      Object array = Array.newInstance(paramType.getComponentType(), values.length);
       for (int i = 0; i < values.length; i++) {
-         objects[i] = propertyEditorParser.parse(values[i], paramType.getComponentType());
+         Array.set(array, i, propertyEditorParser.parse(values[i], paramType.getComponentType()));
       }
-      return objects;
+      return array;
    }
 }
