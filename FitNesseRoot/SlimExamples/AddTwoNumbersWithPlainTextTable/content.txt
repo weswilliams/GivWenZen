@@ -1,4 +1,3 @@
-
 ![: script
 given: i turn on the calculator
 and: i have entered 50 into the calculator

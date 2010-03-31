@@ -5,12 +5,13 @@ import java.util.List;
 
 public class StringToObjectParser {
 
-  MethodParameterParser[] parserInDesiredOrder = new MethodParameterParser[3];
+  MethodParameterParser[] parserInDesiredOrder = new MethodParameterParser[4];
 
   public StringToObjectParser() {
     parserInDesiredOrder[0] = new StringParser();
     parserInDesiredOrder[1] = new PropertyEditorParser();
-    parserInDesiredOrder[2] = new ValueObjectParser();
+    parserInDesiredOrder[2] = new ArrayParser(new PropertyEditorParser());
+    parserInDesiredOrder[3] = new ValueObjectParser();
   }
 
   public Object[] convertParamertersToTypes(Object[] params, Class<?>[] paramTypes) throws Exception {
