@@ -187,6 +187,8 @@
 			<zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" excludes="**/meta-inf/*.*" />
 			<zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar" excludes="**/meta-inf/*.*" />
+            <fileset dir="${givwenzen.basedir}" includes="src/**/*.*" excludes="**/.svn/*.*,**/test/*.*"/>
+            <!--<fileset dir="${givwenzen.examples.src.dir}" excludes="**/.svn/*.*"/>-->
 		</jar>
 	</target>
 
