@@ -20,7 +20,11 @@ public class MissingStepMethodAndInvocationTarget extends MethodAndInvocationTar
         "    public void domainStep() {\n" +
         "      // TODO implement step\n" +
         "    }" +
-        "  }");  
+        "  }\n" +
+        "Typical causes of this error are:\n" +
+        "  * StepClass is missing the @DomainSteps annotation\n" +
+        "  * StepMethod is missing the @DomainStep annotation\n" +
+        "  * The step method annotation has a regular expression that is not matching the current test step\n");  
     }
 
   @Override

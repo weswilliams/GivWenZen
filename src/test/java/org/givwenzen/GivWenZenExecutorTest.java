@@ -9,7 +9,8 @@ import java.beans.PropertyEditorSupport;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.fest.assertions.Assertions.*;
+import static org.junit.Assert.fail;
 
 public class GivWenZenExecutorTest implements GivWenZen {
 
@@ -73,8 +74,9 @@ public class GivWenZenExecutorTest implements GivWenZen {
          .stepClassBasePackage(basePackageForSteps)
          .create();
       executor.given("a step can be handled either through the gui or through the business layer");
-      assertEquals(1, list.size());
-      assertEquals(expected, list.get(0));
+
+      assertThat(list.size()).isEqualTo(1);
+      assertThat(list.get(0)).isEqualTo(expected);
    }
 
    @Test
@@ -102,13 +104,11 @@ public class GivWenZenExecutorTest implements GivWenZen {
          executor.given(method);
          fail("Should Scream When Annotated Method Is Not Found");
       } catch (InvalidDomainStepParameterException e) {
-         assertEquals("Invalid step parameters in method pattern: " + method, e.getMessage().split("\\n")[1]);
-         assertEquals(
-            "  found matching method annotated with: method taking int of (\\d+) parameter and with return value",
-            e.getMessage().split("\\n")[2]);
-         assertEquals(
-            "  method signature is: public java.lang.String org.givwenzen.GivWenZenExecutorTest$FakeSteps2.methodWithIntParameterAndWithReturnValue(int)",
-            e.getMessage().split("\\n")[3]);
+         assertThat(e.getMessage().split("\\n")[1]).isEqualTo("Invalid step parameters in method pattern: " + method);
+         assertThat(e.getMessage().split("\\n")[2]).isEqualTo(
+            "  found matching method annotated with: method taking int of (\\d+) parameter and with return value");
+         assertThat(e.getMessage().split("\\n")[3]).isEqualTo(
+            "  method signature is: public java.lang.String org.givwenzen.GivWenZenExecutorTest$FakeSteps2.methodWithIntParameterAndWithReturnValue(int)");
       }
    }
 
@@ -117,7 +117,7 @@ public class GivWenZenExecutorTest implements GivWenZen {
       try {
          executor.given("not found");
       } catch (DomainStepNotFoundException e) {
-         assertEquals(0, e.getStackTrace().length);
+         assertThat(e.getStackTrace().length).isEqualTo(0);
       }
    }
 
@@ -126,7 +126,9 @@ public class GivWenZenExecutorTest implements GivWenZen {
       try {
          executor.given("not found");
       } catch (DomainStepNotFoundException e) {
-         assertTrue(e.getMessage().contains("@DomainStep(\"not found\")"));
+         assertThat(e.getMessage().contains("@DomainStep(\"not found\")")).isTrue();
+         assertThat(e.getMessage().toLowerCase()).contains("typical causes of this error are:");
+         assertThat(e.getMessage().toLowerCase()).contains("step class ");
       } catch (Exception e) {
          System.out.println("error " + e);
       }
@@ -135,8 +137,8 @@ public class GivWenZenExecutorTest implements GivWenZen {
    @Test
    public void testMethodWithOutParametersAndWithReturnValueIsCalled() throws Exception {
       for (String bddMethod : bddMethods) {
-         assertEquals(METHOD_WITHOUT_PARAMETERS_AND_WITH_RETURN_VALUE, executeStringMethodOnAdapter(
-            METHOD_WITHOUT_PARAMETERS_AND_WITH_RETURN_VALUE, bddMethod));
+         assertThat(executeStringMethodOnAdapter(METHOD_WITHOUT_PARAMETERS_AND_WITH_RETURN_VALUE, bddMethod))
+            .isEqualTo(METHOD_WITHOUT_PARAMETERS_AND_WITH_RETURN_VALUE);
       }
    }
 
@@ -144,9 +146,9 @@ public class GivWenZenExecutorTest implements GivWenZen {
    public void testMethodWithOutParametersAndWithoutReturnValueIsCalled() throws Exception {
       for (String bddMethod : bddMethods) {
          methodWithOutParametersAndWithoutReturnValueCalled = false;
-         assertEquals(this, executeStringMethodOnAdapter(METHOD_WITHOUT_PARAMETERS_AND_WITHOUT_RETURN_VALUE,
-            bddMethod));
-         assertTrue(methodWithOutParametersAndWithoutReturnValueCalled);
+         assertThat(executeStringMethodOnAdapter(METHOD_WITHOUT_PARAMETERS_AND_WITHOUT_RETURN_VALUE, bddMethod))
+             .isEqualTo(this);
+         assertThat(methodWithOutParametersAndWithoutReturnValueCalled).isTrue();
       }
    }
 
@@ -154,9 +156,9 @@ public class GivWenZenExecutorTest implements GivWenZen {
    public void testMethodWithIntegerParameterAndReturnValueIsCalled() throws Exception {
       for (String bddMethod : bddMethods) {
          intParamValue = 0;
-         assertEquals(METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE, executeStringMethodOnAdapter(
-            METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE, bddMethod));
-         assertEquals(1, intParamValue);
+         assertThat(executeStringMethodOnAdapter(METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE, bddMethod))
+            .isEqualTo(METHOD_WITH_INTEGER_PARAMETER_AND_WITH_RETURN_VALUE);
+         assertThat(intParamValue).isEqualTo(1);
       }
    }
 
@@ -164,9 +166,10 @@ public class GivWenZenExecutorTest implements GivWenZen {
    public void testMethodWithMySimpleClassParameterAndReturnValueIsCalled() throws Exception {
       for (String bddMethod : bddMethods) {
          mySimpleClass = null;
-         assertEquals(METHOD_WITH_MYSIMPLECLASS_PARAMETER_AND_WITH_RETURN_VALUE, executeStringMethodOnAdapter(
-            METHOD_WITH_MYSIMPLECLASS_PARAMETER_AND_WITH_RETURN_VALUE, bddMethod));
-         assertEquals("MySimpleCass", mySimpleClass.getValue());
+         assertThat(executeStringMethodOnAdapter(
+            METHOD_WITH_MYSIMPLECLASS_PARAMETER_AND_WITH_RETURN_VALUE, bddMethod))
+               .isEqualTo(METHOD_WITH_MYSIMPLECLASS_PARAMETER_AND_WITH_RETURN_VALUE);
+         assertThat(mySimpleClass.getValue()).isEqualTo("MySimpleCass");
       }
    }
 
@@ -174,20 +177,18 @@ public class GivWenZenExecutorTest implements GivWenZen {
    public void testMethodWithMySimpleClass3ParameterWithAObjectParseAndReturnValueIsCalled() throws Exception {
       for (String bddMethod : bddMethods) {
          mySimpleClass3 = null;
-         assertEquals(
-            METHOD_WITH_MY_SIMPLE_CLASS3_PARAMETER_USING_OBJECT_PARSE_AND_WITH_RETURN_VALUE,
-            executeStringMethodOnAdapter(
-               METHOD_WITH_MY_SIMPLE_CLASS3_PARAMETER_USING_OBJECT_PARSE_AND_WITH_RETURN_VALUE,
-               bddMethod));
-         assertEquals("MySimpleCass3", mySimpleClass3.getValue());
+         assertThat(executeStringMethodOnAdapter(
+               METHOD_WITH_MY_SIMPLE_CLASS3_PARAMETER_USING_OBJECT_PARSE_AND_WITH_RETURN_VALUE, bddMethod))
+            .isEqualTo(METHOD_WITH_MY_SIMPLE_CLASS3_PARAMETER_USING_OBJECT_PARSE_AND_WITH_RETURN_VALUE);
+         assertThat(mySimpleClass3.getValue()).isEqualTo("MySimpleCass3");
       }
    }
 
    @Test
    public void testAnnotatedClassesAreFoundAndStepsAreAvailable() throws Exception {
       // this method is available in FakeSteps.java
-      assertEquals(true, executor.given("my step"));
-      assertEquals(true, executor.given("my step in class requiring access to the adapter"));
+      assertThat(executor.given("my step")).isEqualTo(true);
+      assertThat(executor.given("my step in class requiring access to the adapter")).isEqualTo(true);
    }
 
    @Test(expected = GivWenZenExecutionException.class)
