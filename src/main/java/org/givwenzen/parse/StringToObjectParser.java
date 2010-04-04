@@ -1,33 +1,58 @@
 package org.givwenzen.parse;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.givwenzen.*;
+import org.givwenzen.reflections.*;
+
+import java.util.*;
 
 public class StringToObjectParser {
 
-  MethodParameterParser[] parserInDesiredOrder = new MethodParameterParser[4];
+   private List<MethodParameterParser> parsersInDesiredOrder = new ArrayList<MethodParameterParser>();
 
-  public StringToObjectParser() {
-    parserInDesiredOrder[0] = new StringParser();
-    parserInDesiredOrder[1] = new PropertyEditorParser();
-    parserInDesiredOrder[2] = new ArrayParser(new PropertyEditorParser());
-    parserInDesiredOrder[3] = new ValueObjectParser();
-  }
+   public StringToObjectParser() {
+      addCustomParsers(parsersInDesiredOrder);
+      parsersInDesiredOrder.add(new StringParser());
+      parsersInDesiredOrder.add(new PropertyEditorParser());
+      parsersInDesiredOrder.add(new ArrayParser(new PropertyEditorParser()));
+      parsersInDesiredOrder.add(new ValueObjectParser());
+   }
 
-  public Object[] convertParamertersToTypes(Object[] params, Class<?>[] paramTypes) throws Exception {
-    List<Object> convertedParams = new ArrayList<Object>();
-    for (int index = 0; index < paramTypes.length; index++) {
-      convertedParams.add(convertStringToParamType(params[index], paramTypes[index]));
-    }
-    return convertedParams.toArray(new Object[convertedParams.size()]);
-  }
+   private void addCustomParsers(List<MethodParameterParser> parsersInDesiredOrder) {
 
-  private Object convertStringToParamType(Object param, Class<?> paramType) throws Exception {
-    for (MethodParameterParser parser : parserInDesiredOrder) {
-      if (parser.canParse(paramType)) {
-        return parser.parse(param, paramType);
+      Reflections reflections = new ReflectionsBuilder()
+         .basePackage("bdd.parse.")
+         .subTypeScanner()
+         .build();
+      Set<Class<? extends MethodParameterParser>> classes = reflections.getSubTypesOf(MethodParameterParser.class);
+      for (Class<? extends MethodParameterParser> aClass : classes) {
+         try {
+            parsersInDesiredOrder.add(aClass.newInstance());
+         } catch (InstantiationException e) {
+            throw new GivWenZenException(
+               "Unable to instantiate " + aClass.getName() +
+               ".  The usual cause of this is the class is an interface or abstract class.", e);
+         } catch (IllegalAccessException e) {
+            throw new GivWenZenException(
+               "Unable to access the constructor for " + aClass.getName() +
+               ".  The usual cause of this is the constructor is private or protected.", e);
+         }
       }
-    }
-    return param;
-  }
+   }
+
+   public Object[] convertParamertersToTypes(Object[] paramerters, Class<?>[] paramerterTypes) throws Exception {
+      List<Object> convertedParamerters = new ArrayList<Object>();
+      for (int index = 0; index < paramerterTypes.length; index++) {
+         convertedParamerters.add(convertStringToParamerterType(paramerters[index], paramerterTypes[index]));
+      }
+      return convertedParamerters.toArray(new Object[convertedParamerters.size()]);
+   }
+
+   private Object convertStringToParamerterType(Object paramerter, Class<?> paramerterType) throws Exception {
+      for (MethodParameterParser parser : parsersInDesiredOrder) {
+         if (parser.canParse(paramerterType)) {
+            return parser.parse(paramerter, paramerterType);
+         }
+      }
+      return paramerter;
+   }
 }

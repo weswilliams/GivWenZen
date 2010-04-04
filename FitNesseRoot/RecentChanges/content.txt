@@ -1,3 +1,4 @@
+|SlimExamples.ObjectVarArgsExample||09:19:03 Fri, Apr 02, 2010|
 |SlimExamples.NativeArrayParameterExample||21:40:44 Wed, Mar 31, 2010|
 |SlimExamples.ArrayParameterExample||21:11:31 Wed, Mar 31, 2010|
 |SlimExamples.AddTwoNumbersWithPlainTextTable||21:08:05 Wed, Mar 31, 2010|

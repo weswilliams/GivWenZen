@@ -1,7 +1,7 @@
 package org.givwenzen.parse;
 
 public interface MethodParameterParser {
-  boolean canParse(Class<?> paramType);
+  boolean canParse(Class<?> paramerterType);
 
-  Object parse(Object param, Class<?> paramType) throws Exception;
+  Object parse(Object paramerter, Class<?> paramerterType) throws Exception;
 }

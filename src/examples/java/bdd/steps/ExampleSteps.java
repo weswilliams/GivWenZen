@@ -13,6 +13,7 @@ public class ExampleSteps {
    private Integer total;
    private String[] values;
    private int[] ints;
+   private ExampleObject[] objects;
 
    public ExampleSteps(GivWenZen givWenZen) {
       this.givWenZen = givWenZen;
@@ -59,12 +60,23 @@ public class ExampleSteps {
    }
 
    @DomainStep("a native array method (.*)")
-    public void nativeArrayParameterMethod(int[] ints) {
+   public void nativeArrayParameterMethod(int... ints) {
       this.ints = ints;
    }
 
    @DomainStep("native array " + SOME_NUMBER + " has " + SOME_NUMBER)
-    public boolean verifyNativeArrayParameterMethod(int index, int value) {
+   public boolean verifyNativeArrayParameterMethod(int index, int value) {
       return ints[index] == value;
-    }
+   }
+
+
+   @DomainStep("a var arg method of TestObjects (.*)")
+   public void objectArrayParameterMethod(ExampleObject... objects) {
+      this.objects = objects;
+   }
+
+   @DomainStep("var arg (\\d+) is (.*)")
+   public boolean verifyObjectVarArgs(int index, ExampleObject value) {
+      return objects[index].equals(value);
+   }
 }

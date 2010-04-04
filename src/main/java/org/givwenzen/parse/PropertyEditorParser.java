@@ -13,18 +13,18 @@ public class PropertyEditorParser implements MethodParameterParser {
     addToPropertyManagerSearchPath(EDITOR_SEARCH_PATH);
   }
 
-  public boolean canParse(Class<?> paramType) {
-    return getPropertyEditorFor(paramType) != null;
+  public boolean canParse(Class<?> paramerterType) {
+    return getPropertyEditorFor(paramerterType) != null;
   }
 
-  public Object parse(Object param, Class<?> paramType) throws Exception {
-    PropertyEditor propertyEditor = getPropertyEditorFor(paramType);
-    propertyEditor.setAsText(param.toString());
+  public Object parse(Object paramerter, Class<?> paramerterType) throws Exception {
+    PropertyEditor propertyEditor = getPropertyEditorFor(paramerterType);
+    propertyEditor.setAsText(paramerter.toString());
     return propertyEditor.getValue();
   }
 
-  public static PropertyEditor getPropertyEditorFor(Class<?> paramType) {
-    return PropertyEditorManager.findEditor(paramType);
+  public static PropertyEditor getPropertyEditorFor(Class<?> paramerterType) {
+    return PropertyEditorManager.findEditor(paramerterType);
   }
 
   public static void addToPropertyManagerSearchPath(String editorSearchPath) {
