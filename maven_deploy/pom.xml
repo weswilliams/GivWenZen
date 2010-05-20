@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.givwenzen</groupId>
 	<artifactId>GivWenZen</artifactId>
-	<version>1.0Beta5-SNAPSHOT</version>
+	<version>1.0Beta10</version>
 
 	<dependencies>
 		<dependency>
@@ -14,13 +14,13 @@
 		<dependency>
 			<groupId>org.fitnesse</groupId>
 			<artifactId>fitnesse</artifactId>
-			<version>20090709</version>
+			<version>20100303</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.google.collections</groupId>
 			<artifactId>google-collections</artifactId>
-			<version>1.0-rc2</version>
+			<version>1.0-rc4</version>
 		</dependency>
 
 		<dependency>
@@ -37,7 +37,7 @@
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-core</artifactId>
+			<artifactId>slf4j-simple</artifactId>
 			<version>1.5.6</version>
 		</dependency>
 
@@ -46,19 +46,16 @@
 			<artifactId>dom4j</artifactId>
 			<version>1.6</version>
 		</dependency>
-
 		<dependency>
 			<groupId>apache-log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.14</version>
 		</dependency>
-
 		<dependency>
-			<groupId>org.reflections</groupId>
-			<artifactId>reflections</artifactId>
-			<version>0.9.4</version>
+			<groupId>commons-vfs</groupId>
+			<artifactId>commons-vfs</artifactId>
+			<version>1.0</version>
 		</dependency>
-
 	</dependencies>
 
 </project>

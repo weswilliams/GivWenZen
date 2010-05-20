@@ -233,7 +233,7 @@
 		</findbugs>
 	</target>
 
-	<target name="maven.deploy" depends="build.givwenzen">
+	<target name="maven.deploy">
 		<artifact:remoteRepository url="${maven.releases.repo}" id="nexus.releases">
 			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
 		</artifact:remoteRepository>
@@ -244,8 +244,8 @@
 
 		<artifact:pom id="gwz.pom" file="${givwenzen.basedir}/maven_deploy/pom.xml" />
 
-		<artifact:deploy file="${givwenzen.target.dir}/${jar.file.name}">
-			<remoteRepository refid="nexus.snapshots" />
+		<artifact:deploy file="${givwenzen.target.dir}/${maven.jar.file.name}">
+			<remoteRepository refid="nexus.releases" />
 			<pom refid="gwz.pom" />
 		</artifact:deploy>
 	</target>
