@@ -9,8 +9,8 @@ public class StringToObjectParserTest {
    @Test
    public void shouldFindAdditionalMethodParameterParsersInBDDDotParse() throws Exception {
       String[] value = {"x"};
-      Class<?>[] type = {TestCustomObjectForParsing.class};
+      Class<?>[] type = {CustomObjectForParsing.class};
       Object object = new StringToObjectParser().convertParamertersToTypes(value, type)[0];
-      assertEquals(new TestCustomObjectForParsing("x"), object);
+      assertEquals(new CustomObjectForParsing("x"), object);
    }
 }

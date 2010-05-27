@@ -1,6 +1,6 @@
 package bdd.steps;
 
-public class TestCustomState {
+public class CustomState {
 
   private String value;
 

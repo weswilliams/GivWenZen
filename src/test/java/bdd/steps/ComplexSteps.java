@@ -43,7 +43,7 @@ public class ComplexSteps {
    @DomainStep("custom state objects are used")
    public void createGWZWithCustomState() {
       gwz = GivWenZenExecutorCreator.instance()
-         .customStepState(new TestCustomState(), new TestCustomState2())
+         .customStepState(new CustomState(), new CustomState2())
          .create();
    }
 
@@ -59,7 +59,7 @@ public class ComplexSteps {
 
    @DomainStep("a custom instantiation strategy for creating custom step classes")
    public void createGWZWithCustomInstantiationStrategy() {
-      InstantiationStrategy customStrategy = new TestCustomInstantiationStrategy();
+      InstantiationStrategy customStrategy = new CustomInstantiationStrategy();
       gwz = GivWenZenExecutorCreator.instance()
          .customStepState(this)
          .customInstantiationStrategies(customStrategy)
@@ -68,7 +68,7 @@ public class ComplexSteps {
 
    @DomainStep("a step class that is created by the custom instantiation strategy")
    public void stepClassExistsAndCanBeInstantiatedByCustomInstantiationStrategy() throws Exception {
-      assertTrue(new TestCustomInstantiationStrategy().instantiate(CustomInstantiationSteps.class, null).couldInstantiate());
+      assertTrue(new CustomInstantiationStrategy().instantiate(CustomInstantiationSteps.class, null).couldInstantiate());
    }
 
    @DomainStep("a step is called that exists in the step class created by the custom instantiation strategy")

@@ -5,9 +5,9 @@ import org.givwenzen.annotations.DomainSteps;
 
 @DomainSteps
 public class StepsUsingCustomTestState {
-  private TestCustomState state;
+  private CustomState state;
 
-  public StepsUsingCustomTestState(TestCustomState state) {
+  public StepsUsingCustomTestState(CustomState state) {
     this.state = state;
   }
 

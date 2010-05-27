@@ -1,9 +1,9 @@
 package org.givwenzen.parse;
 
-public class TestCustomObjectForParsing {
+public class CustomObjectForParsing {
    private String value;
 
-   public TestCustomObjectForParsing(String value) {
+   public CustomObjectForParsing(String value) {
       this.value = value;
    }
 
@@ -11,7 +11,7 @@ public class TestCustomObjectForParsing {
    public boolean equals(Object o) {
       if (this == o) return true;
       if (o == null || getClass() != o.getClass()) return false;
-      TestCustomObjectForParsing that = (TestCustomObjectForParsing) o;
+      CustomObjectForParsing that = (CustomObjectForParsing) o;
       return !(value != null ? !value.equals(that.value) : that.value != null);
    }
 

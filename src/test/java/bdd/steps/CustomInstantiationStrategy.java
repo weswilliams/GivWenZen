@@ -7,7 +7,7 @@ import org.givwenzen.annotations.InstantiationStrategy;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 
-public class TestCustomInstantiationStrategy implements InstantiationStrategy {
+public class CustomInstantiationStrategy implements InstantiationStrategy {
 
    public InstantiationState instantiate(Class<?> markedClass, Object parameter) throws InvocationTargetException,
       InstantiationException, IllegalAccessException {
