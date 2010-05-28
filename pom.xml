@@ -5,7 +5,7 @@
     <artifactId>givwenzen</artifactId>
     <packaging>jar</packaging>
     <name>GivWenZen</name>
-    <version>1.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <description>
         GivWenZen allows a user to use the BDD Given When Then vocabulary and plain text sentences to help a
         team get the words right and create a ubiquitous language to describe and test a business domain.
