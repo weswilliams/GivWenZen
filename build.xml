@@ -37,8 +37,6 @@
 
 	<property file="${givwenzen.basedir}/${ant.project.name}.properties" />
 
-	<typedef resource="org/apache/maven/artifact/ant/antlib.xml" uri="urn:maven-artifact-ant" classpath="${givwenzen.basedir}/lib/maven-ant-tasks-2.0.10.jar" />
-
 	<path id="givwenzen.bootclasspath">
 		<!-- Paths to be included in compilation bootclasspath -->
 	</path>
@@ -233,21 +231,5 @@
 		</findbugs>
 	</target>
 
-	<target name="maven.deploy">
-		<artifact:remoteRepository url="${maven.releases.repo}" id="nexus.releases">
-			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
-		</artifact:remoteRepository>
-
-		<artifact:remoteRepository url="${maven.snapshots.repo}" id="nexus.snapshots">
-			<authentication username="${mvn.repo.user}" password="${mvn.repo.password}" />
-		</artifact:remoteRepository>
-
-		<artifact:pom id="gwz.pom" file="${givwenzen.basedir}/maven_deploy/pom.xml" />
-
-		<artifact:deploy file="${givwenzen.target.dir}/${maven.jar.file.name}">
-			<remoteRepository refid="nexus.releases" />
-			<pom refid="gwz.pom" />
-		</artifact:deploy>
-	</target>
 
 </project>
