@@ -1,10 +1,12 @@
 package org.givwenzen;
 
+import org.givwenzen.annotations.DomainSteps;
+import org.givwenzen.annotations.MarkedClass;
+import org.givwenzen.annotations.MarkedClassFinder;
+
 import java.util.Set;
 
-import org.givwenzen.annotations.*;
-
-public class DomainStepFinder {
+public class DomainStepFinder implements IDomainStepFinder {
 
     public static final String DEFAULT_STEP_PACKAGE = "bdd.steps.";
     private String packageForSteps;
