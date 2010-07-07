@@ -4,6 +4,8 @@ import org.givwenzen.annotations.InstantiationStrategy;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
@@ -39,6 +41,8 @@ public class GivWenZenExecutorCreatorTest {
         GivWenZenExecutor executor = creator
                 .customInstantiationStrategies(instantiationStrategy)
                 .create();
-        assertThat(executor.getInstantiationStrategies()).contains(instantiationStrategy);
+
+        List<InstantiationStrategy> strategies = ((DomainStepFactory) executor.domainStepFactory).getInstantiationStrategies();
+        assertThat(strategies).contains(instantiationStrategy);
     }
 }

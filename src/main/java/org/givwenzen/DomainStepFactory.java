@@ -7,7 +7,7 @@ import java.util.Set;
 
 import org.givwenzen.annotations.*;
 
-public class DomainStepFactory {
+public class DomainStepFactory implements IDomainStepFactory {
    private List<InstantiationStrategy> instantiationStrategies = new ArrayList<InstantiationStrategy>();
 
    public DomainStepFactory(InstantiationStrategy... strategies) {
@@ -49,7 +49,7 @@ public class DomainStepFactory {
    }
 
    private void addDefaultInstantiationStrategies() {
-      add(new ObjectInterfacesInstantiationStrategy());
+      add(new ObjectInterfacesInstantiationStrategy());                                            
       add(new ObjectParameterInstantiationStrategy());
       add(new NoParameterInstantiationStrategy());
    }

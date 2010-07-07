@@ -36,7 +36,7 @@ public class GivWenZenExecutorCreator {
         return new GivWenZenExecutor(createDomainStepFinder(), createDomainStepFactory(), getStepState());
     }
 
-    private DomainStepFactory createDomainStepFactory() {
+    private IDomainStepFactory createDomainStepFactory() {
         return new DomainStepFactory(instantiationStrategies);
     }
 

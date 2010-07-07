@@ -11,7 +11,7 @@ public class GivWenZenExecutor implements GivWenZen {
     private Object[] stepState;
     private DomainStepMethodLocator methodLocator;
     IDomainStepFinder domainStepFinder;
-    private DomainStepFactory domainStepFactory;
+    IDomainStepFactory domainStepFactory;
 
     //deprecate
     public GivWenZenExecutor() {
@@ -24,7 +24,7 @@ public class GivWenZenExecutor implements GivWenZen {
     }
 
     //GivWenZenExecutorSettings
-    GivWenZenExecutor(IDomainStepFinder domainStepFinder, DomainStepFactory factory, Object... stepState) {
+    GivWenZenExecutor(IDomainStepFinder domainStepFinder, IDomainStepFactory factory, Object... stepState) {
         super();
         this.domainStepFinder = domainStepFinder;
         this.domainStepFactory = factory;
@@ -45,6 +45,7 @@ public class GivWenZenExecutor implements GivWenZen {
         methodLocator = new DomainStepMethodLocator(stepDefinitions);
     }
 
+    //deprecate
     public GivWenZenExecutor(DomainStepFinder domainStepFinder, Object... stepState) {
         this(domainStepFinder, new DomainStepFactory(), stepState);
     }
@@ -85,9 +86,5 @@ public class GivWenZenExecutor implements GivWenZen {
 
     public Object[] getCustomStepState() {
         return stepState;
-    }
-
-    public List<InstantiationStrategy> getInstantiationStrategies() {
-        return domainStepFactory.getInstantiationStrategies();
     }
 }
