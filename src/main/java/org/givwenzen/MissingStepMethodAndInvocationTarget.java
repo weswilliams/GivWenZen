@@ -5,7 +5,7 @@ public class MissingStepMethodAndInvocationTarget extends MethodAndInvocationTar
     public static final String MATCH_ANY_STRING = ".*";
 
     public MissingStepMethodAndInvocationTarget() {
-        super(null, null);
+        super(null, null, null);
     }
 
     @Override

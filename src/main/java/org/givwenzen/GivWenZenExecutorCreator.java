@@ -1,6 +1,5 @@
 package org.givwenzen;
 
-import com.google.common.collect.TreeMultimap;
 import org.givwenzen.annotations.InstantiationStrategy;
 
 public class GivWenZenExecutorCreator {
@@ -10,6 +9,7 @@ public class GivWenZenExecutorCreator {
     private IDomainStepFinder domainStepFinder;
     private IDomainStepFactory domainStepFactory;
     private Object[] stepState;
+    private ICustomParserFinder customParserFinder = new CustomParserFinder();
 
     public static GivWenZenExecutorCreator instance() {
         return new GivWenZenExecutorCreator();
@@ -20,11 +20,10 @@ public class GivWenZenExecutorCreator {
         return this;
     }
 
-//
-//   public GivWenZenExecutorCreator customParserFinder(ICustomParserFinder finder) {
-//      this.finder = finder;
-//      return this;
-//   }
+    public GivWenZenExecutorCreator customParserFinder(ICustomParserFinder customParserFinder) {
+        this.customParserFinder = customParserFinder;
+        return this;
+    }
 
     public GivWenZenExecutorCreator customStepState(Object... state) {
         this.state = state;
@@ -37,7 +36,7 @@ public class GivWenZenExecutorCreator {
     }
 
     public GivWenZenExecutor create() {
-        return new GivWenZenExecutor(createDomainStepFinder(), createDomainStepFactory(), getStepState());
+        return new GivWenZenExecutor(createDomainStepFinder(), createDomainStepFactory(), customParserFinder, getStepState());
     }
 
     private IDomainStepFactory createDomainStepFactory() {

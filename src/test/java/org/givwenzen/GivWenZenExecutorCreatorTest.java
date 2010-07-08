@@ -18,6 +18,16 @@ public class GivWenZenExecutorCreatorTest {
     }
 
     @Test
+    public void shouldCreateDefaultInstanceNeatly() throws Exception {
+        GivWenZenExecutor executor = creator.create();
+        assertThat(executor.customParserFinder).isNotNull();
+        assertThat(executor.domainStepFactory).isNotNull();
+        assertThat(executor.customParserFinder).isNotNull();
+        assertThat(executor.stepState).isNotNull();
+        assertThat(executor.methodLocator).isNotNull();
+    }
+
+    @Test
     public void shouldBeAbleToCreateGivWenZenExecutorWithDifferentStepPackage() throws Exception {
         String basePackage = "test.package.name.";
         GivWenZenExecutor executor = creator
@@ -50,15 +60,18 @@ public class GivWenZenExecutorCreatorTest {
     public void shouldCreateInstance() throws Exception {
         IDomainStepFactory factory = mock(IDomainStepFactory.class);
         IDomainStepFinder finder = mock(IDomainStepFinder.class);
+        ICustomParserFinder parserFinder = mock(ICustomParserFinder.class);
 
         GivWenZenExecutor executor = creator
                 .domainStepFactory(factory)
                 .domainStepFinder(finder)
                 .customStepState("foo")
+                .customParserFinder(parserFinder)
                 .create();
 
         assertThat(executor.domainStepFactory).isEqualTo(factory);
         assertThat(executor.domainStepFinder).isEqualTo(finder);
-        assertThat(executor.stepState).isEqualTo(new Object[] {"foo"});
+        assertThat(executor.stepState).isEqualTo(new Object[]{"foo"});
+        assertThat(executor.customParserFinder).isEqualTo(parserFinder);
     }
 }

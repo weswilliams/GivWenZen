@@ -14,14 +14,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MethodAndInvocationTarget {
-    //inject StringToObjectParser (with correct CustomParserFinder)
-    private StringToObjectParser converter = new StringToObjectParser();
     private Method method;
     private Object target;
+    private StringToObjectParser parser;
 
-    public MethodAndInvocationTarget(Method method, Object target) {
+    public MethodAndInvocationTarget(Method method, Object target, StringToObjectParser parser) {
         this.method = method;
         this.target = target;
+        this.parser = parser;
     }
 
     public Object invoke(String methodString) throws Exception {
@@ -82,7 +82,7 @@ public class MethodAndInvocationTarget {
                 params.add(matchResult.group(index));
             }
         }
-        return converter.convertParamertersToTypes(
+        return parser.convertParamertersToTypes(
                 params.toArray(new Object[params.size()]), method.getParameterTypes());
     }
 

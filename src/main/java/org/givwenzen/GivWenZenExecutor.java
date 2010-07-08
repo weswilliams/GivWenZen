@@ -1,22 +1,24 @@
 package org.givwenzen;
 
 
-import org.givwenzen.annotations.InstantiationStrategy;
 import org.givwenzen.annotations.MarkedClass;
 
 import java.util.List;
 import java.util.Set;
 
 public class GivWenZenExecutor implements GivWenZen {
+    DomainStepMethodLocator methodLocator;
+
+    //this state can be removed once we get rid of deprecated constructors
     Object[] stepState;
-    private DomainStepMethodLocator methodLocator;
     IDomainStepFinder domainStepFinder;
     IDomainStepFactory domainStepFactory;
+    ICustomParserFinder customParserFinder;
 
     @Deprecated
     /**
      * Please use GivWenZenExecutorCreator.instance().create();
-      */
+     */
     public GivWenZenExecutor() {
         this(new DomainStepFinder(), new DomainStepFactory());
     }
@@ -28,18 +30,17 @@ public class GivWenZenExecutor implements GivWenZen {
      *           .domainStepFactory(factory)
      *           .stepState(stepState)
      *           .create();
-      */
+     */
     public GivWenZenExecutor(DomainStepFinder domainStepFinder, DomainStepFactory factory, Object... stepState) {
-        this((IDomainStepFinder) domainStepFinder, factory, stepState);
+        this((IDomainStepFinder) domainStepFinder, factory, new CustomParserFinder(), stepState);
     }
 
     //GivWenZenExecutorSettings
-    GivWenZenExecutor(IDomainStepFinder domainStepFinder, IDomainStepFactory factory, Object... stepState) {
+    GivWenZenExecutor(IDomainStepFinder domainStepFinder, IDomainStepFactory factory, ICustomParserFinder customParserFinder, Object... stepState) {
         super();
         this.domainStepFinder = domainStepFinder;
         this.domainStepFactory = factory;
-//      this.stepState = stepState == null ? this : stepState;
-//      Object[] adapters = new Object[]{this.stepState, this};
+        this.customParserFinder = customParserFinder;
 
         this.stepState = stepState == null || stepState.length == 0 ? new Object[]{this} : stepState;
         int adaptersLength = this.stepState.length + 1;
@@ -51,8 +52,8 @@ public class GivWenZenExecutor implements GivWenZen {
         List<Object> stepDefinitions = factory.createStepDefinitions(classes, adapters);
         stepDefinitions.add(0, this.stepState);
 
-        //inject DomainStepMethodLocator 
-        methodLocator = new DomainStepMethodLocator(stepDefinitions);
+        //inject DomainStepMethodLocator
+        methodLocator = new DomainStepMethodLocator(stepDefinitions, customParserFinder);
     }
 
     @Deprecated
@@ -61,7 +62,7 @@ public class GivWenZenExecutor implements GivWenZen {
      *           .domainStepFinder(domainStepFinder)
      *           .stepState(stepState)
      *           .create();
-      */
+     */
     public GivWenZenExecutor(DomainStepFinder domainStepFinder, Object... stepState) {
         this(domainStepFinder, new DomainStepFactory(), stepState);
     }
