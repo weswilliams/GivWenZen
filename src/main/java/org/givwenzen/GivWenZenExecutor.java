@@ -8,17 +8,27 @@ import java.util.List;
 import java.util.Set;
 
 public class GivWenZenExecutor implements GivWenZen {
-    private Object[] stepState;
+    Object[] stepState;
     private DomainStepMethodLocator methodLocator;
     IDomainStepFinder domainStepFinder;
     IDomainStepFactory domainStepFactory;
 
-    //deprecate
+    @Deprecated
+    /**
+     * Please use GivWenZenExecutorCreator.instance().create();
+      */
     public GivWenZenExecutor() {
         this(new DomainStepFinder(), new DomainStepFactory());
     }
 
-    //deprecate
+    @Deprecated
+    /**
+     * Please use GivWenZenExecutorCreator.instance()
+     *           .domainStepFinder(domainStepFinder)
+     *           .domainStepFactory(factory)
+     *           .stepState(stepState)
+     *           .create();
+      */
     public GivWenZenExecutor(DomainStepFinder domainStepFinder, DomainStepFactory factory, Object... stepState) {
         this((IDomainStepFinder) domainStepFinder, factory, stepState);
     }
@@ -45,7 +55,13 @@ public class GivWenZenExecutor implements GivWenZen {
         methodLocator = new DomainStepMethodLocator(stepDefinitions);
     }
 
-    //deprecate
+    @Deprecated
+    /**
+     * Please use GivWenZenExecutorCreator.instance()
+     *           .domainStepFinder(domainStepFinder)
+     *           .stepState(stepState)
+     *           .create();
+      */
     public GivWenZenExecutor(DomainStepFinder domainStepFinder, Object... stepState) {
         this(domainStepFinder, new DomainStepFactory(), stepState);
     }

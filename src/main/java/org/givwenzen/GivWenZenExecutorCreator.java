@@ -1,11 +1,15 @@
 package org.givwenzen;
 
+import com.google.common.collect.TreeMultimap;
 import org.givwenzen.annotations.InstantiationStrategy;
 
 public class GivWenZenExecutorCreator {
     private String packageName;
     private Object[] state;
     private InstantiationStrategy[] instantiationStrategies = new InstantiationStrategy[0];
+    private IDomainStepFinder domainStepFinder;
+    private IDomainStepFactory domainStepFactory;
+    private Object[] stepState;
 
     public static GivWenZenExecutorCreator instance() {
         return new GivWenZenExecutorCreator();
@@ -37,15 +41,34 @@ public class GivWenZenExecutorCreator {
     }
 
     private IDomainStepFactory createDomainStepFactory() {
+        if (domainStepFactory != null) {
+            return domainStepFactory;
+        }
         return new DomainStepFactory(instantiationStrategies);
     }
 
-    private DomainStepFinder createDomainStepFinder() {
+    private IDomainStepFinder createDomainStepFinder() {
+        if (domainStepFinder != null) return domainStepFinder;
         if (packageName != null) return new DomainStepFinder(packageName);
         return new DomainStepFinder();
     }
 
     private Object[] getStepState() {
         return state;
+    }
+
+    public GivWenZenExecutorCreator domainStepFinder(IDomainStepFinder domainStepFinder) {
+        this.domainStepFinder = domainStepFinder;
+        return this;
+    }
+
+    public GivWenZenExecutorCreator domainStepFactory(IDomainStepFactory domainStepFactory) {
+        this.domainStepFactory = domainStepFactory;
+        return this;
+    }
+
+    public GivWenZenExecutorCreator stepState(Object ... stepState) {
+        this.stepState = stepState;
+        return this;
     }
 }

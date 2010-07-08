@@ -45,4 +45,20 @@ public class GivWenZenExecutorCreatorTest {
         List<InstantiationStrategy> strategies = ((DomainStepFactory) executor.domainStepFactory).getInstantiationStrategies();
         assertThat(strategies).contains(instantiationStrategy);
     }
+
+    @Test
+    public void shouldCreateInstance() throws Exception {
+        IDomainStepFactory factory = mock(IDomainStepFactory.class);
+        IDomainStepFinder finder = mock(IDomainStepFinder.class);
+
+        GivWenZenExecutor executor = creator
+                .domainStepFactory(factory)
+                .domainStepFinder(finder)
+                .customStepState("foo")
+                .create();
+
+        assertThat(executor.domainStepFactory).isEqualTo(factory);
+        assertThat(executor.domainStepFinder).isEqualTo(finder);
+        assertThat(executor.stepState).isEqualTo(new Object[] {"foo"});
+    }
 }
