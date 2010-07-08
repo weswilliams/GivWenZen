@@ -66,9 +66,4 @@ public class GivWenZenExecutorCreator {
         this.domainStepFactory = domainStepFactory;
         return this;
     }
-
-    public GivWenZenExecutorCreator stepState(Object ... stepState) {
-        this.stepState = stepState;
-        return this;
-    }
 }
