@@ -2,7 +2,6 @@ package org.givwenzen.levenshtein;
 
 import org.givwenzen.*;
 
-import java.lang.reflect.*;
 import java.util.*;
 
 public class SimilarMethodNameFinder {
