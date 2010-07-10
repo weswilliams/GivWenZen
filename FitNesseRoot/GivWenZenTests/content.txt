@@ -13,7 +13,7 @@
 !path ./lib/slf4j-simple-1.5.6.jar
 !path ./lib/slf4j-api-1.5.6.jar
 !path ./lib/javassist.jar
-!path ./lib/google-collect-1.0-rc4.jar
+!path ./lib/guava-r06.jar
 !path ./lib/dom4j-1.6.1.jar
 !path ./lib/commons-vfs-1.0.jar
 !path ./lib/clover-2.6.1.jar

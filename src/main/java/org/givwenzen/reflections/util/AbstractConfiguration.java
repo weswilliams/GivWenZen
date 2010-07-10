@@ -30,7 +30,7 @@ public class AbstractConfiguration implements Configuration {
 
     /** set the scanners instances for scanning different metadata */
     public void setScanners(final Scanner... scanners) {
-        this.scanners = ImmutableSet.of(scanners);
+        this.scanners = ImmutableSet.copyOf(scanners);
     }
 
     public Set<URL> getUrls() {

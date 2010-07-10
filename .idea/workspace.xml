@@ -14,19 +14,21 @@
     <option name="scrTextFileName" value="" />
     <option name="historyRevisionsNumber" value="4" />
   </component>
-  <component name="ChangeListManager" verified="true">
+  <component name="ChangeListManager">
     <list default="true" readonly="true" id="a7562009-1d9c-4926-8d06-21e0dd192b7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfaceInstantiationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfaceInstantiationStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/examples/java/bdd/steps/StepsWithCustomState.java" afterPath="$PROJECT_DIR$/src/examples/java/bdd/steps/StepsWithCustomState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStateCreator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/org/givwenzen/GivWenZenExecutorCreatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/GivWenZenExecutorCreatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java" afterPath="$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/bdd/steps/GivWenZenExecutorFunctionalTest.java" afterPath="$PROJECT_DIR$/src/test/java/bdd/steps/GivWenZenExecutorFunctionalTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfacesInstantiationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfacesInstantiationStrategy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStateCreatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/NoParameterInstantiationStrategy.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/NoParameterInstantiationStrategy.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java" />
     </list>
+    <ignored path="$USER_HOME_GRIFFON$/" />
+    <ignored path="$USER_HOME_GRAILS$/" />
     <ignored path="givwenzen.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,7 +40,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="ClassPatternConfiguration">
     <testPatterns>
-      <classPattern testedClass="$CLASS$" testClass="test/$CLASS$Test" />
+      <classPattern testedClass="$CLASS$" testClass="test/xTest" />
     </testPatterns>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -90,86 +92,55 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStrategy.java">
+      <file leaf-file-name="AbstractConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+            <state line="32" column="42" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InstantiationStateCreatorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStateCreatorTest.java">
+      <file leaf-file-name="content.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="50" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InstantiationStateCreator.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStateCreator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.06137184">
+            <state line="13" column="25" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCustomInstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java">
+      <file leaf-file-name="content.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultInstantiationState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/DefaultInstantiationState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="28" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
+            <state line="15" column="12" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NoParameterInstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/NoParameterInstantiationStrategy.java">
+      <file leaf-file-name="content.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="74" selection-start="562" selection-end="630" vertical-scroll-proportion="0.0">
+            <state line="17" column="12" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectInterfaceInstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfaceInstantiationStrategy.java">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="31" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0">
+            <state line="52" column="52" selection-start="2468" selection-end="2468" vertical-scroll-proportion="0.41001856">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObjectInterfacesInstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfacesInstantiationStrategy.java">
+      <file leaf-file-name="GivWenZenExecutorFunctionalTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/GivWenZenExecutorFunctionalTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="73" selection-start="210" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ObjectParameterInstantiationStrategy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="31" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
+            <state line="17" column="41" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,19 +153,9 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="Git.Settings">
-    <option name="GIT_EXECUTABLE" value="C:\Program Files\Git\bin\git.exe" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/givwenzen/GivWenZenExecutorCreatorTest.java" />
-        <option value="$PROJECT_DIR$/src/examples/java/org/givwenzen/HardToManageConstructorParams.java" />
-        <option value="$PROJECT_DIR$/src/examples/java/org/givwenzen/GivWenZenWithCustomState.java" />
-        <option value="$PROJECT_DIR$/src/examples/java/bdd/steps/StepsWithCustomState.java" />
-        <option value="$PROJECT_DIR$/src/test/java/org/givwenzen/DynamicBuilder.java" />
-        <option value="$PROJECT_DIR$/src/test/java/bdd/steps/ComplexSteps.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/DefaultInstantiationState.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStrategyCreatorTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStateCreatorTest.java" />
@@ -204,6 +165,13 @@
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java" />
         <option value="$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStateCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/bdd/steps/GivWenZenExecutorFunctionalTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java" />
+        <option value="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt" />
+        <option value="$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt" />
+        <option value="$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
@@ -278,35 +246,72 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
+      <pane id="Favorites" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Favorites" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="133" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="99" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="98" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.pathVariables" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="108" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="103" />
     <property name="last_opened_file_path" value="C:\Documents and Settings\sg0899445\My Documents\My Pictures" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="778" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="103" />
     <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="803" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="options.lastSelected" value="preferences.pathVariables" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="project.structure.side.proportion" value="0.21845794" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -316,7 +321,7 @@
       <recent name="org.givwenzen.annotations" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All Unit Tests">
+  <component name="RunManager" selected="Application.Fitnesse Server">
     <configuration default="false" name="GivWenZenExecutorTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma">
         <pattern>
@@ -585,11 +590,11 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="JUnit.GivWenZenExecutorTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.DomainStepMethodLocatorTest.stepClassWithValidStepMethodIsFoundSuccessfully" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.All Unit Tests" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DynamicBuilder" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.InstantiationStateCreatorTest.shouldCreateUninstantiatedState" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.InstantiationStateCreatorTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DynamicBuilder" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InstantiationStateCreatorTest.shouldCreateUninstantiatedState" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InstantiationStateCreatorTest" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.All Unit Tests" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -597,7 +602,7 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnConfiguration">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="LAST_MERGED_REVISION" />
@@ -617,36 +622,36 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen\src\test" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen\src\test" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen\.idea" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen\.idea" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen\src\main" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen\src\main" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen\FitNesseRoot" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen\FitNesseRoot" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen\.idea" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen\.idea" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen\src\examples" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen\src\examples" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen\src\test" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen\src\test" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen\FitNesseRoot" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen\FitNesseRoot" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen\src\main" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen\src\main" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen\src\examples" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen\src\examples" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\cc_views\givwenzen" />
-          <option name="myCopyRoot" value="C:\cc_views\givwenzen" />
+          <option name="myVcsRoot" value="E:\projects\givwenzen" />
+          <option name="myCopyRoot" value="E:\projects\givwenzen" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -672,27 +677,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1688" height="1024" extended-state="6" />
+    <frame x="1676" y="-4" width="1288" height="1032" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="V1Details" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514988" sideWeight="0.77329975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498469" sideWeight="0.6640712" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="V1Integration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21788414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32814237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2480098" sideWeight="0.8197998" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24736415" sideWeight="0.6862967" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1724138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30577576" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="V1Details" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514988" sideWeight="0.77329975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="V1Integration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21788414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -709,6 +714,8 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="in order to make InstantiationState creation easier and clearer&#10;- created an InstantiationStateCreator&#10;- changed all classes creating InstantiaionState instances to use the creator&#10;&#10;- small refactorigns&#10;-- changed step name that was the default name to one that made more since in StepsWithCustomState class&#10;-- layed out the GivWenZenCreatorTest slightly different (hopefull more readable)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
@@ -771,118 +778,102 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutorCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="94" selection-end="94" vertical-scroll-proportion="0.19459459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenForSlim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="37" selection-end="37" vertical-scroll-proportion="0.094736844">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bdd/custom/steps/CustomSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="8" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/java/org/givwenzen/GivWenZenWithCustomState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="44" selection-start="186" selection-end="221" vertical-scroll-proportion="0.28421053">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/examples/java/bdd/steps/StepsWithCustomState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="234" selection-end="273" vertical-scroll-proportion="0.37894738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/ComplexSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="377" selection-end="377" vertical-scroll-proportion="0.1491228">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/CustomInstantiationSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="335" selection-end="345" vertical-scroll-proportion="0.2142039">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStateCreatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="50" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/NoParameterInstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="74" selection-start="562" selection-end="630" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfaceInstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="31" selection-start="873" selection-end="873" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfacesInstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="73" selection-start="210" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="31" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/DefaultInstantiationState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="28" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="2" column="28" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStateCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.06137184">
+        <state line="2" column="0" selection-start="36" selection-end="36" vertical-scroll-proportion="0.039719626" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/annotations/InstantiationStateCreatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="50" selection-start="377" selection-end="377" vertical-scroll-proportion="0.21845794" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="21" selection-start="110" selection-end="110" vertical-scroll-proportion="0.07943925" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutorCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="914" selection-end="914" vertical-scroll-proportion="0.33214286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/IDomainStepFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="17" selection-start="111" selection-end="111" vertical-scroll-proportion="0.11744387" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/GivWenZenExecutorCreatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="19" selection-start="658" selection-end="658" vertical-scroll-proportion="0.019859813">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="23" selection-start="785" selection-end="785" vertical-scroll-proportion="0.019859813">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/bdd/steps/GivWenZenExecutorFunctionalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="41" selection-start="464" selection-end="464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/guava-r06.jar!/com/google/common/collect/ImmutableSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="63" selection-start="1303" selection-end="1303" vertical-scroll-proportion="-17.708334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="42" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="25" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="12" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="12" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="52" selection-start="2468" selection-end="2468" vertical-scroll-proportion="0.41001856">
           <folding />
         </state>
       </provider>

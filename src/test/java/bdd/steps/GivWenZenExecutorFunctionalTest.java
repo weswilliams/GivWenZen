@@ -15,7 +15,7 @@ public final class GivWenZenExecutorFunctionalTest {
 	@Test
 	public void shouldExecuteStepsWhenCreatedViaDefaultConstructor() throws Exception {
 		//given
-		GivWenZen gwz = new GivWenZenExecutor();
+		@SuppressWarnings({"deprecation"}) GivWenZen gwz = new GivWenZenExecutor();
 		//when
 		gwz.given("gwz rocks!");
 		//then no exception is thrown

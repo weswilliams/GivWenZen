@@ -50,7 +50,7 @@
 		<path path="${givwenzen.lib.dir}/commons-logging.jar" />
 		<path path="${givwenzen.lib.dir}/javassist.jar" />
 		<path path="${givwenzen.lib.dir}/log4j-1.2.9.jar" />
-		<path path="${givwenzen.lib.dir}/google-collect-1.0-rc4.jar" />
+		<path path="${givwenzen.lib.dir}/guava-r06.jar" />
 		<path path="${givwenzen.lib.dir}/commons-vfs-1.0.jar" />
 		<path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar" />
 		<path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" />
