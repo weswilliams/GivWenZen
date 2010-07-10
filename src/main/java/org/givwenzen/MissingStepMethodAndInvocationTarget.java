@@ -1,12 +1,19 @@
 package org.givwenzen;
 
+import org.givwenzen.levenshtein.*;
+
+import java.util.Collection;
+
 public class MissingStepMethodAndInvocationTarget extends MethodAndInvocationTarget {
 
     public static final String MATCH_ANY_STRING = ".*";
+   private Collection<MethodAndInvocationTarget> steps;
+   private static final int MAXIMUM_DISTANCE = 5;
 
-    public MissingStepMethodAndInvocationTarget() {
+   public MissingStepMethodAndInvocationTarget(Collection<MethodAndInvocationTarget> steps) {
         super(null, null, null);
-    }
+      this.steps = steps;
+   }
 
     @Override
     public Object invoke(String methodString) throws Exception {
@@ -24,10 +31,22 @@ public class MissingStepMethodAndInvocationTarget extends MethodAndInvocationTar
                         "Typical causes of this error are:\n" +
                         "  * StepClass is missing the @DomainSteps annotation\n" +
                         "  * StepMethod is missing the @DomainStep annotation\n" +
-                        "  * The step method annotation has a regular expression that is not matching the current test step\n");
+                        "  * The step method annotation has a regular expression that is not matching the current test step\n" +
+                        buildStringOfSimilarMethods(methodString));
     }
 
-    @Override
+   private String buildStringOfSimilarMethods(String methodString) {
+      StringBuilder similarMethodsString = new StringBuilder();
+      similarMethodsString.append("\n").append("Methods with similar patterns:");
+      Collection<String> similarMethods = new SimilarMethodNameFinder(MAXIMUM_DISTANCE)
+            .findSimilarMethods(methodString, steps);
+      for (String similarMethod : similarMethods) {
+         similarMethodsString.append("\n  * \"").append(similarMethod).append("\"");
+      }
+      return similarMethodsString.toString();
+   }
+
+   @Override
     public String getMethodAsString() {
         return ".stepnotfound";
     }

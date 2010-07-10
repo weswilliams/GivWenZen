@@ -41,7 +41,7 @@ public class DomainStepMethodLocator {
                 possibleAmbiguities.add(methodAndTarget);
         }
         if (possibleAmbiguities.isEmpty()) {
-            possibleAmbiguities.add(new MissingStepMethodAndInvocationTarget());
+            possibleAmbiguities.add(new MissingStepMethodAndInvocationTarget(getSteps()));
         }
         return possibleAmbiguities;
     }
