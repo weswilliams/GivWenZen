@@ -22,7 +22,7 @@ public class SimilarMethodNameFinder implements Similarity {
    public Collection<String> findSimilarMethods(
          String methodString, Collection<MethodAndInvocationTarget> steps) {
 
-      ArrayList<String> foundMethods = new ArrayList<String>();
+      List<String> foundMethods = new ArrayList();
 
       for (MethodAndInvocationTarget step : steps) {
          try {

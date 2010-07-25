@@ -19,6 +19,7 @@
       <root url="jar://$PROJECT_DIR$/lib/fest-assert-1.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/fest-util-1.1.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/guava-r06.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lucene-core-3.0.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

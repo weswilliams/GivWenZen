@@ -1,266 +1,280 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <project name="givwenzen" xmlns:artifact="urn:maven-artifact-ant" default="build.givwenzen">
 
-	<dirname property="givwenzen.basedir" file="${ant.file.givwenzen}" />
+   <dirname property="givwenzen.basedir" file="${ant.file.givwenzen}"/>
 
-	<property environment="env" />
-	<property name="project.jdk.home" value="${env.JAVA_HOME}" />
-	<property name="project.jdk.bin" value="${project.jdk.home}/bin" />
-	<property name="jdk.home.givwenzen" value="${project.jdk.home}" />
-	<property name="jdk.bin.givwenzen" value="${project.jdk.bin}" />
+   <property environment="env"/>
+   <property name="project.jdk.home" value="${env.JAVA_HOME}"/>
+   <property name="project.jdk.bin" value="${project.jdk.home}/bin"/>
+   <property name="jdk.home.givwenzen" value="${project.jdk.home}"/>
+   <property name="jdk.bin.givwenzen" value="${project.jdk.bin}"/>
 
-	<property name="givwenzen.target.dir" value="${givwenzen.basedir}/target" />
+   <property name="givwenzen.target.dir" value="${givwenzen.basedir}/target"/>
 
-	<property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes" />
-	<property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main" />
-	<property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test" />
-	<property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples" />
+   <property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes"/>
+   <property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main"/>
+   <property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test"/>
+   <property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples"/>
 
-	<property name="reports.tests" value="${givwenzen.target.dir}/reports" />
-	<property name="fitnesse.port" value="8001" />
+   <property name="reports.tests" value="${givwenzen.target.dir}/reports"/>
+   <property name="fitnesse.port" value="8001"/>
 
-	<property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib" />
+   <property name="givwenzen.lib.dir" value="${givwenzen.basedir}/lib"/>
 
-	<property name="givwenzen.main.src.dir" value="src/main/java" />
-	<property name="givwenzen.test.src.dir" value="src/test/java" />
-	<property name="givwenzen.examples.src.dir" value="src/examples/java" />
+   <property name="givwenzen.main.src.dir" value="src/main/java"/>
+   <property name="givwenzen.test.src.dir" value="src/test/java"/>
+   <property name="givwenzen.examples.src.dir" value="src/examples/java"/>
 
-	<property name="findbugs.home" value="/java_tools/findbugs-1.3.9" />
+   <property name="findbugs.home" value="/java_tools/findbugs-1.3.9"/>
 
-	<tstamp>
-		<format property="build_date" pattern="yyyyMMdd" locale="en,US" />
-	</tstamp>
+   <tstamp>
+      <format property="build_date" pattern="yyyyMMdd" locale="en,US"/>
+   </tstamp>
 
-	<property name="date.based.file.name" value="${ant.project.name}-${build_date}"/>
-	
-	<property name="zip.file.name" value="${date.based.file.name}.zip" />
-	<property name="zip.temp.dir" value="${givwenzen.basedir}/${date.based.file.name}"/>
-	
-	<property name="jar.file.name" value="${date.based.file.name}.jar" />
-	<property name="jar.examples.file.name" value="${ant.project.name}-examples-${build_date}.jar" />
-	<property name="jar.with.dependencies.file.name" value="${ant.project.name}-with-dependencies-${build_date}.jar" />
+   <property name="date.based.file.name" value="${ant.project.name}-${build_date}"/>
 
-	<property file="${givwenzen.basedir}/${ant.project.name}.properties" />
+   <property name="zip.file.name" value="${date.based.file.name}.zip"/>
+   <property name="zip.temp.dir" value="${givwenzen.basedir}/${date.based.file.name}"/>
 
-	<path id="givwenzen.bootclasspath">
-		<!-- Paths to be included in compilation bootclasspath -->
-	</path>
+   <property name="jar.file.name" value="${date.based.file.name}.jar"/>
+   <property name="jar.examples.file.name" value="${ant.project.name}-examples-${build_date}.jar"/>
+   <property name="jar.with.dependencies.file.name" value="${ant.project.name}-with-dependencies-${build_date}.jar"/>
 
-	<path id="givwenzen.classpath">
-		<path path="${givwenzen.lib.dir}/commons-logging.jar" />
-		<path path="${givwenzen.lib.dir}/javassist.jar" />
-		<path path="${givwenzen.lib.dir}/log4j-1.2.9.jar" />
-		<path path="${givwenzen.lib.dir}/guava-r06.jar" />
-		<path path="${givwenzen.lib.dir}/commons-vfs-1.0.jar" />
-		<path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar" />
-		<path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" />
-		<path path="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar" />
-		<path path="${givwenzen.lib.dir}/fitlibrary.jar" />
-        <path path="${givwenzen.lib.dir}/fitnesse.jar" />
-        <path path="${givwenzen.lib.dir}/fest-assert-1.2.jar" />
-        <path path="${givwenzen.lib.dir}/fest-util-1.1.jar" />
-    </path>
+   <property file="${givwenzen.basedir}/${ant.project.name}.properties"/>
 
-	<path id="givwenzen.examples.classpath">
-		<path refid="givwenzen.classpath" />
-		<path location="${givwenzen.output.dir}" />
-	</path>
+   <path id="givwenzen.bootclasspath">
+      <!-- Paths to be included in compilation bootclasspath -->
+   </path>
 
-	<path id="givwenzen.test.classpath">
-		<path refid="givwenzen.classpath" />
-		<path location="${givwenzen.output.dir}" />
-		<path path="${givwenzen.lib.dir}/hamcrest-core-1.1.jar" />
-		<path path="${givwenzen.lib.dir}/junit-4.5.jar" />
-		<path path="${givwenzen.lib.dir}/mockito-core-1.7.jar" />
-		<path path="${givwenzen.lib.dir}/objenesis-1.0.jar" />
-		<path path="${givwenzen.lib.dir}/clover-2.6.1.jar" />
-	</path>
+   <path id="givwenzen.classpath">
+      <path path="${givwenzen.lib.dir}/commons-logging.jar"/>
+      <path path="${givwenzen.lib.dir}/javassist.jar"/>
+      <path path="${givwenzen.lib.dir}/log4j-1.2.9.jar"/>
+      <path path="${givwenzen.lib.dir}/guava-r06.jar"/>
+      <path path="${givwenzen.lib.dir}/commons-vfs-1.0.jar"/>
+      <path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar"/>
+      <path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar"/>
+      <path path="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar"/>
+      <path path="${givwenzen.lib.dir}/fitlibrary.jar"/>
+      <path path="${givwenzen.lib.dir}/fitnesse.jar"/>
+      <path path="${givwenzen.lib.dir}/fest-assert-1.2.jar"/>
+      <path path="${givwenzen.lib.dir}/fest-util-1.1.jar"/>
+      <path path="${givwenzen.lib.dir}/lucene-core-3.0.2.jar"/>
+   </path>
 
-	<path id="givwenzen.run.test.classpath">
-		<path refid="givwenzen.test.classpath" />
-		<path location="${givwenzen.testoutput.dir}" />
-	</path>
+   <path id="givwenzen.examples.classpath">
+      <path refid="givwenzen.classpath"/>
+      <path location="${givwenzen.output.dir}"/>
+   </path>
 
-	<path id="givwenzen.sourcepath">
-		<dirset dir="${givwenzen.basedir}">
-			<include name="${givwenzen.main.src.dir}" />
-		</dirset>
-	</path>
+   <path id="givwenzen.test.classpath">
+      <path refid="givwenzen.classpath"/>
+      <path location="${givwenzen.output.dir}"/>
+      <path path="${givwenzen.lib.dir}/hamcrest-core-1.1.jar"/>
+      <path path="${givwenzen.lib.dir}/junit-4.5.jar"/>
+      <path path="${givwenzen.lib.dir}/mockito-core-1.7.jar"/>
+      <path path="${givwenzen.lib.dir}/objenesis-1.0.jar"/>
+      <path path="${givwenzen.lib.dir}/clover-2.6.1.jar"/>
+   </path>
 
-	<path id="givwenzen.test.sourcepath">
-		<dirset dir="${givwenzen.basedir}">
-			<include name="${givwenzen.test.src.dir}" />
-		</dirset>
-	</path>
+   <path id="givwenzen.run.test.classpath">
+      <path refid="givwenzen.test.classpath"/>
+      <path location="${givwenzen.testoutput.dir}"/>
+   </path>
 
-	<path id="givwenzen.examples.sourcepath">
-		<dirset dir="${givwenzen.basedir}">
-			<include name="${givwenzen.examples.src.dir}" />
-		</dirset>
-	</path>
+   <path id="givwenzen.sourcepath">
+      <dirset dir="${givwenzen.basedir}">
+         <include name="${givwenzen.main.src.dir}"/>
+      </dirset>
+   </path>
 
-	<target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
-		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
+   <path id="givwenzen.test.sourcepath">
+      <dirset dir="${givwenzen.basedir}">
+         <include name="${givwenzen.test.src.dir}"/>
+      </dirset>
+   </path>
 
-	<target name="build.clover.givwenzen" description="Compile givwenzen" depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
-		  compile.givwenzen.examples,givwenzen.test,execute_fitnesse_tests,clover.report,clover.html" />
+   <path id="givwenzen.examples.sourcepath">
+      <dirset dir="${givwenzen.basedir}">
+         <include name="${givwenzen.examples.src.dir}"/>
+      </dirset>
+   </path>
 
-	<target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
-		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies" />
+   <target name="build.givwenzen" description="Compile givwenzen" depends="clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies"/>
 
-	<target name="with.clover">
-		<taskdef resource="cloverlib.xml" />
-		<clover-setup />
-	</target>
+   <target name="build.clover.givwenzen" description="Compile givwenzen" depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
+		  compile.givwenzen.examples,givwenzen.test,execute_fitnesse_tests,clover.report,clover.html"/>
 
-	<target name="clover.html">
-		<clover-html-report outdir="${reports.tests}/clover_html" title="${ant.project.name}" />
-	</target>
+   <target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
+		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies"/>
 
-	<target name="clover.report">
-		<clover-report>
-			<current outfile="${reports.tests}/coverage.xml">
-				<format type="xml" />
-			</current>
-		</clover-report>
-	</target>
+   <target name="with.clover">
+      <taskdef resource="cloverlib.xml"/>
+      <clover-setup/>
+   </target>
 
-	<target name="clean.givwenzen" description="cleanup module">
-		<delete dir="${givwenzen.target.dir}" />
-		<mkdir dir="${reports.tests}" />
-	</target>
+   <target name="clover.html">
+      <clover-html-report outdir="${reports.tests}/clover_html" title="${ant.project.name}"/>
+   </target>
 
-	<target name="clean.givwenzen.classes" description="cleanup compiled classes">
-		<delete dir="${givwenzen.baseoutput.dir}" />
-	</target>
+   <target name="clover.report">
+      <clover-report>
+         <current outfile="${reports.tests}/coverage.xml">
+            <format type="xml"/>
+         </current>
+      </clover-report>
+   </target>
 
-	<target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
-		<mkdir dir="${givwenzen.output.dir}" />
-		<javac destdir="${givwenzen.output.dir}" debug="false" source="1.5" target="1.5" nowarn="false" fork="true" executable="${jdk.bin.givwenzen}/javac">
-			<bootclasspath refid="givwenzen.bootclasspath" />
-			<classpath refid="givwenzen.classpath" />
-			<src refid="givwenzen.sourcepath" />
-		</javac>
-	</target>
+   <target name="clean.givwenzen" description="cleanup module">
+      <delete dir="${givwenzen.target.dir}"/>
+      <mkdir dir="${reports.tests}"/>
+   </target>
 
-	<target name="compile.givwenzen.tests" depends="compile.givwenzen.production" description="compile givwenzen; test classes" unless="skip.tests">
-		<mkdir dir="${givwenzen.testoutput.dir}" />
-		<javac destdir="${givwenzen.testoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
-			<classpath refid="givwenzen.test.classpath" />
-			<src refid="givwenzen.test.sourcepath" />
-		</javac>
-	</target>
+   <target name="clean.givwenzen.classes" description="cleanup compiled classes">
+      <delete dir="${givwenzen.baseoutput.dir}"/>
+   </target>
 
-	<target name="compile.givwenzen.examples" depends="compile.givwenzen.production" description="compile givwenzen example classes">
-		<mkdir dir="${givwenzen.examplesoutput.dir}" />
-		<javac destdir="${givwenzen.examplesoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true" executable="${jdk.bin.givwenzen}/javac">
-			<classpath refid="givwenzen.examples.classpath" />
-			<src refid="givwenzen.examples.sourcepath" />
-		</javac>
-	</target>
+   <target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
+      <mkdir dir="${givwenzen.output.dir}"/>
+      <javac destdir="${givwenzen.output.dir}" debug="false" source="1.5" target="1.5" nowarn="false" fork="true"
+             executable="${jdk.bin.givwenzen}/javac">
+         <bootclasspath refid="givwenzen.bootclasspath"/>
+         <classpath refid="givwenzen.classpath"/>
+         <src refid="givwenzen.sourcepath"/>
+      </javac>
+   </target>
 
-	<target name="givwenzen.test" description="run junit tests">
-		<junit printsummary="yes" fork="yes" haltonfailure="yes">
-			<classpath refid="givwenzen.run.test.classpath" />
-			<formatter type="xml" />
-			<batchtest fork="yes" todir="${reports.tests}">
-				<fileset dir="${givwenzen.basedir}/${givwenzen.test.src.dir}">
-					<include name="**/*Test.java" />
-				</fileset>
-			</batchtest>
-		</junit>
-	</target>
+   <target name="compile.givwenzen.tests" depends="compile.givwenzen.production"
+           description="compile givwenzen; test classes" unless="skip.tests">
+      <mkdir dir="${givwenzen.testoutput.dir}"/>
+      <javac destdir="${givwenzen.testoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
+             executable="${jdk.bin.givwenzen}/javac">
+         <classpath refid="givwenzen.test.classpath"/>
+         <src refid="givwenzen.test.sourcepath"/>
+      </javac>
+   </target>
 
-	<target name="jar.givwenzen">
-		<jar destfile="${givwenzen.target.dir}/${jar.file.name}">
-			<fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class" />
-			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
-		</jar>
-	</target>
+   <target name="compile.givwenzen.examples" depends="compile.givwenzen.production"
+           description="compile givwenzen example classes">
+      <mkdir dir="${givwenzen.examplesoutput.dir}"/>
+      <javac destdir="${givwenzen.examplesoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
+             executable="${jdk.bin.givwenzen}/javac">
+         <classpath refid="givwenzen.examples.classpath"/>
+         <src refid="givwenzen.examples.sourcepath"/>
+      </javac>
+   </target>
 
-	<target name="jar.givwenzen.with.dependencies">
-		<jar destfile="${givwenzen.target.dir}/${jar.with.dependencies.file.name}">
-			<fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class" />
-			<fileset dir="${givwenzen.basedir}" includes="LICENSE README" />
-			<zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/guava-r06.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/log4j-1.2.9.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/commons-vfs-1.0.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" excludes="**/meta-inf/*.*" />
-			<zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar" excludes="**/meta-inf/*.*" />
-            <fileset dir="${givwenzen.basedir}" includes="src/**/*.*" excludes="**/.svn/*.*,**/test/*.*"/>
-            <!--<fileset dir="${givwenzen.examples.src.dir}" excludes="**/.svn/*.*"/>-->
-		</jar>
-	</target>
+   <target name="givwenzen.test" description="run junit tests">
+      <junit printsummary="yes" fork="yes" haltonfailure="yes">
+         <classpath refid="givwenzen.run.test.classpath"/>
+         <formatter type="xml"/>
+         <batchtest fork="yes" todir="${reports.tests}">
+            <fileset dir="${givwenzen.basedir}/${givwenzen.test.src.dir}">
+               <include name="**/*Test.java"/>
+            </fileset>
+         </batchtest>
+      </junit>
+   </target>
 
-	<target name="jar.givwenzen.examples">
-		<jar destfile="${givwenzen.target.dir}/${jar.examples.file.name}" basedir="${givwenzen.examplesoutput.dir}" />
-	</target>
+   <target name="jar.givwenzen">
+      <jar destfile="${givwenzen.target.dir}/${jar.file.name}">
+         <fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class"/>
+         <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
+      </jar>
+   </target>
 
-	<path id="fitnesse.classpath">
-		<fileset dir="${givwenzen.lib.dir}">
-			<include name="**/*.jar" />
-		</fileset>
-	</path>
+   <target name="jar.givwenzen.with.dependencies">
+      <jar destfile="${givwenzen.target.dir}/${jar.with.dependencies.file.name}">
+         <fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class"/>
+         <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
+         <zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/guava-r06.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/log4j-1.2.9.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/commons-vfs-1.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar" excludes="**/meta-inf/*.*"/>
+         <fileset dir="${givwenzen.basedir}" includes="src/**/*.*" excludes="**/.svn/*.*,**/test/*.*"/>
+         <!--<fileset dir="${givwenzen.examples.src.dir}" excludes="**/.svn/*.*"/>-->
+      </jar>
+   </target>
 
-	<target name="load_fitnesse_taskdef">
-		<taskdef classpathref="fitnesse.classpath" resource="tasks.properties" />
-	</target>
+   <target name="jar.givwenzen.examples">
+      <jar destfile="${givwenzen.target.dir}/${jar.examples.file.name}" basedir="${givwenzen.examplesoutput.dir}"/>
+   </target>
 
-	<target name="execute-fitnesse-tests" depends="execute_fitnesse_tests"/>
-	
-	<target name="execute_fitnesse_tests" depends="load_fitnesse_taskdef" description="Executes the Fitnesse Acceptance Test Suite. This target starts fitnesse, executes the Accetpance test suite, publishes the test results and stops fitnesse">
-		<start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="${fitnesse.port}" />
-		<execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml" classpathref="fitnesse.classpath" />
-		<execute-fitnesse-tests suitepage="SlimExamples" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-slim-examples-results.xml" classpathref="fitnesse.classpath" />
-		<execute-fitnesse-tests suitepage="FitLibraryExamples" fitnesseport="${fitnesse.port}" resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-fitlibrary-examples-results.xml" classpathref="fitnesse.classpath" />
-		<stop-fitnesse fitnesseport="${fitnesse.port}" />
-	</target>
+   <path id="fitnesse.classpath">
+      <fileset dir="${givwenzen.lib.dir}">
+         <include name="**/*.jar"/>
+      </fileset>
+   </path>
 
-	<target name="new-execute-fitnesse-tests" description="NOT READY - DO NOT USE FOR BUILD MACHINE - SERVERLESS FITNESSE RUNNER">
-	    <java jar="lib/fitnesse.jar" failonerror="true" fork="true" 
-	    	output="${givwenzen.target.dir}/gwz-slim-examples-results.xml">
-	      <arg value="-c"/>
-	      <arg value="SlimExamples?suite&amp;format=xml"/>
-	    </java>
-	</target>
+   <target name="load_fitnesse_taskdef">
+      <taskdef classpathref="fitnesse.classpath" resource="tasks.properties"/>
+   </target>
 
-	<target name="findbugs" depends="jar.givwenzen">
-		<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask" />
-		<findbugs home="${findbugs.home}" output="xml:withMessages" outputFile="${reports.tests}/findbugs.xml">
-			<auxClasspath refid="givwenzen.classpath" />
-			<sourcePath path="${givwenzen.main.src.dir}" />
-			<class location="${givwenzen.target.dir}/${jar.file.name}" />
-		</findbugs>
-	</target>
-	
-	
-	<target name="zip" description="create the release zip file">
-  	  
-  	  <typedef resource="org/tigris/subversion/svnant/svnantlib.xml" 
-	    classpath="C:/java_tools/apache-ant-1.7.0/lib/svnant.jar" />
-	    
-	    <svn>
-	      <export 
-	  	srcUrl="https://givwenzen.googlecode.com/svn/trunk"
-	  	destPath="${zip.temp.dir}"/>
-	    </svn>
-	      
-	    <copy todir="${zip.temp.dir}/target">
-	        <fileset dir="${givwenzen.target.dir}" excludes="*.jar" />
-	    </copy>
-	      
-	    <copy todir="${zip.temp.dir}">
-	        <fileset dir="${givwenzen.target.dir}" includes="**/*.jar" />
-	    </copy>
-	    
-	    <zip destfile="${givwenzen.target.dir}/${zip.file.name}"
-	      basedir="${zip.temp.dir}"/>
-	      
-	    <delete dir="${zip.temp.dir}" />
-	</target>
+   <target name="execute-fitnesse-tests" depends="execute_fitnesse_tests"/>
+
+   <target name="execute_fitnesse_tests" depends="load_fitnesse_taskdef"
+           description="Executes the Fitnesse Acceptance Test Suite. This target starts fitnesse, executes the Accetpance test suite, publishes the test results and stops fitnesse">
+      <start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="${fitnesse.port}"/>
+      <execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="${fitnesse.port}"
+                              resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml"
+                              classpathref="fitnesse.classpath"/>
+      <execute-fitnesse-tests suitepage="SlimExamples" fitnesseport="${fitnesse.port}"
+                              resultsdir="${givwenzen.target.dir}" debug="false"
+                              resultsxmlpage="gwz-slim-examples-results.xml" classpathref="fitnesse.classpath"/>
+      <execute-fitnesse-tests suitepage="FitLibraryExamples" fitnesseport="${fitnesse.port}"
+                              resultsdir="${givwenzen.target.dir}" debug="false"
+                              resultsxmlpage="gwz-fitlibrary-examples-results.xml" classpathref="fitnesse.classpath"/>
+      <stop-fitnesse fitnesseport="${fitnesse.port}"/>
+   </target>
+
+   <target name="new-execute-fitnesse-tests"
+           description="NOT READY - DO NOT USE FOR BUILD MACHINE - SERVERLESS FITNESSE RUNNER">
+      <java jar="lib/fitnesse.jar" failonerror="true" fork="true"
+            output="${givwenzen.target.dir}/gwz-slim-examples-results.xml">
+         <arg value="-c"/>
+         <arg value="SlimExamples?suite&amp;format=xml"/>
+      </java>
+   </target>
+
+   <target name="findbugs" depends="jar.givwenzen">
+      <taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+      <findbugs home="${findbugs.home}" output="xml:withMessages" outputFile="${reports.tests}/findbugs.xml">
+         <auxClasspath refid="givwenzen.classpath"/>
+         <sourcePath path="${givwenzen.main.src.dir}"/>
+         <class location="${givwenzen.target.dir}/${jar.file.name}"/>
+      </findbugs>
+   </target>
+
+
+   <target name="zip" description="create the release zip file">
+
+      <typedef resource="org/tigris/subversion/svnant/svnantlib.xml"
+               classpath="C:/java_tools/apache-ant-1.7.0/lib/svnant.jar"/>
+
+      <svn>
+         <export
+                 srcUrl="https://givwenzen.googlecode.com/svn/trunk"
+                 destPath="${zip.temp.dir}"/>
+      </svn>
+
+      <copy todir="${zip.temp.dir}/target">
+         <fileset dir="${givwenzen.target.dir}" excludes="*.jar"/>
+      </copy>
+
+      <copy todir="${zip.temp.dir}">
+         <fileset dir="${givwenzen.target.dir}" includes="**/*.jar"/>
+      </copy>
+
+      <zip destfile="${givwenzen.target.dir}/${zip.file.name}"
+           basedir="${zip.temp.dir}"/>
+
+      <delete dir="${zip.temp.dir}"/>
+   </target>
 
 
 </project>
