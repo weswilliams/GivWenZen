@@ -1,6 +1,6 @@
 package org.givwenzen;
 
-import org.givwenzen.levenshtein.*;
+import org.givwenzen.text.matching.levenshtein.*;
 
 import java.util.Collection;
 
@@ -8,7 +8,7 @@ public class MissingStepMethodAndInvocationTarget extends MethodAndInvocationTar
 
     public static final String MATCH_ANY_STRING = ".*";
    private Collection<MethodAndInvocationTarget> steps;
-   private static final int MAXIMUM_DISTANCE = Integer.parseInt(System.getProperty("GWZ_METHOD_DISTANCE", "5"));
+   private static final int MAXIMUM_DISTANCE = Integer.parseInt(System.getProperty("GWZ_METHOD_DISTANCE", "10"));
 
    public MissingStepMethodAndInvocationTarget(Collection<MethodAndInvocationTarget> steps) {
         super(null, null, null);

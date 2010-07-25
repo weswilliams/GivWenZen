@@ -117,6 +117,9 @@ public class DomainStepMethodLocator {
             if (method.isAnnotationPresent(DomainStep.class)) {
                 StringToObjectParser parser = new StringToObjectParser(customParserFinder);
                 targetMethods.add(new MethodAndInvocationTarget(method, target, parser));
+            } else {
+               // TODO - build a MethodAndInvocationTarget from the method name and parameters
+               // must not conflict with defined methods
             }
         }
         return targetMethods;

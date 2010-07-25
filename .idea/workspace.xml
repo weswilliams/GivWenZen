@@ -16,16 +16,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a7562009-1d9c-4926-8d06-21e0dd192b7e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
+      <change type="MOVED" beforePath="E:\projects\givwenzen\src\main\java\org\givwenzen\levenshtein\SimilarMethodNameFinder.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/lucene" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java" />
+      <change type="MOVED" beforePath="E:\projects\givwenzen\src\main\java\org\givwenzen\levenshtein\Distance.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/Distance.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/AddTwoNumbers/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/AddTwoNumbers/content.txt" />
+      <change type="MOVED" beforePath="E:\projects\givwenzen\src\test\java\org\givwenzen\levenshtein\SimilarMethodNameFinderTest.java" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/levenshtein" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/Similarity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/org/givwenzen/levenshtein" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" />
     </list>
-    <ignored path="$USER_HOME_GRIFFON$/" />
-    <ignored path="$USER_HOME_GRAILS$/" />
-    <ignored path="givwenzen.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$USER_HOME_GRAILS$/" />
+    <ignored path="$USER_HOME_GRIFFON$/" />
+    <ignored path="givwenzen.iws" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,18 +97,30 @@
   </component>
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SimilarMethodNameFinder.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="8" selection-start="8" selection-end="47" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="GIT_EXECUTABLE" value="C:\Program Files\Git\bin\git.exe" />
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectInterfacesInstantiationStrategy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/ObjectParameterInstantiationStrategy.java" />
         <option value="$PROJECT_DIR$/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/InstantiationStateCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutor.java" />
@@ -106,12 +129,14 @@
         <option value="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt" />
         <option value="$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt" />
         <option value="$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/Distance.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinderTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java" />
       </list>
     </option>
   </component>
@@ -186,8 +211,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -225,20 +248,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="givwenzen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="133" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="99" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="99" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
     <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -263,18 +352,21 @@
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="project.structure.side.proportion" value="0.21845794" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="project.structure.side.proportion" value="0.21845794" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.givwenzen.levenshtein" />
       <recent name="org.givwenzen" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.givwenzen.levenshtein" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="org.givwenzen.MissingStepMethodAndInvocationTarget" />
@@ -284,6 +376,8 @@
       <recent name="org.givwenzen.annotations" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.givwenzen.text.matching.levenshtein" />
+      <recent name="org.givwenzen.text.matching" />
       <recent name="org.givwenzen.levenshtein" />
     </key>
   </component>
@@ -298,8 +392,8 @@
       <module name="test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.givwenzen.levenshtein" />
-      <option name="MAIN_CLASS_NAME" value="org.givwenzen.levenshtein.SimilarMethodNameFinderTest" />
+      <option name="PACKAGE_NAME" value="org.givwenzen.text.matching.levenshtein" />
+      <option name="MAIN_CLASS_NAME" value="org.givwenzen.text.matching.levenshtein.SimilarMethodNameFinderTest" />
       <option name="METHOD_NAME" value="shouldBeFoundWhenDistanceIsEqualToMinimumDistance" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -325,8 +419,8 @@
       <module name="test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.givwenzen.levenshtein" />
-      <option name="MAIN_CLASS_NAME" value="org.givwenzen.levenshtein.SimilarMethodNameFinderTest" />
+      <option name="PACKAGE_NAME" value="org.givwenzen.text.matching.levenshtein" />
+      <option name="MAIN_CLASS_NAME" value="org.givwenzen.text.matching.levenshtein.SimilarMethodNameFinderTest" />
       <option name="METHOD_NAME" value="shouldBeFoundWhenDistanceIsLessThanMaximumDistance" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -352,8 +446,8 @@
       <module name="test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.givwenzen.levenshtein" />
-      <option name="MAIN_CLASS_NAME" value="org.givwenzen.levenshtein.SimilarMethodNameFinderTest" />
+      <option name="PACKAGE_NAME" value="org.givwenzen.text.matching.levenshtein" />
+      <option name="MAIN_CLASS_NAME" value="org.givwenzen.text.matching.levenshtein.SimilarMethodNameFinderTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -379,8 +473,8 @@
       <module name="test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.givwenzen.levenshtein" />
-      <option name="MAIN_CLASS_NAME" value="org.givwenzen.levenshtein.SimilarMethodNameFinderTest" />
+      <option name="PACKAGE_NAME" value="org.givwenzen.text.matching.levenshtein" />
+      <option name="MAIN_CLASS_NAME" value="org.givwenzen.text.matching.levenshtein.SimilarMethodNameFinderTest" />
       <option name="METHOD_NAME" value="shouldBeFoundWhenDistanceIsEqualToMaximumDistance" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -406,8 +500,8 @@
       <module name="test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="org.givwenzen.levenshtein" />
-      <option name="MAIN_CLASS_NAME" value="org.givwenzen.levenshtein.SimilarMethodNameFinderTest" />
+      <option name="PACKAGE_NAME" value="org.givwenzen.text.matching.levenshtein" />
+      <option name="MAIN_CLASS_NAME" value="org.givwenzen.text.matching.levenshtein.SimilarMethodNameFinderTest" />
       <option name="METHOD_NAME" value="shouldFindMethodStringsWithDistanceLessThanMaximumDistance" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
@@ -445,6 +539,14 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" class_name="" html_or_swf_file_path="" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" port="0" run_mode="HtmlOrSwfFile" scope="Class" socket_policy_port="0" url_to_launch="http://">
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
       <module name="" />
       <setting name="path" value="" />
@@ -454,14 +556,6 @@
       <setting name="workingDirectory" value="$PROJECT_DIR$" />
       <setting name="sysFilter" value=".*" />
       <setting name="exampleFilter" value=".*" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" class_name="" html_or_swf_file_path="" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" port="0" run_mode="HtmlOrSwfFile" scope="Class" socket_policy_port="0" url_to_launch="http://">
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -589,13 +683,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All Unit Tests" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsEqualToMinimumDistance" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsLessThanMaximumDistance" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsEqualToMaximumDistance" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldFindMethodStringsWithDistanceLessThanMaximumDistance" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsEqualToMinimumDistance" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsLessThanMaximumDistance" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldBeFoundWhenDistanceIsEqualToMaximumDistance" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldFindMethodStringsWithDistanceLessThanMaximumDistance" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.All Unit Tests" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -613,6 +707,7 @@
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
     <option name="DETECT_NESTED_COPIES" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <configuration useDefault="true">C:\Documents and Settings\sg0899445\Application Data\Subversion</configuration>
@@ -679,11 +774,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1676" y="-4" width="1288" height="1032" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498469" sideWeight="0.6640712" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -692,12 +786,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24736415" sideWeight="0.6500566" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" sideWeight="0.65118915" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34201586" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34088334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="V1Details" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514988" sideWeight="0.77329975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3265074" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="V1Integration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21788414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -779,120 +874,84 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/guava-r06.jar!/com/google/common/collect/ImmutableSet.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/Distance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="63" selection-start="1303" selection-end="1303" vertical-scroll-proportion="-17.708334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/reflections/util/AbstractConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="42" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/content.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FitNesseRoot/GivWenZenTests/content.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FitNesseRoot/SlimExamples/content.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="366" selection-end="366" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepNotFoundException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="29" selection-start="53" selection-end="53" vertical-scroll-proportion="0.060606062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="18" selection-start="291" selection-end="305" vertical-scroll-proportion="0.3030303">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/Distance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="13" selection-start="819" selection-end="819" vertical-scroll-proportion="0.79447323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MethodAndInvocationTarget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="38" selection-start="2056" selection-end="2076" vertical-scroll-proportion="0.33206832">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="53" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.9946808">
-          <folding />
-        </state>
+        <state line="44" column="13" selection-start="819" selection-end="819" vertical-scroll-proportion="0.79447323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/CustomParserFinderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="293" selection-end="293" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/levenshtein/SimilarMethodNameFinderTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.7651123">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="111" selection-start="401" selection-end="401" vertical-scroll-proportion="0.41062802">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="0.23776224">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="69" column="0" selection-start="2376" selection-end="2376" vertical-scroll-proportion="0.7651123" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="48" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.49704143">
+        <state line="45" column="48" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.49704143" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/MarkedClassFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="27" selection-start="640" selection-end="640" vertical-scroll-proportion="0.33214286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="32" selection-start="744" selection-end="744" vertical-scroll-proportion="0.60714287" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/GivWenZenExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="56" selection-start="1925" selection-end="1925" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/annotations/MarkedClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="49" selection-end="49" vertical-scroll-proportion="0.060714286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="31" selection-start="1085" selection-end="1085" vertical-scroll-proportion="0.33214286" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MethodAndInvocationTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="24" selection-start="558" selection-end="558" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/maven/lib/maven.jar!/org/jetbrains/idea/maven/dom/maven-4.0.0.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1531" column="33" selection-start="74815" selection-end="74815" vertical-scroll-proportion="0.020310633" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="52" selection-start="157" selection-end="157" vertical-scroll-proportion="0.019953052" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="28" selection-start="4363" selection-end="4363" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/examples/java/bdd/steps/ExampleSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="51" selection-start="2133" selection-end="2138" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="8" selection-start="8" selection-end="47" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

@@ -1,4 +1,4 @@
-package org.givwenzen.levenshtein;
+package org.givwenzen.text.matching.levenshtein;
 
 public class Distance {
 

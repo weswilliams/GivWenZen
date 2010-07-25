@@ -1,10 +1,11 @@
-package org.givwenzen.levenshtein;
+package org.givwenzen.text.matching.levenshtein;
 
 import org.givwenzen.*;
+import org.givwenzen.text.matching.*;
 
 import java.util.*;
 
-public class SimilarMethodNameFinder {
+public class SimilarMethodNameFinder implements Similarity {
    private int maximumDistance;
    private Distance distance;
 
@@ -17,6 +18,7 @@ public class SimilarMethodNameFinder {
       return distance.LD(name1, name2) <= maximumDistance;
    }
 
+   @Override
    public Collection<String> findSimilarMethods(
          String methodString, Collection<MethodAndInvocationTarget> steps) {
 

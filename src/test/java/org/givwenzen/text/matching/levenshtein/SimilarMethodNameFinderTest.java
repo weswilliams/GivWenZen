@@ -1,6 +1,7 @@
-package org.givwenzen.levenshtein;
+package org.givwenzen.text.matching.levenshtein;
 
 import org.givwenzen.*;
+import org.givwenzen.text.matching.levenshtein.*;
 import org.junit.*;
 
 import java.util.*;
