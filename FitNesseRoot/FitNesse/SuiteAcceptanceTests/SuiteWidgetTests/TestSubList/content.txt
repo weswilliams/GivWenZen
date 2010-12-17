@@ -28,8 +28,10 @@ A list created as follows {{{ * Item one
 |type|number|string?|
 |line|1|<ul>|
 |line|2|<li>Item One</li>|
-|line|3|<ul>|
+|line|3|<li><ul>|
 |line|4|<li>Item Two</li>|
 |line|5|</ul>|
-|line|6|</ul>|
+|line|6|</li>|
+|line|7|</ul>|
+
 

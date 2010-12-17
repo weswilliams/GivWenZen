@@ -16,16 +16,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a7562009-1d9c-4926-8d06-21e0dd192b7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene/LuceneSimilarityTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/lucene/LuceneSimilarity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene/MethodAndInvocationTargetDocument.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/SG0899445.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/SG0899445.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/addChildPagePopup.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/addChildPagePopup.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteExecutionReport.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteExecutionReport.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteHistoryXML.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteHistoryXML.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteXML.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteXML.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/testExecutionReport.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/testExecutionReport.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/testResults.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/testResults.vm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/properties" afterPath="$PROJECT_DIR$/FitNesseRoot/properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/updateList" afterPath="$PROJECT_DIR$/FitNesseRoot/updateList" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" afterPath="$PROJECT_DIR$/.idea/projectCodeStyle.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/AddTwoNumbers/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/AddTwoNumbers/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/AddTwoNumbers/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitLibraryExamples/AddTwoNumbers/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteAuthenticationTests/TestSecureTestPage/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteAuthenticationTests/TestSecureTestPage/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/ScenarioLibrary/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/ScenarioLibrary/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/SetUp/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/SetUp/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteVirtualWikiTests/TestAliasLinkToNonExistentPageDefersToRemoteServer/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteVirtualWikiTests/TestAliasLinkToNonExistentPageDefersToRemoteServer/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteVirtualWikiTests/TestAliasLinkToNonExistentSubPage/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteVirtualWikiTests/TestAliasLinkToNonExistentSubPage/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestInclude/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestInclude/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestMultiLineTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestMultiLineTable/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSimpleTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSimpleTable/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSubList/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSubList/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSubList/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteWidgetTests/TestSubList/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CreatingTestTables/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CreatingTestTables/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CreatingTestTables/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CreatingTestTables/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CustomizingTestExecution/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CustomizingTestExecution/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DebugingFixtureCode/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DebugingFixtureCode/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DownloadingAndInstallingFitNesse/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DownloadingAndInstallingFitNesse/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/MarkupHashTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/MarkupHashTable/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/MarkupTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/MarkupTable/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PageFooter/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PageFooter/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/QuickReferenceGuide/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/QuickReferenceGuide/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/RestfulSuiteXmlFormat/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/RestfulSuiteXmlFormat/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulTests/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulTests/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RunningFromJunit/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RunningFromJunit/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SourceCodeControl/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SourceCodeControl/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/StartingAndStoppingFitNesse/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/StartingAndStoppingFitNesse/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/properties.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/css/fitnesse_base.css" afterPath="$PROJECT_DIR$/FitNesseRoot/files/css/fitnesse_base.css" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -89,7 +137,6 @@
   <component name="FavoritesManager">
     <favorites_list name="givwenzen" />
   </component>
-  <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="SimilarMethodNameFinder.java" pinned="false" current="false" current-in-tab="false">
@@ -105,9 +152,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/lucene/LuceneSimilarity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="65" column="0" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +160,7 @@
       <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="60" selection-start="3068" selection-end="3068" vertical-scroll-proportion="-10.88">
+            <state line="61" column="60" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,7 +169,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="34" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.59287053">
+            <state line="72" column="6" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.24691358">
               <folding />
             </state>
           </provider>
@@ -134,9 +179,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene/LuceneSimilarityTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="37" column="87" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,8 +192,8 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="GIT_EXECUTABLE" value="C:\Program Files\Git\bin\git.exe" />
     <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -209,13 +252,27 @@
     <option name="IS_SET_METHOD_ICONS_ENABLED" value="true" />
     <option name="IS_UNIT_TEST_ENABLED" value="true" />
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
-      <profile-state />
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id>Inspections</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Abstraction issues</id>
+          </State>
+        </selected-state>
+      </profile-state>
     </entry>
   </component>
   <component name="ProjectLevelVcsManager">
@@ -226,7 +283,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -245,7 +302,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -256,21 +312,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Favorites" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="133" />
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="99" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="31" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
-    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
@@ -291,17 +348,17 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Imports" />
+    <property name="options.lastSelected" value="copyright.filetypes.JAVA" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
     <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="project.structure.side.proportion" value="0.21845794" />
-    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -328,7 +385,7 @@
       <recent name="org.givwenzen.levenshtein" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All Unit Tests">
+  <component name="RunManager" selected="Application.Fitnesse Server">
     <configuration default="false" name="SimilarMethodNameFinderTest.shouldFindMethodStringsWithDistanceLessThanMaximumDistance" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" runner="emma">
         <pattern>
@@ -352,6 +409,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -379,6 +437,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -406,6 +465,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -433,6 +493,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="2388" />
         <option name="TRANSPORT" value="0" />
@@ -466,6 +527,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="2381" />
         <option name="TRANSPORT" value="0" />
@@ -476,16 +538,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="EasybRunConfigurationType" factoryName="Easyb Specification">
-      <module name="" />
-      <setting name="specificationPath" value="" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -495,30 +547,6 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" air_descriptor_path="" air_program_params="" air_publisher_id="" air_root_dir_path="" air_run_mode="AppDescriptor" class_name="" html_or_swf_file_path="" main_class_name="" method_name="" module_name="" output_log_level="" package_name="" port="0" run_mode="HtmlOrSwfFile" scope="Class" socket_policy_port="0" url_to_launch="http://">
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="packagepath" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="sysFilter" value=".*" />
-      <setting name="exampleFilter" value=".*" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -578,21 +606,7 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="version" value="false" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <patterns />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -604,7 +618,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="emma" />
       <option name="MAIN_CLASS_NAME" value="fitnesseMain.FitNesseMain" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e 0" />
+      <option name="PROGRAM_PARAMETERS" value="-e 0 -p 8080" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -637,13 +651,14 @@
         <value defaultName="wholeProject" />
       </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldFindMethodStringsWithDistanceLessThanMaximumDistance" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Fitnesse Server" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SimilarMethodNameFinderTest.shouldFindMethodStringsWithDistanceLessThanMaximumDistance" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All Unit Tests" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.MethodAndInvocationTargetDocumentTest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.LuceneSimilarityTest.shouldFindMethodWithAtLeastOneWordInCommon" />
@@ -669,7 +684,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <configuration useDefault="true">C:\Documents and Settings\sg0899445\Application Data\Subversion</configuration>
+    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>true</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
@@ -677,39 +692,46 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen\.idea" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen\.idea" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/src/examples" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/src/examples" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen\FitNesseRoot" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen\FitNesseRoot" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/.idea" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/.idea" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen\src\examples" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen\src\examples" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen\src\test" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen\src\test" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/FitNesseRoot" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/FitNesseRoot" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen\src\main" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen\src\main" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/src/main" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/src/main" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$/src/test" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$/src/test" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="E:\projects\givwenzen" />
-          <option name="myCopyRoot" value="E:\projects\givwenzen" />
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
         </SvnCopyRootSimple>
       </list>
     </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1292557468917</created>
+      <updated>1292557468917</updated>
+    </task>
+    <servers />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -732,26 +754,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1676" y="-4" width="1288" height="1032" extended-state="6" />
-    <editor active="true" />
+    <frame x="320" y="150" width="960" height="600" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Properties" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32964602" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32616082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2498469" sideWeight="0.6640712" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972497" sideWeight="0.65929204" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398641" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3272933" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32522124" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.67477876" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32927817" sideWeight="0.65118915" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893288" sideWeight="0.670354" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34088334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34070796" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="V1Details" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30514988" sideWeight="0.77329975" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32616082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="V1Integration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21788414" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="EJB" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,8 +794,9 @@
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="true" />
     <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="in order to make InstantiationState creation easier and clearer&#10;- created an InstantiationStateCreator&#10;- changed all classes creating InstantiaionState instances to use the creator&#10;&#10;- small refactorigns&#10;-- changed step name that was the default name to one that made more since in StepsWithCustomState class&#10;-- layed out the GivWenZenCreatorTest slightly different (hopefull more readable)" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished fitnesse update" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -794,6 +818,7 @@
     <MESSAGE value="- in order to make customization of GivWenZen easier&#10;-- fixed the ant file to include fest jars&#10;" />
     <MESSAGE value="- in order to allow for multiple custom state objects&#10;-- refactored the GivWenZenExecutor to allow for 0 or more custom step state objects&#10;-- refactored GWZForJUnit (not sure how it was working before).  I think the next step will be just to get rid of it. &#10;-- changed tests to use multiple custom state objects" />
     <MESSAGE value="in order to make InstantiationState creation easier and clearer&#10;- created an InstantiationStateCreator&#10;- changed all classes creating InstantiaionState instances to use the creator&#10;&#10;- small refactorigns&#10;-- changed step name that was the default name to one that made more since in StepsWithCustomState class&#10;-- layed out the GivWenZenCreatorTest slightly different (hopefull more readable)" />
+    <MESSAGE value="finished fitnesse update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -855,88 +880,59 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/lucene-core-3.0.2.jar!/org/apache/lucene/document/Document.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="177" selection-end="177" vertical-scroll-proportion="0.129771">
-          <folding />
-        </state>
+        <state line="5" column="26" selection-start="177" selection-end="177" vertical-scroll-proportion="0.129771" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/CustomParserFinderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="293" selection-end="293" vertical-scroll-proportion="0.21715328">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="293" selection-end="293" vertical-scroll-proportion="0.21715328" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MethodAndInvocationTarget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="-0.12757973">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_20/src.zip!/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="17" selection-start="5345" selection-end="5345" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="25" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="-0.12757973" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/MissingStepMethodAndInvocationTarget.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="54" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="40" column="54" selection-start="2067" selection-end="2067" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="29" selection-start="1725" selection-end="1725" vertical-scroll-proportion="1.2830188">
-          <folding />
-        </state>
+        <state line="47" column="29" selection-start="1725" selection-end="1725" vertical-scroll-proportion="1.2830188" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/Similarity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="146" selection-end="146" vertical-scroll-proportion="0.1551095">
+        <state line="7" column="32" selection-start="146" selection-end="146" vertical-scroll-proportion="0.1551095" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/levenshtein/SimilarMethodNameFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="25" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/lucene/LuceneSimilarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="60" selection-start="3068" selection-end="3068" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene/LuceneSimilarityTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="87" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/givwenzen/text/matching/lucene/LuceneSimilarity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="0" selection-start="2687" selection-end="2687" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="60" selection-start="3068" selection-end="3068" vertical-scroll-proportion="-10.88">
-          <folding />
-        </state>
+        <state line="37" column="87" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="34" selection-start="2528" selection-end="2528" vertical-scroll-proportion="0.59287053">
+        <state line="72" column="6" selection-start="2577" selection-end="2577" vertical-scroll-proportion="0.24691358">
           <folding />
         </state>
       </provider>
@@ -945,40 +941,86 @@
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
-        <UIState>
+        <settings>
+          <artifact-editor />
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+              </list>
+            </option>
           </splitter-proportions>
-          <settings />
-        </UIState>
+        </settings>
       </state>
-      <state key="ProjectJDKs.UI">
-        <UIState>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
           <splitter-proportions>
-            <SplitterProportionsDataImpl>
-              <option name="proportions">
-                <list>
-                  <option value="0.2" />
-                </list>
-              </option>
-            </SplitterProportionsDataImpl>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+              </list>
+            </option>
           </splitter-proportions>
-          <last-edited>Ruby SDK 1.8.6</last-edited>
-        </UIState>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>examples</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.21845794" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
       </state>
       <state key="ScopeChooserConfigurable.UI">
-        <UIState>
-          <splitter-proportions>
-            <SplitterProportionsDataImpl />
-          </splitter-proportions>
-          <settings />
-        </UIState>
+        <settings>
+          <splitter-proportions />
+        </settings>
       </state>
     </states>
   </component>

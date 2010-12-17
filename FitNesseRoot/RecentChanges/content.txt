@@ -1,3 +1,4 @@
+|FitLibraryExamples.AddTwoNumbers||21:50:52 Thu, Dec 16, 2010|
 |SlimExamples.AddTwoNumbers||10:34:52 Sun, Jul 25, 2010|
 |SlimExamples.AddTwoNumbersWithPlainTextTable||23:40:22 Mon, Jul 19, 2010|
 |SlimExamples.ObjectVarArgsExample||09:19:03 Fri, Apr 02, 2010|
@@ -31,7 +32,6 @@
 |FitLibraryExamples||17:37:52 Wed, Dec 02, 2009|
 |GivWenZenTests||17:37:20 Wed, Dec 02, 2009|
 |FitLibraryExamples.StepsWithCustomState||11:44:35 Wed, Dec 02, 2009|
-|FitLibraryExamples.AddTwoNumbers||11:43:52 Wed, Dec 02, 2009|
 |FitLibraryExamples.StepsThatCallOtherSteps||11:43:07 Wed, Dec 02, 2009|
 |FitLibraryExamples.SetUp||11:38:06 Wed, Dec 02, 2009|
 |FrontPage||10:37:41 Mon, Nov 09, 2009|
