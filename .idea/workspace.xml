@@ -16,39 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="a7562009-1d9c-4926-8d06-21e0dd192b7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteExecutionReport.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/suiteExecutionReport.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/templates/testExecutionReport.vm" afterPath="$PROJECT_DIR$/FitNesseRoot/files/templates/testExecutionReport.vm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/properties" afterPath="$PROJECT_DIR$/FitNesseRoot/properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/updateList" afterPath="$PROJECT_DIR$/FitNesseRoot/updateList" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/ScenarioLibrary/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/ScenarioLibrary/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BlankCellsInNestedScenariosShouldWork/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ScenarioLibraryTestSuite/BlankCellsInNestedScenariosShouldWork/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TableTableReturnsNull/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TableTableReturnsNull/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTwoIdenticalTablesOnPageDontConflict/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTwoIdenticalTablesOnPageDontConflict/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/ScenarioLibrary/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/ScenarioLibrary/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/SetUp/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteTestHistory/SetUp/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/BuildOperateCheck/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CustomizingTestExecution/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/CustomizingTestExecution/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DebugingFixtureCode/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/DebugingFixtureCode/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/FixtureGallery/ImportantConcepts/MarkupVariables/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollExample/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/PayrollTests/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/QuickReferenceGuide/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/QuickReferenceGuide/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RestfulServices/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/RowEntryFixture/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/SliM/SlimProtocol/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/FitNesse/UserGuide/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" afterPath="$PROJECT_DIR$/FitNesseRoot/RecentChanges/content.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/AddTwoNumbers/properties.xml" afterPath="$PROJECT_DIR$/FitNesseRoot/SlimExamples/AddTwoNumbers/properties.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FitNesseRoot/files/css/fitnesse_base.css" afterPath="$PROJECT_DIR$/FitNesseRoot/files/css/fitnesse_base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/givwenzen.properties" afterPath="$PROJECT_DIR$/givwenzen.properties" />
     </list>
     <ignored path=".idea/workspace.xml" />
     <ignored path="$USER_HOME_GRAILS$/" />
@@ -113,10 +82,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="41" selection-start="10268" selection-end="10268" vertical-scroll-proportion="0.2924791">
+            <state line="222" column="41" selection-start="10268" selection-end="10268" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="givwenzen.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/givwenzen.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.2016129">
               <folding />
             </state>
           </provider>
@@ -136,7 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/Distance.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/DomainStepMethodLocator.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/givwenzen/levenshtein/SimilarMethodNameFinder.java" />
@@ -152,6 +129,7 @@
         <option value="$PROJECT_DIR$/src/test/java/org/givwenzen/text/matching/lucene/LuceneSimilarityTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/givwenzen.properties" />
       </list>
     </option>
   </component>
@@ -622,7 +600,7 @@
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
-    <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
+    <configuration useDefault="false">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>true</myIsUseDefaultProxy>
     <supportedVersion>125</supportedVersion>
   </component>
@@ -694,14 +672,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="46" y="38" width="986" height="740" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260135" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24972497" sideWeight="0.65929204" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.398641" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295583" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3243243" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3243243" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.67477876" order="4" side_tool="false" content_ui="tabs" />
@@ -735,7 +713,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="update ant-build to run fitnesse tests, not satisfied with this yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="test of intellij commit" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -759,6 +737,7 @@
     <MESSAGE value="in order to make InstantiationState creation easier and clearer&#10;- created an InstantiationStateCreator&#10;- changed all classes creating InstantiaionState instances to use the creator&#10;&#10;- small refactorigns&#10;-- changed step name that was the default name to one that made more since in StepsWithCustomState class&#10;-- layed out the GivWenZenCreatorTest slightly different (hopefull more readable)" />
     <MESSAGE value="finished fitnesse update" />
     <MESSAGE value="update ant-build to run fitnesse tests, not satisfied with this yet" />
+    <MESSAGE value="test of intellij commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -870,7 +849,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="41" selection-start="10268" selection-end="10268" vertical-scroll-proportion="0.2924791">
+        <state line="222" column="41" selection-start="10268" selection-end="10268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/givwenzen.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="200" selection-end="200" vertical-scroll-proportion="0.2016129">
           <folding />
         </state>
       </provider>
