@@ -1,5 +1,5 @@
+|SlimExamples.AddTwoNumbers||10:04:29 Sat, Jan 08, 2011|
 |FitLibraryExamples.AddTwoNumbers||21:50:52 Thu, Dec 16, 2010|
-|SlimExamples.AddTwoNumbers||10:34:52 Sun, Jul 25, 2010|
 |SlimExamples.AddTwoNumbersWithPlainTextTable||23:40:22 Mon, Jul 19, 2010|
 |SlimExamples.ObjectVarArgsExample||09:19:03 Fri, Apr 02, 2010|
 |SlimExamples.NativeArrayParameterExample||21:40:44 Wed, Mar 31, 2010|

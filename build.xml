@@ -104,7 +104,7 @@
 		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies"/>
 
    <target name="build.clover.givwenzen" description="Compile givwenzen" depends="with.clover,clean.givwenzen,compile.givwenzen.production,compile.givwenzen.tests,
-		  compile.givwenzen.examples,givwenzen.test,execute_fitnesse_tests,clover.report,clover.html"/>
+		  compile.givwenzen.examples,givwenzen.test,execute-fitnesse-tests,clover.report,clover.html"/>
 
    <target name="build.givwenzen.leave.reports" description="Compile givwenzen but do not clean reports" depends="clean.givwenzen.classes,compile.givwenzen.production,compile.givwenzen.tests,compile.givwenzen.examples,
 		        givwenzen.test,jar.givwenzen,jar.givwenzen.examples,jar.givwenzen.with.dependencies"/>
@@ -215,29 +215,22 @@
       <taskdef classpathref="fitnesse.classpath" resource="tasks.properties"/>
    </target>
 
-   <target name="execute-fitnesse-tests" depends="execute_fitnesse_tests"/>
-
-   <target name="execute_fitnesse_tests" depends="load_fitnesse_taskdef"
-           description="Executes the Fitnesse Acceptance Test Suite. This target starts fitnesse, executes the Accetpance test suite, publishes the test results and stops fitnesse">
-      <start-fitnesse wikidirectoryrootpath="${basedir}" fitnesseport="${fitnesse.port}"/>
-      <execute-fitnesse-tests suitepage="GivWenZenTests" fitnesseport="${fitnesse.port}"
-                              resultsdir="${givwenzen.target.dir}" debug="false" resultsxmlpage="gwz-tests-results.xml"
-                              classpathref="fitnesse.classpath"/>
-      <execute-fitnesse-tests suitepage="SlimExamples" fitnesseport="${fitnesse.port}"
-                              resultsdir="${givwenzen.target.dir}" debug="false"
-                              resultsxmlpage="gwz-slim-examples-results.xml" classpathref="fitnesse.classpath"/>
-      <execute-fitnesse-tests suitepage="FitLibraryExamples" fitnesseport="${fitnesse.port}"
-                              resultsdir="${givwenzen.target.dir}" debug="false"
-                              resultsxmlpage="gwz-fitlibrary-examples-results.xml" classpathref="fitnesse.classpath"/>
-      <stop-fitnesse fitnesseport="${fitnesse.port}"/>
-   </target>
-
-   <target name="new-execute-fitnesse-tests"
+   <target name="execute-fitnesse-tests"
            description="NOT READY - DO NOT USE FOR BUILD MACHINE - SERVERLESS FITNESSE RUNNER">
       <java jar="lib/fitnesse.jar" failonerror="true" fork="true"
             output="${givwenzen.target.dir}/gwz-slim-examples-results.xml">
          <arg value="-c"/>
          <arg value="SlimExamples?suite&amp;format=xml"/>
+      </java>
+      <java jar="lib/fitnesse.jar" failonerror="true" fork="true"
+            output="${givwenzen.target.dir}/gwz-tests-results.xml">
+         <arg value="-c"/>
+         <arg value="GWZTests?suite&amp;format=xml"/>
+      </java>
+      <java jar="lib/fitnesse.jar" failonerror="true" fork="true"
+            output="${givwenzen.target.dir}/gwz-fitlibrary-examples-results.xml">
+         <arg value="-c"/>
+         <arg value="FitLibraryExamples?suite&amp;format=xml"/>
       </java>
    </target>
 
