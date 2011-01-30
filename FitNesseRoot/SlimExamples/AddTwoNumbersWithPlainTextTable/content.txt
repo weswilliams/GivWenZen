@@ -1,3 +1,6 @@
+!3 This example is best understood by clicking the edit button and seeing how the test is defined. Instead of using normal wiki table formats a character is defined that indicates column delineation in the first row of the script table, in this example it is the  ':' character 
+
+
 ![: script
 given: i turn on the calculator
 and: i have entered 50 into the calculator

@@ -1,11 +1,11 @@
-|SlimExamples.AddTwoNumbers||10:04:29 Sat, Jan 08, 2011|
+|SlimExamples.SetUp||10:38:48 Sun, Jan 23, 2011|
+|SlimExamples.AddTwoNumbers||10:09:48 Sun, Jan 23, 2011|
+|SlimExamples.AddTwoNumbersWithPlainTextTable||09:59:02 Sun, Jan 23, 2011|
 |FitLibraryExamples.AddTwoNumbers||21:50:52 Thu, Dec 16, 2010|
-|SlimExamples.AddTwoNumbersWithPlainTextTable||23:40:22 Mon, Jul 19, 2010|
 |SlimExamples.ObjectVarArgsExample||09:19:03 Fri, Apr 02, 2010|
 |SlimExamples.NativeArrayParameterExample||21:40:44 Wed, Mar 31, 2010|
 |SlimExamples.ArrayParameterExample||21:11:31 Wed, Mar 31, 2010|
 |GivWenZenTests.ComplexStepScenario.UseCustomStateObject||18:13:14 Fri, Jan 29, 2010|
-|SlimExamples.SetUp||19:35:07 Mon, Jan 18, 2010|
 |SlimExamples||16:54:34 Mon, Jan 18, 2010|
 |SlimExamples.AddTwoNumbersWithoutDuplication2||15:40:47 Mon, Jan 18, 2010|
 |SlimExamples.AddTwoNumbersWithLessDuplicationDuplication||15:40:38 Mon, Jan 18, 2010|
