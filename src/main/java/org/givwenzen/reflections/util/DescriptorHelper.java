@@ -119,7 +119,7 @@ public class DescriptorHelper {
 
         try {
             String descriptor = typeNameToDescriptor(typeName);
-            return Class.forName(descriptor);
+            return Class.forName(descriptor, true, Thread.currentThread().getContextClassLoader());
         } catch (ClassNotFoundException e) {
             throw new ReflectionsException("could not resolve type " + typeName, e);
         }
