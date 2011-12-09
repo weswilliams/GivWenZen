@@ -71,9 +71,6 @@
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
   </component>
-  <component name="DependencyValidationManager">
-    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
-  </component>
   <component name="EclipseEmbeddedCompilerSettings">
     <option name="DEBUGGING_INFO" value="true" />
     <option name="GENERATE_NO_WARNINGS" value="true" />
@@ -204,6 +201,36 @@
           <value>
             <SvnBranchConfiguration>
               <option name="trunkUrl" value="" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/FitNesseRoot">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://givwenzen.googlecode.com/svn/branches" />
+                  <option value="https://givwenzen.googlecode.com/svn/maven2" />
+                  <option value="https://givwenzen.googlecode.com/svn/tags" />
+                  <option value="https://givwenzen.googlecode.com/svn/wiki" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://givwenzen.googlecode.com/svn/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://givwenzen.googlecode.com/svn/branches" />
+                  <option value="https://givwenzen.googlecode.com/svn/maven2" />
+                  <option value="https://givwenzen.googlecode.com/svn/tags" />
+                  <option value="https://givwenzen.googlecode.com/svn/wiki" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://givwenzen.googlecode.com/svn/trunk" />
             </SvnBranchConfiguration>
           </value>
         </entry>

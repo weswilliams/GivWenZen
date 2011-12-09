@@ -10,11 +10,14 @@ FitNesseRoot/files/images/FitnesseStarted.png
 FitNesseRoot/files/images/Thumbs.db
 FitNesseRoot/files/images/collapsableClosed.gif
 FitNesseRoot/files/images/collapsableOpen.gif
+FitNesseRoot/files/images/fail.png
 FitNesseRoot/files/images/fitnesse_architecture.jpg
 FitNesseRoot/files/images/folder.gif
 FitNesseRoot/files/images/importedPage.jpg
+FitNesseRoot/files/images/pass.png
 FitNesseRoot/files/images/plus.png
 FitNesseRoot/files/images/stop.gif
+FitNesseRoot/files/images/unrun.png
 FitNesseRoot/files/images/virtualPage.jpg
 FitNesseRoot/files/css/fitnesse_base.css
 FitNesseRoot/files/css/jquery.autocomplete.css
@@ -51,6 +54,8 @@ FitNesseRoot/files/templates/searchResultsFooter.vm
 FitNesseRoot/files/templates/searchResultsHeader.vm
 FitNesseRoot/files/templates/suiteExecutionReport.vm
 FitNesseRoot/files/templates/suiteHistoryXML.vm
+FitNesseRoot/files/templates/suiteOverview.vm
+FitNesseRoot/files/templates/suiteOverviewNode.vm
 FitNesseRoot/files/templates/suiteXML.vm
 FitNesseRoot/files/templates/testExecutionReport.vm
 FitNesseRoot/files/templates/testHistory.vm
@@ -386,6 +391,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ChainTest/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ChainTest/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ChainWithInstanceTest/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ChainWithInstanceTest/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/DefineTableTypeTest/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/DefineTableTypeTest/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ErikPragtBug/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/ErikPragtBug/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/HashTableTests/ShouldConvertHashWidgetToHashTable/content.txt
@@ -484,6 +491,8 @@ FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSubsetQuery/conten
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSubsetQuery/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSymbolsDontGetTurnedToStringsInTheOutput/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestSymbolsDontGetTurnedToStringsInTheOutput/properties.xml
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTryingParameterizationIsntTooGreedy/content.txt
+FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTryingParameterizationIsntTooGreedy/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTwoIdenticalTablesOnPageDontConflict/content.txt
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/TestTwoIdenticalTablesOnPageDontConflict/properties.xml
 FitNesseRoot/FitNesse/SuiteAcceptanceTests/SuiteSlimTests/content.txt
@@ -760,6 +769,7 @@ FitNesseRoot/FitNesse/UserGuide/ActionFixture/properties.xml
 FitNesseRoot/FitNesse/UserGuide/ActionFixtureCode/content.txt
 FitNesseRoot/FitNesse/UserGuide/ActionFixtureCode/properties.xml
 FitNesseRoot/FitNesse/UserGuide/AdministeringFitnesse/content.txt
+FitNesseRoot/FitNesse/UserGuide/AdministeringFitnesse/properties.xml
 FitNesseRoot/FitNesse/UserGuide/AttentionMessagesInTestResults/content.txt
 FitNesseRoot/FitNesse/UserGuide/AttentionMessagesInTestResults/properties.xml
 FitNesseRoot/FitNesse/UserGuide/BeingAsister/content.txt
@@ -1292,6 +1302,8 @@ FitNesseRoot/FitNesse/UserGuide/SliM/DataTypes/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/DataTypes/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/DecisionTable/properties.xml
+FitNesseRoot/FitNesse/UserGuide/SliM/DefineTableType/content.txt
+FitNesseRoot/FitNesse/UserGuide/SliM/DefineTableType/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/ExceptionHandling/content.txt
 FitNesseRoot/FitNesse/UserGuide/SliM/ExceptionHandling/properties.xml
 FitNesseRoot/FitNesse/UserGuide/SliM/GracefulNames/content.txt
