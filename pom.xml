@@ -140,7 +140,7 @@
     <distributionManagement>
         <repository>
             <id>givwenzen-repo</id>
-            <url>git:releases://github.com:bernerbits/GivWenZen.git</url>
+            <url>git:releases://bernerbits@github.com:bernerbits/GivWenZen.git</url>
         </repository>
     </distributionManagement>
 </project>
