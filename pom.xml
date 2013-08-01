@@ -11,16 +11,18 @@
         team get the words right and create a ubiquitous language to describe and test a business domain.
     </description>
     <url>http://givwenzen.googlecode.com</url>
+    
     <licenses>
         <license>
             <name>The MIT License</name>
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+    
     <scm>
-        <connection>http://givwenzen.googlecode.com/svn/tags/1.0</connection>
-        <developerConnection>https://givwenzen.googlecode.com/svn/tags/1.0</developerConnection>
-        <url>http://code.google.com/p/givwenzen/source/browse/</url>
+        <connection>scm:git:https://github.com/bernerbits/GivWenZen.git</connection>
+        <developerConnection>scm:git:https://github.com/bernerbits/GivWenZen.git</developerConnection>
+        <url>https://github.com/bernerbits/GivWenZen</url>
     </scm>
 
     <dependencies>
@@ -138,10 +140,9 @@
     </repositories>
 
     <distributionManagement>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
+        <site>
             <id>givwenzen-repo</id>
-            <url>svn:https://givwenzen.googlecode.com/svn/maven2</url>
-        </repository>
+            <url>scm:git:https://github.com/bernerbits/GivWenZen.git/repo</url>
+        </site>
     </distributionManagement>
 </project>
