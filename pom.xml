@@ -140,9 +140,9 @@
     </repositories>
 
     <distributionManagement>
-        <site>
+        <repository>
             <id>givwenzen-repo</id>
             <url>scm:git:https://github.com/bernerbits/GivWenZen.git/repo</url>
-        </site>
+        </repository>
     </distributionManagement>
 </project>
