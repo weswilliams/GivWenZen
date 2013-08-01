@@ -122,27 +122,25 @@
                 </configuration>
             </plugin>
         </plugins>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>synergian-repo</id>
+			<url>https://raw.github.com/synergian/wagon-git/releases</url>
+		</pluginRepository>
+	</pluginRepositories>
         <extensions>
             <extension>
-                <groupId>org.jvnet.wagon-svn</groupId>
-                <artifactId>wagon-svn</artifactId>
-                <version>1.8</version>
+                <groupId>ar.com.synergian</groupId>
+                <artifactId>wagon-git</artifactId>
+                <version>0.1.6</version>
             </extension>
         </extensions>
     </build>
 
-    <repositories>
-        <repository>
-            <id>maven2-repository.dev.java.net</id>
-            <name>Java.net Repository for Maven</name>
-            <url>http://download.java.net/maven/2/</url>
-        </repository>
-    </repositories>
-
     <distributionManagement>
         <repository>
             <id>givwenzen-repo</id>
-            <url>scm:git:https://github.com/bernerbits/GivWenZen.git/repo</url>
+            <url>git:releases://github.com:bernerbits/GivWenZen.git</url>
         </repository>
     </distributionManagement>
 </project>
