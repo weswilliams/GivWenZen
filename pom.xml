@@ -5,7 +5,7 @@
     <artifactId>givwenzen</artifactId>
     <packaging>jar</packaging>
     <name>GivWenZen</name>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <description>
         GivWenZen allows a user to use the BDD Given When Then vocabulary and plain text sentences to help a
         team get the words right and create a ubiquitous language to describe and test a business domain.
@@ -27,31 +27,32 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
-            <version>1.1</version>
+            <version>1.1.3</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>r06</version>
-        </dependency>
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava-gwt</artifactId>
+		    <version>14.0.1</version>
+		</dependency>
 
         <dependency>
-            <groupId>javassist</groupId>
+            <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
-            <version>3.8.0.GA</version>
+            <version>3.18.0-GA</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.5.6</version>
+            <version>1.7.5</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.5.6</version>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
@@ -59,16 +60,20 @@
             <artifactId>dom4j</artifactId>
             <version>1.6</version>
         </dependency>
+        
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>1.2.14</version>
+            <version>1.2.17</version>
+            <scope>provided</scope>
         </dependency>
+        
         <dependency>
             <groupId>commons-vfs</groupId>
             <artifactId>commons-vfs</artifactId>
             <version>1.0</version>
         </dependency>
+        
        <dependency>
            <groupId>org.apache.lucene</groupId>
            <artifactId>lucene-core</artifactId>
@@ -77,28 +82,28 @@
 
         <dependency>
             <groupId>org.fitnesse</groupId>
-            <artifactId>fitlibrary</artifactId>
-            <version>20080812</version>
+            <artifactId>fitnesse</artifactId>
+            <version>20130531</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.1</version>
+            <version>4.11</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.easytesting</groupId>
             <artifactId>fest-assert</artifactId>
-            <version>1.2</version>
+            <version>1.4</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>1.8.4</version>
+            <version>1.9.5</version>
             <scope>test</scope>
         </dependency>
 
