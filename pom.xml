@@ -122,12 +122,6 @@
                 </configuration>
             </plugin>
         </plugins>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>synergian-repo</id>
-			<url>https://raw.github.com/synergian/wagon-git/releases</url>
-		</pluginRepository>
-	</pluginRepositories>
         <extensions>
             <extension>
                 <groupId>ar.com.synergian</groupId>
@@ -136,6 +130,12 @@
             </extension>
         </extensions>
     </build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>synergian-repo</id>
+			<url>https://raw.github.com/synergian/wagon-git/releases</url>
+		</pluginRepository>
+	</pluginRepositories>
 
     <distributionManagement>
         <repository>
