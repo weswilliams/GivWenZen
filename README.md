@@ -42,7 +42,7 @@ Note that the Fitnesse instructions below assume that you want to write your Giv
     |$executor=                |create                      |
     |start|Giv Wen Zen For Slim|$executor                   |
 
-This is literally just instantiating Java classes and calling methods on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism but will post more as I learn more :)
+This is literally just instantiating Java classes and calling methods on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism (my guess is title-less fixtures are considered "scripts" by SLIM) but will post more as I learn more :)
 
 ### Thanks and good luck! 
 Derek Berner
