@@ -1,8 +1,8 @@
 # GivWenZen Fork Notice
 
-There has not been a major update to the GivWenZen main project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes. 
+There has not been a major update to the GivWenZen main project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes, which I have decided to make public. As such, feature requests, issues and so on are likely to be met at worse than a snail's pace. However, should you send me pull requests, I'm more than happy to oblige. 
 
-The instructions in the original README below are somewhat out-of-date; I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
+I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
 
 First, add the following repository to your pom.xml or settings.xml:
 
@@ -116,10 +116,6 @@ http://groups.google.com/group/givwenzen_user
 
 http://groups.google.com/group/givwenzen_developer
 
-<p style="margin-top:10px; margin-bottom:0; padding-bottom:0; text-align:center; line-height:0"><a target="_blank" href="http://feeds.feedburner.com/~r/weswilliams/~6/1"><img src="http://feeds.feedburner.com/weswilliams.1.gif" alt="WesWilliams" style="border:0"></a></p>
-
-<a href="http://www.atlassian.com/software/clover" title="Atlassian Clover"><img border="0" width="180" height="60" alt="Atlassian Clover" src="http://www.atlassian.com/software/clover/images/badges/v1/lg_clover.png"></a>
-
 # Running
 
     ant
@@ -140,8 +136,6 @@ Libraries required for main classes:
 * javassist.jar - Mozilla Public License 1.1. 
 * log4j-1.2.9.jar - Apache License 2.0.
 * reflections-0.9.2.jar - GNU Lesser General Public License
-
-#### Links
 
 [GivWenZen]: <http://code.google.com/p/givwenzen> "GivWenZen"
 [BDD]: <http://behaviour-driven.org/> "BDD"
