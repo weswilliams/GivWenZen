@@ -51,18 +51,18 @@ Derek Berner
 
 # [![GivWenZen](http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png)](http://code.google.com/p/givwenzen "GivWenZen")
 
-[http://code.google.com/p/givwenzen GivWenZen] allows a user to use the [http://behaviour-driven.org/ BDD] [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] vocabulary and plain text sentences to help a team [http://behaviour-driven.org/GettingTheWordsRight get the words right] and create a [http://behaviour-driven.org/UbiquitousLanguage ubiquitous language] to describe and test a business domain.
+[GivWenZen] allows a user to use the [http://behaviour-driven.org/ BDD] [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] vocabulary and plain text sentences to help a team [http://behaviour-driven.org/GettingTheWordsRight get the words right] and create a [http://behaviour-driven.org/UbiquitousLanguage ubiquitous language](http://code.google.com/p/givwenzen "GivWenZen] allows a user to use the [http://behaviour-driven.org/ BDD] [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] vocabulary and plain text sentences to help a team [http://behaviour-driven.org/GettingTheWordsRight get the words right] and create a [http://behaviour-driven.org/UbiquitousLanguage ubiquitous language") to describe and test a business domain.
 
 = The Idea =
 
-The idea was taken from [http://cukes.info/ Cucumber] and my desire to create [http://cukes.info/ Cucumber] like specifications and tests in [http://fitnesse.org/ FitNesse]. Like [http://cukes.info/ Cucumber], [http://code.google.com/p/givwenzen GivWenZen] does not distinguish between [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] or and but you should. Regular expression parsing is used to determine what step method should be executed for each given when then step in a test. Regular expression parsing is also used to find parameters to the step method. Also see how other ideas from [http://cukes.info/ Cucumber] map to [http://fitnesse.org/ FitNesse].
+The idea was taken from [Cucumber] and my desire to create [http://cukes.info/ Cucumber] like specifications and tests in [http://fitnesse.org/ FitNesse]. Like [http://cukes.info/ Cucumber], [http://code.google.com/p/givwenzen GivWenZen] does not distinguish between [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] or and but you should. Regular expression parsing is used to determine what step method should be executed for each given when then step in a test. Regular expression parsing is also used to find parameters to the step method. Also see how other ideas from [http://cukes.info/ Cucumber] map to [http://fitnesse.org/ FitNesse](http://cukes.info/ "Cucumber] and my desire to create [http://cukes.info/ Cucumber] like specifications and tests in [http://fitnesse.org/ FitNesse]. Like [http://cukes.info/ Cucumber], [http://code.google.com/p/givwenzen GivWenZen] does not distinguish between [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] or and but you should. Regular expression parsing is used to determine what step method should be executed for each given when then step in a test. Regular expression parsing is also used to find parameters to the step method. Also see how other ideas from [http://cukes.info/ Cucumber] map to [http://fitnesse.org/ FitNesse").
 
 = Example =
-=== 1) Start with an example [http://code.google.com/p/givwenzen/wiki/ExampleSlimFixture fixture] actual class found in the givwenzen_test.jar. ===
+=== 1) Start with an example [fixture](http://code.google.com/p/givwenzen/wiki/ExampleSlimFixture "fixture") actual class found in the givwenzen_test.jar. ===
 
-=== 2) In a [http://fitnesse.org/ FitNesse] table it could look like this. ===
+=== 2) In a [FitNesse](http://fitnesse.org/ "FitNesse") table it could look like this. ===
 
-===== import and start should go in [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SetUp] or [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SuiteSetUp] =====
+===== import and start should go in [SetUp] or [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SuiteSetUp](http://fitnesse.org/FitNesse.UserGuide.SpecialPages "SetUp] or [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SuiteSetUp") =====
 
     |import|
     |org.givwenzen|
@@ -105,10 +105,10 @@ The idea was taken from [http://cukes.info/ Cucumber] and my desire to create [h
 ----
 
 = More Examples =
-More example can be found in the [http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot FitNesseRoot] in source.  It is easy to [http://code.google.com/p/givwenzen/wiki/GettingStarted get started].
+More example can be found in the [FitNesseRoot] in source.  It is easy to [http://code.google.com/p/givwenzen/wiki/GettingStarted get started](http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot "FitNesseRoot] in source.  It is easy to [http://code.google.com/p/givwenzen/wiki/GettingStarted get started").
 
-[http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/SimpleStepScenario Simple scenarios]
-[http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/ComplexStepScenario More complex scenarios]
+[Simple scenarios](http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/SimpleStepScenario "Simple scenarios")
+[More complex scenarios](http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/ComplexStepScenario "More complex scenarios")
 
 ==== Groups: ====
 
