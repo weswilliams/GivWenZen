@@ -1,34 +1,34 @@
 # GivWenZen Fork Notice
 
-There has not been a major update to the main branch of this project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes. 
+There has not been a major update to the GivWenZen main project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes. 
 
 The instructions in the original README below are somewhat out-of-date; I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
 
 1. Add the following repository to your pom.xml or settings.xml:
 
-	<repositories>
-		...
-		<repository>
-			<id>givwenzen-repo</id>
-			<name>GivWenZen Repository</name>
-			<url>https://raw.github.com/bernerbits/GivWenZen.git/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		...
-	</repositories>
+    &lt;repositories>
+        ...
+        &lt;repository>
+            &lt;id>givwenzen-repo&lt;/id>
+            &lt;name>GivWenZen Repository&lt;/name>
+            &lt;url>https://raw.github.com/bernerbits/GivWenZen.git/releases&lt;/url>
+            &lt;releases>
+                &lt;enabled>true&lt;/enabled>
+            &lt;/releases>
+            &lt;snapshots>
+                &lt;enabled>false&lt;/enabled>
+            &lt;/snapshots>
+        &lt;/repository>
+        ...
+    &lt;/repositories>
 
 2. Add the dependency to your pom project:
 
-	<dependency>
-		<groupId>com.googlecode.givwenzen</groupId>
-		<artifactId>givwenzen</artifactId>
-		<version>1.0.4</version>
-	</dependency>
+    &lt;dependency>
+        &lt;groupId>com.googlecode.givwenzen&lt;/groupId>
+        &lt;artifactId>givwenzen&lt;/artifactId>
+        &lt;version>1.0.4&lt;/version>
+    &lt;/dependency>
 
 That's it! Note that if you are using GivWenZen with a testing framework you will want to include `<scope>test</scope>` in your dependency.
 
@@ -36,11 +36,11 @@ That's it! Note that if you are using GivWenZen with a testing framework you wil
 
 Note that the Fitnesse instructions below assume that you want to write your GivWenZen fixtures in the default package of `bdd.steps`. You may not want to do this by default. I am working on a way to configure GivWenZen from within Fitnesse, but in the meantime, the following workaround will get you running in the package of your choosing:
 
-	|script                                                     |
-	|start                     |Giv Wen Zen Executor Creator    |
-	|step class base package   |vanderbilt.voom.fitnesse.fixture|
-	|$executor=                |create                          |
-	|start|giv wen zen for slim|$executor                       |
+    |script                                                     |
+    |start                     |Giv Wen Zen Executor Creator    |
+    |step class base package   |vanderbilt.voom.fitnesse.fixture|
+    |$executor=                |create                          |
+    |start|giv wen zen for slim|$executor                       |
 
 This is literally instantiating java classes and calling functions on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism but will post more as I learn more :)
 
@@ -64,43 +64,43 @@ The idea was taken from [http://cukes.info/ Cucumber] and my desire to create [h
 
 ===== import and start should go in [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SetUp] or [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SuiteSetUp] =====
 
-	|import|
-	|org.givwenzen|
+    |import|
+    |org.givwenzen|
 
-	|script|
-	|start|giv wen zen for slim|
+    |script|
+    |start|giv wen zen for slim|
 
 ===== this is your test =====
 
-	|script|
-	| given| a ToDo item is due tomorrow |
-	| when | the date changes to tomorrow  |
-	| then | a notification exists indicating the ToDo is due |
+    |script|
+    | given| a ToDo item is due tomorrow |
+    | when | the date changes to tomorrow  |
+    | then | a notification exists indicating the ToDo is due |
 
 === 3) The following is an example step class and test step method ===
 
-	package bdd.steps;
+    package bdd.steps;
 
-	@DomainSteps
-	public class ExampleSteps {
+    @DomainSteps
+    public class ExampleSteps {
 
-	  @DomainStep( “a ToDo item is due (.*)” )
-	  public void createToDoWithDueDateOf(CustomDate date) {
-	    // do something
-	  }
+      @DomainStep( “a ToDo item is due (.*)” )
+      public void createToDoWithDueDateOf(CustomDate date) {
+        // do something
+      }
 
-	  @DomainStep( “the date changes to (.*)” )
-	  public void theDateIs(CustomDate date) {
-	    // do something
-	  }
+      @DomainStep( “the date changes to (.*)” )
+      public void theDateIs(CustomDate date) {
+        // do something
+      }
 
-	  @DomainStep( “a notification exists indicating the ToDo is due” )
-	  public boolean verifyNotificationExistsForDueToDo() {
-	    // do something
-	    return false;
-	  }
+      @DomainStep( “a notification exists indicating the ToDo is due” )
+      public boolean verifyNotificationExistsForDueToDo() {
+        // do something
+        return false;
+      }
 
-	}
+    }
 
 ----
 
