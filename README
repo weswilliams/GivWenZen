@@ -1,3 +1,54 @@
+# GivWenZen Fork Notice
+
+There has not been a major update to the main branch of this project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes. 
+
+The instructions in the original README below are somewhat out-of-date; I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
+
+1. Add the following repository to your pom.xml or settings.xml:
+
+	<repositories>
+		...
+		<repository>
+			<id>givwenzen-repo</id>
+			<name>GivWenZen Repository</name>
+			<url>https://raw.github.com/bernerbits/GivWenZen.git/releases</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		...
+	</repositories>
+
+2. Add the dependency to your pom project:
+
+	<dependency>
+		<groupId>com.googlecode.givwenzen</groupId>
+		<artifactId>givwenzen</artifactId>
+		<version>1.0.4</version>
+	</dependency>
+
+That's it! Note that if you are using GivWenZen with a testing framework you will want to include `<scope>test</scope>` in your dependency.
+
+## Changing the Fixture package
+
+Note that the Fitnesse instructions below assume that you want to write your GivWenZen fixtures in the default package of `bdd.steps`. You may not want to do this by default. I am working on a way to configure GivWenZen from within Fitnesse, but in the meantime, the following workaround will get you running in the package of your choosing:
+
+	|script                                                     |
+	|start                     |Giv Wen Zen Executor Creator    |
+	|step class base package   |vanderbilt.voom.fitnesse.fixture|
+	|$executor=                |create                          |
+	|start|giv wen zen for slim|$executor                       |
+
+This is literally instantiating java classes and calling functions on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism but will post more as I learn more :)
+
+### Thanks and good luck! 
+Derek Berner
+
+# Original README
+
 = [http://code.google.com/p/givwenzen http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png] = 
 
 [http://code.google.com/p/givwenzen GivWenZen] allows a user to use the [http://behaviour-driven.org/ BDD] [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] vocabulary and plain text sentences to help a team [http://behaviour-driven.org/GettingTheWordsRight get the words right] and create a [http://behaviour-driven.org/UbiquitousLanguage ubiquitous language] to describe and test a business domain.
@@ -12,45 +63,45 @@ The idea was taken from [http://cukes.info/ Cucumber] and my desire to create [h
 === 2) In a [http://fitnesse.org/ FitNesse] table it could look like this. ===
 
 ===== import and start should go in [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SetUp] or [http://fitnesse.org/FitNesse.UserGuide.SpecialPages SuiteSetUp] =====
-{{{
-|import|
-|org.givwenzen|
 
-|script|
-|start|giv wen zen for slim|
-}}}
+	|import|
+	|org.givwenzen|
+
+	|script|
+	|start|giv wen zen for slim|
+
 ===== this is your test =====
-{{{
-|script|
-| given| a ToDo item is due tomorrow |
-| when | the date changes to tomorrow  |
-| then | a notification exists indicating the ToDo is due |
-}}}
+
+	|script|
+	| given| a ToDo item is due tomorrow |
+	| when | the date changes to tomorrow  |
+	| then | a notification exists indicating the ToDo is due |
+
 === 3) The following is an example step class and test step method ===
-{{{
-package bdd.steps;
 
-@DomainSteps
-public class ExampleSteps {
+	package bdd.steps;
 
-  @DomainStep( “a ToDo item is due (.*)” )
-  public void createToDoWithDueDateOf(CustomDate date) {
-    // do something
-  }
+	@DomainSteps
+	public class ExampleSteps {
 
-  @DomainStep( “the date changes to (.*)” )
-  public void theDateIs(CustomDate date) {
-    // do something
-  }
+	  @DomainStep( “a ToDo item is due (.*)” )
+	  public void createToDoWithDueDateOf(CustomDate date) {
+	    // do something
+	  }
 
-  @DomainStep( “a notification exists indicating the ToDo is due” )
-  public boolean verifyNotificationExistsForDueToDo() {
-    // do something
-    return false;
-  }
+	  @DomainStep( “the date changes to (.*)” )
+	  public void theDateIs(CustomDate date) {
+	    // do something
+	  }
 
-}
-}}}
+	  @DomainStep( “a notification exists indicating the ToDo is due” )
+	  public boolean verifyNotificationExistsForDueToDo() {
+	    // do something
+	    return false;
+	  }
+
+	}
+
 ----
 
 = More Examples =
