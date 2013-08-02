@@ -4,31 +4,31 @@ There has not been a major update to the GivWenZen main project since 2011. I ha
 
 The instructions in the original README below are somewhat out-of-date; I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
 
-1. Add the following repository to your pom.xml or settings.xml:
+First, add the following repository to your pom.xml or settings.xml:
 
-    &lt;repositories>
+    <repositories>
         ...
-        &lt;repository>
-            &lt;id>givwenzen-repo&lt;/id>
-            &lt;name>GivWenZen Repository&lt;/name>
-            &lt;url>https://raw.github.com/bernerbits/GivWenZen.git/releases&lt;/url>
-            &lt;releases>
-                &lt;enabled>true&lt;/enabled>
-            &lt;/releases>
-            &lt;snapshots>
-                &lt;enabled>false&lt;/enabled>
-            &lt;/snapshots>
-        &lt;/repository>
+        <repository>
+            <id>givwenzen-repo</id>
+            <name>GivWenZen Repository</name>
+            <url>https://raw.github.com/bernerbits/GivWenZen.git/releases</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
         ...
-    &lt;/repositories>
+    </repositories>
 
-2. Add the dependency to your pom project:
+Next, add the dependency to your pom project:
 
-    &lt;dependency>
-        &lt;groupId>com.googlecode.givwenzen&lt;/groupId>
-        &lt;artifactId>givwenzen&lt;/artifactId>
-        &lt;version>1.0.4&lt;/version>
-    &lt;/dependency>
+    <dependency>
+        <groupId>com.googlecode.givwenzen</groupId>
+        <artifactId>givwenzen</artifactId>
+        <version>1.0.4</version>
+    </dependency>
 
 That's it! Note that if you are using GivWenZen with a testing framework you will want to include `<scope>test</scope>` in your dependency.
 
@@ -36,11 +36,11 @@ That's it! Note that if you are using GivWenZen with a testing framework you wil
 
 Note that the Fitnesse instructions below assume that you want to write your GivWenZen fixtures in the default package of `bdd.steps`. You may not want to do this by default. I am working on a way to configure GivWenZen from within Fitnesse, but in the meantime, the following workaround will get you running in the package of your choosing:
 
-    |script                                                     |
-    |start                     |Giv Wen Zen Executor Creator    |
-    |step class base package   |vanderbilt.voom.fitnesse.fixture|
-    |$executor=                |create                          |
-    |start|giv wen zen for slim|$executor                       |
+    |script                                                 |
+    |start                     |Giv Wen Zen Executor Creator|
+    |step class base package   |your.package.name.here      |
+    |$executor=                |create                      |
+    |start|Giv Wen Zen For Slim|$executor                   |
 
 This is literally just instantiating Java classes and calling methods on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism but will post more as I learn more :)
 
@@ -49,7 +49,7 @@ Derek Berner
 
 # Original README
 
-= [http://code.google.com/p/givwenzen http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png] = 
+# [![GivWenZen](http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png)](http://code.google.com/p/givwenzen "GivWenZen")
 
 [http://code.google.com/p/givwenzen GivWenZen] allows a user to use the [http://behaviour-driven.org/ BDD] [http://wiki.github.com/aslakhellesoy/cucumber/given-when-then Given When Then] vocabulary and plain text sentences to help a team [http://behaviour-driven.org/GettingTheWordsRight get the words right] and create a [http://behaviour-driven.org/UbiquitousLanguage ubiquitous language] to describe and test a business domain.
 
