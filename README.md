@@ -11,7 +11,7 @@ First, add the following repository to your pom.xml or settings.xml:
         <repository>
             <id>givwenzen-repo</id>
             <name>GivWenZen Repository</name>
-            <url>https://raw.github.com/bernerbits/GivWenZen.git/releases</url>
+            <url>https://raw.github.com/bernerbits/GivWenZen/releases</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
