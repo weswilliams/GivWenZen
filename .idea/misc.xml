@@ -119,31 +119,16 @@
     <option name="mavenHome" value="C:\java_tools\apache-maven-2.1.0" />
     <option name="usePluginRegistry" value="true" />
   </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
   <component name="PerforceChangeBrowserSettings">
     <option name="USE_CLIENT_FILTER" value="true" />
     <option name="CLIENT" value="" />
-  </component>
-  <component name="PerforceDirect.Settings">
-    <option name="useP4CONFIG" value="true" />
-    <option name="port" value="&lt;perforce_server&gt;:1666" />
-    <option name="client" value="" />
-    <option name="user" value="" />
-    <option name="passwd" value="" />
-    <option name="showCmds" value="false" />
-    <option name="useNativeApi" value="true" />
-    <option name="pathToExec" value="p4" />
-    <option name="useCustomPathToExec" value="false" />
-    <option name="SYNC_FORCE" value="false" />
-    <option name="SYNC_RUN_RESOLVE" value="true" />
-    <option name="REVERT_UNCHANGED_FILES" value="true" />
-    <option name="CHARSET" value="none" />
-    <option name="SHOW_BRANCHES_HISTORY" value="true" />
-    <option name="ENABLED" value="true" />
-    <option name="USE_LOGIN" value="false" />
-    <option name="LOGIN_SILENTLY" value="false" />
-    <option name="INTEGRATE_RUN_RESOLVE" value="true" />
-    <option name="INTEGRATE_REVERT_UNCHANGED" value="true" />
-    <option name="SERVER_TIMEOUT" value="20000" />
   </component>
   <component name="ProjectDetails">
     <option name="projectName" value="givwenzen" />
@@ -151,7 +136,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/target/classes" />
   </component>
   <component name="ResourceManagerContainer">
