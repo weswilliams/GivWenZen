@@ -34,15 +34,10 @@ That's it! Note that if you are using GivWenZen with a testing framework you wil
 
 ## Changing the Fixture package
 
-Note that the Fitnesse instructions below assume that you want to write your GivWenZen fixtures in the default package of `bdd.steps`. You may not want to do this by default. I am working on a way to configure GivWenZen from within Fitnesse, but in the meantime, the following workaround will get you running in the package of your choosing:
+Note that the Fitnesse instructions below assume that you want to write your GivWenZen fixtures in the default package of `bdd.steps`. You can override this by using:
 
     |script                                                 |
-    |start                     |Giv Wen Zen Executor Creator|
-    |step class base package   |your.package.name.here      |
-    |$executor=                |create                      |
-    |start|Giv Wen Zen For Slim|$executor                   |
-
-This is literally just instantiating Java classes and calling methods on them. The final line does some magic in SLIM that lets you write Given/When/Then fixtures without a title indicator. I don't currently understand this mechanism (my guess is title-less fixtures are considered "scripts" by SLIM) but will post more as I learn more :)
+    |start|Giv Wen Zen For Slim|your.package.name.here      |
 
 ### Thanks and good luck! 
 Derek Berner
