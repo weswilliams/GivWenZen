@@ -1,10 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.googlecode.givwenzen</groupId>
+    <groupId>com.github.bernerbits</groupId>
     <artifactId>givwenzen</artifactId>
-    <packaging>jar</packaging>
+    <version>1.0.6-SNAPSHOT</version>
+
     <name>GivWenZen</name>
-    <version>1.0.6</version>
+    <packaging>jar</packaging>
     <description>
         GivWenZen allows a user to use the BDD Given When Then vocabulary and plain text sentences to help a
         team get the words right and create a ubiquitous language to describe and test a business domain.
@@ -17,13 +18,35 @@
             <url>http://www.opensource.org/licenses/mit-license.php</url>
         </license>
     </licenses>
+
+    <developers>
+        <developer>
+            <name>Derek Berner</name>
+            <email>bernerbits+gwz@gmail.com</email>
+            <organization>Self</organization>
+            <organizationUrl>http://github.com/bernerbits</organizationUrl>
+        </developer>
+    </developers>
     
     <scm>
-        <connection>scm:git:https://github.com/AndrewTownsend/GivWenZen.git</connection>
-        <developerConnection>scm:git:https://github.com/AndrewTownsend/GivWenZen.git</developerConnection>
-        <url>https://github.com/AndrewTownsend/GivWenZen</url>
+        <connection>scm:git:git@github.com:bernerbits/givwenzen.git</connection>
+        <developerConnection>scm:git:git@github.com:bernerbits/givwenzen.git</developerConnection>
+        <url>git@github.com:bernerbits/givwenzen</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>nexus-staging</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>nexus-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+   
     <dependencies>
         <dependency>
             <groupId>commons-logging</groupId>
@@ -37,11 +60,11 @@
             <version>17.0</version>
         </dependency>
 
-		<dependency>
-		    <groupId>com.google.guava</groupId>
-		    <artifactId>guava-gwt</artifactId>
-		    <version>17.0</version>
-		</dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava-gwt</artifactId>
+            <version>17.0</version>
+        </dependency>
 
         <dependency>
             <groupId>org.javassist</groupId>
@@ -126,26 +149,40 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-        <extensions>
-            <extension>
-                <groupId>ar.com.synergian</groupId>
-                <artifactId>wagon-git</artifactId>
-                <version>0.1.6</version>
-            </extension>
-        </extensions>
     </build>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>synergian-repo</id>
-			<url>https://raw.github.com/synergian/wagon-git/releases</url>
-		</pluginRepository>
-	</pluginRepositories>
 
-    <distributionManagement>
-        <repository>
-            <id>givwenzen-repo</id>
-            <url>git:releases://git@github.com:bernerbits/GivWenZen.git</url>
-        </repository>
-    </distributionManagement>
 </project>
