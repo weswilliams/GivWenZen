@@ -2,27 +2,9 @@
 
 There has not been a major update to the GivWenZen main project since 2011. I have decided to build and release a fork of this project, updated to work with the latest Fitnesse. I am not the maintainer of the original project; this is a fork for my own development purposes, which I have decided to make public. As such, feature requests, issues and so on are likely to be met at worse than a snail's pace. However, should you send me pull requests, I'm more than happy to oblige. 
 
-I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project (this assumes a working proficiency with Maven):
+I have chosen to focus on getting GivWenZen to build as a Maven project. To that end, here is what you need to include GivWenZen in your Maven project:
 
-First, add the following repository to your pom.xml or settings.xml:
-
-    <repositories>
-        ...
-        <repository>
-            <id>givwenzen-repo</id>
-            <name>GivWenZen Repository</name>
-            <url>https://raw.github.com/bernerbits/GivWenZen/releases</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        ...
-    </repositories>
-
-Next, add the dependency to your pom project:
+Add the dependency to your pom project:
 
     <dependency>
         <groupId>com.googlecode.givwenzen</groupId>

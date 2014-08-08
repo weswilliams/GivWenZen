@@ -10,7 +10,7 @@
         GivWenZen allows a user to use the BDD Given When Then vocabulary and plain text sentences to help a
         team get the words right and create a ubiquitous language to describe and test a business domain.
     </description>
-    <url>http://givwenzen.googlecode.com</url>
+    <url>http://github.com/bernerbits/givwenzen</url>
     
     <licenses>
         <license>
