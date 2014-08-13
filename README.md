@@ -7,9 +7,9 @@ I have chosen to focus on getting GivWenZen to build as a Maven project. To that
 Add the dependency to your pom project:
 
     <dependency>
-        <groupId>com.googlecode.givwenzen</groupId>
+        <groupId>com.github.bernerbits</groupId>
         <artifactId>givwenzen</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.6</version>
     </dependency>
 
 That's it! Note that if you are using GivWenZen with a testing framework you will want to include `<scope>test</scope>` in your dependency.
