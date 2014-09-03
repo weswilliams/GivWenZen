@@ -85,7 +85,12 @@ public class Reflections {
         scannerClasses = Lists.newArrayList();
         for (Scanner scanner : configuration.getScanners()) {
             scanner.setConfiguration(configuration);
-            scanner.setStore(store.getStore(scanner.getIndexName()));
+            Multimap<String, String> s = store.getStore(scanner.getIndexName());
+            if(s == null) {
+                s = ArrayListMultimap.create();
+                store.store.put(scanner.getIndexName(), s);
+            }
+            scanner.setStore(s);
             scannerClasses.add(scanner.getClass());
         }
 
@@ -145,7 +150,7 @@ public class Reflections {
         time = System.currentTimeMillis() - time;
 
         Integer keys = 0, values = 0;
-        for (Multimap<String, String> multimap : store.store.values()) {
+        for (Multimap<String, String> multimap : store.store.asMap().values()) {
             keys += multimap.keySet().size();
             values += multimap.size();
         }
@@ -165,7 +170,7 @@ public class Reflections {
      * so that it could be found later much faster using the load method
      */
     public void save(final String filename) {
-        final Map<String, Multimap<String, String>> store = this.store.store;
+        final Map<String, Multimap<String, String>> store = this.store.store.asMap();
 
         Document document = DocumentFactory.getInstance().createDocument();
         Element reflections = document.addElement("Reflections");

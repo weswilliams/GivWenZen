@@ -4,11 +4,11 @@ public class GivWenZenForSlim implements GivWenZen {
    private GivWenZenExecutor executor;
 
    public GivWenZenForSlim() {
-      this(GivWenZenExecutorCreator.instance().create());
+      this.executor = GivWenZenExecutorCreator.instance().create();
    }
 
-   public GivWenZenForSlim(GivWenZenExecutor executor) {
-      this.executor = executor;
+   public GivWenZenForSlim(String packageName) {
+      this.executor = GivWenZenExecutorCreator.instance().stepClassBasePackage(packageName).create();
    }
 
    public Object given(String methodString) throws Exception {
