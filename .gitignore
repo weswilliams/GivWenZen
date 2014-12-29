@@ -7,6 +7,7 @@ gen/
 out/
 build.log
 build-log.xml
+.classpath
 
 # IDEA Ignores
 *.iml
