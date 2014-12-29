@@ -1,0 +1,20 @@
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+out/
+build.log
+build-log.xml
+.classpath
+
+# IDEA Ignores
+*.iml
+*.ipr
+*.iws
+.idea/
+.gradle/
+
+# MAC
+*.DS_Store
