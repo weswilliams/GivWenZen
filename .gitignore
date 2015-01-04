@@ -21,5 +21,9 @@ build-log.xml
 # maven generated
 target/
 
+#FitNesse generated files
+FitNesseRoot/ErrorLogs/
+FitNesseRoot/files/
+
 # MAC
 *.DS_Store
