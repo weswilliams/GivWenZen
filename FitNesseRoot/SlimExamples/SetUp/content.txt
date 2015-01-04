@@ -1,5 +1,0 @@
-|import|
-|org.givwenzen|
-
--|script|
-|start|giv wen zen for slim|

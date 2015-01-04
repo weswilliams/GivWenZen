@@ -4,8 +4,8 @@
 
 !define TEST_SYSTEM {slim}
 
-!path ./target/classes/main
-!path ./target/classes/test
+!path ./target/classes
+!path ./target/test-classes
 !path ./lib/junit-4.5.jar
 !path ./lib/commons-logging.jar
 !path ./lib/fitnesse.jar

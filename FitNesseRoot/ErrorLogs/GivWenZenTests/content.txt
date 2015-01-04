@@ -1,0 +1,13 @@
+
+!3 !-slim:fitnesse.slim.SlimService-!
+|'''Date: '''| 11:15:44 AM (PST) on Sunday, January 4, 2015 |
+|'''Test Page: '''|.GivWenZenTests|
+|'''Command: '''| !-/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/bin/java -cp fitnesse.jar:./target/classes:./target/test-classes:./lib/junit-4.5.jar:./lib/commons-logging.jar:./lib/fitnesse.jar:./lib/log4j-1.2.9.jar:./lib/slf4j-simple-1.5.6.jar:./lib/slf4j-api-1.5.6.jar:./lib/javassist.jar:./lib/guava-r06.jar:./lib/dom4j-1.6.1.jar:./lib/commons-vfs-1.0.jar:./lib/clover-2.6.1.jar fitnesse.slim.SlimService 8087-! |
+|'''Exit code: '''| 0 |
+|'''Time elapsed: '''| 1.538 seconds |
+
+----
+'''Standard Error:'''
+{{{log4j:WARN No appenders could be found for logger (org.apache.commons.vfs.impl.DefaultFileReplicator).
+log4j:WARN Please initialize the log4j system properly.
+}}}

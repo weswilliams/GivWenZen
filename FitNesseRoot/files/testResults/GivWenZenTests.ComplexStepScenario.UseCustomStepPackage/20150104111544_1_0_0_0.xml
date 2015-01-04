@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140901</FitNesseVersion>
+  <rootPath>GivWenZenTests.ComplexStepScenario.UseCustomStepPackage</rootPath>
+    <result>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>71</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="GivWenZenTests.ComplexStepScenario.SetUp"&gt;.GivWenZenTests.ComplexStepScenario.SetUp&lt;/a&gt; &lt;a href="GivWenZenTests.ComplexStepScenario.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;a href="FrontPage"&gt;GivWenZen&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;org.givwenzen&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="hidden"&gt;
+		&lt;td colspan="2"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;start&lt;/td&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;giv wen zen for slim&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="hidden"&gt;
+		&lt;td colspan="2"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;given&lt;/td&gt;
+		&lt;td&gt;a custom package for step classes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;and&lt;/td&gt;
+		&lt;td&gt;a step 'in custom package' defined in a class in the custom package&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;when&lt;/td&gt;
+		&lt;td&gt;the step in the custom package 'in custom package' is called&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;then&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;the step in the custom package 'in custom package' is found and executed successfully&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;br/&gt;&lt;h3&gt;See:&lt;/h3&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java"&gt;http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/custom/steps/CustomSteps.java"&gt;http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/custom/steps/CustomSteps.java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <relativePageName>UseCustomStepPackage</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='org.givwenzen'}</instruction>
+        <slimResult>pass(org.givwenzen)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>org.givwenzen</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='GivWenZenForSlim', args=[]}</instruction>
+        <slimResult>pass(giv wen zen for slim)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_1_0</instructionId>
+                    <col>1</col>
+                              <row>1</row>
+                    <type>ConstructionExpectation</type>
+                                        <evaluationMessage>giv wen zen for slim</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='given', args=[a custom package for step classes]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_2_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='and', args=[a step 'in custom package' defined in a class in the custom package]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_2_1</instructionId>
+                    <col>0</col>
+                              <row>2</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_2', instruction='call', instanceName='scriptTableActor', methodName='when', args=[the step in the custom package 'in custom package' is called]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <instructionId>scriptTable_2_2</instructionId>
+                    <col>0</col>
+                              <row>3</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_3', instruction='call', instanceName='scriptTableActor', methodName='then', args=[the step in the custom package 'in custom package' is found and executed successfully]}</instruction>
+        <slimResult>pass()</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>scriptTable_2_3</instructionId>
+                    <col>0</col>
+                              <row>4</row>
+                    <type>ScriptActionExpectation</type>
+                                      </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+      <finalCounts>
+    <right>1</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>72</totalRunTimeInMillis>
+  
+</testResults>
+

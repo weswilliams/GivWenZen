@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<suiteResults>
+  <FitNesseVersion>v20140901</FitNesseVersion>
+  <rootPath>GivWenZenTests</rootPath>
+    <pageHistoryReference>
+    <name>GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy</name>
+    <date>01/04/2015 11:15:43</date>
+    <pageHistoryLink>GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy?pageHistory&amp;resultDate=20150104111543</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>779</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>GivWenZenTests.ComplexStepScenario.UseCustomStateObject</name>
+    <date>01/04/2015 11:15:44</date>
+    <pageHistoryLink>GivWenZenTests.ComplexStepScenario.UseCustomStateObject?pageHistory&amp;resultDate=20150104111544</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>150</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>GivWenZenTests.ComplexStepScenario.UseCustomStepPackage</name>
+    <date>01/04/2015 11:15:44</date>
+    <pageHistoryLink>GivWenZenTests.ComplexStepScenario.UseCustomStepPackage?pageHistory&amp;resultDate=20150104111544</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>71</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>GivWenZenTests.SimpleStepScenario.StepWithCustomTypeParameterCanBeCalled</name>
+    <date>01/04/2015 11:15:44</date>
+    <pageHistoryLink>GivWenZenTests.SimpleStepScenario.StepWithCustomTypeParameterCanBeCalled?pageHistory&amp;resultDate=20150104111544</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>70</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>GivWenZenTests.SimpleStepScenario.StepWithNativeTypeParameterCanBeCalled</name>
+    <date>01/04/2015 11:15:44</date>
+    <pageHistoryLink>GivWenZenTests.SimpleStepScenario.StepWithNativeTypeParameterCanBeCalled?pageHistory&amp;resultDate=20150104111544</pageHistoryLink>
+    <counts>
+      <right>2</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>63</runTimeInMillis>
+  </pageHistoryReference>
+    <pageHistoryReference>
+    <name>GivWenZenTests.SimpleStepScenario.StepWithNoParameterCanBeCalled</name>
+    <date>01/04/2015 11:15:44</date>
+    <pageHistoryLink>GivWenZenTests.SimpleStepScenario.StepWithNoParameterCanBeCalled?pageHistory&amp;resultDate=20150104111544</pageHistoryLink>
+    <counts>
+      <right>1</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>0</exceptions>
+    </counts>
+    <runTimeInMillis>56</runTimeInMillis>
+  </pageHistoryReference>
+    <finalCounts>
+    <right>6</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>0</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>1549</totalRunTimeInMillis>
+
+</suiteResults>
+

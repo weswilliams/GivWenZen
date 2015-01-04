@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<testResults>
+  <FitNesseVersion>v20140901</FitNesseVersion>
+  <rootPath>GivWenZenTests.ComplexStepScenario.UseCustomInstantiationStrategy</rootPath>
+    <result>
+    <counts>
+      <right>0</right>
+      <wrong>0</wrong>
+      <ignores>0</ignores>
+      <exceptions>5</exceptions>
+    </counts>
+    <runTimeInMillis>150</runTimeInMillis>
+    <content>&lt;div class="collapsible closed"&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#' class='expandall'&gt;Expand&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#' class='collapseall'&gt;Collapse&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+	&lt;p class="title"&gt;Included page: &lt;a href="GivWenZenTests.ComplexStepScenario.SetUp"&gt;.GivWenZenTests.ComplexStepScenario.SetUp&lt;/a&gt; &lt;a href="GivWenZenTests.ComplexStepScenario.SetUp?edit&amp;amp;redirectToReferer=true&amp;amp;redirectAction=" class="edit"&gt;(edit)&lt;/a&gt;&lt;/p&gt;
+	&lt;div&gt;&lt;a href="FrontPage"&gt;GivWenZen&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;table&gt;
+	&lt;tr&gt;
+		&lt;td&gt;import&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;&lt;span class="pass"&gt;org.givwenzen&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="hidden"&gt;
+		&lt;td colspan="2"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;start&lt;/td&gt;
+		&lt;td&gt;giv wen zen for slim &lt;span class="error"&gt;Could not invoke constructor for GivWenZenForSlim[0]&lt;/span&gt;&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;&lt;table&gt;
+	&lt;tr class="hidden"&gt;
+		&lt;td colspan="2"&gt;script&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;given &lt;span class="error"&gt;The instance scriptTableActor.given. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;a custom instantiation strategy for creating custom step classes&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;and &lt;span class="error"&gt;The instance scriptTableActor.and. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;a step class that is created by the custom instantiation strategy&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;when &lt;span class="error"&gt;The instance scriptTableActor.when. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;a step is called that exists in the step class created by the custom instantiation strategy&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;then &lt;span class="error"&gt;The instance scriptTableActor.then. does not exist&lt;/span&gt;&lt;/td&gt;
+		&lt;td&gt;the step in the step class created by the custom instantiation strategy is executed successfully&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;&lt;h3&gt;See:&lt;/h3&gt;
+&lt;ul&gt;
+	&lt;li&gt;&lt;a href="http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java"&gt;http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/ComplexSteps.java&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/CustomInstantiationSteps.java"&gt;http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/CustomInstantiationSteps.java&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java"&gt;http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/TestCustomInstantiationStrategy.java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <relativePageName>UseCustomInstantiationStrategy</relativePageName>
+            <instructions>
+            <instructionResult>
+        <instruction>{id='import_0_0', instruction='import', path='org.givwenzen'}</instruction>
+        <slimResult>pass(org.givwenzen)</slimResult>
+                <expectation>
+                    <status>pass</status>
+                    <instructionId>import_0_0</instructionId>
+                    <col>0</col>
+                              <row>1</row>
+                    <type>ImportExpectation</type>
+                                        <evaluationMessage>org.givwenzen</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_1_0', instruction='make', instanceName='scriptTableActor', className='GivWenZenForSlim', args=[]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_1_0</instructionId>
+                              <type>ConstructionExpectation</type>
+                                        <evaluationMessage>Could not invoke constructor for GivWenZenForSlim[0]</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_0', instruction='call', instanceName='scriptTableActor', methodName='given', args=[a custom instantiation strategy for creating custom step classes]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_0</instructionId>
+                              <type>ScriptActionExpectation</type>
+                                        <evaluationMessage>The instance scriptTableActor.given. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_1', instruction='call', instanceName='scriptTableActor', methodName='and', args=[a step class that is created by the custom instantiation strategy]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_1</instructionId>
+                              <type>ScriptActionExpectation</type>
+                                        <evaluationMessage>The instance scriptTableActor.and. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_2', instruction='call', instanceName='scriptTableActor', methodName='when', args=[a step is called that exists in the step class created by the custom instantiation strategy]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_2</instructionId>
+                              <type>ScriptActionExpectation</type>
+                                        <evaluationMessage>The instance scriptTableActor.when. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+            <instructionResult>
+        <instruction>{id='scriptTable_2_3', instruction='call', instanceName='scriptTableActor', methodName='then', args=[the step in the step class created by the custom instantiation strategy is executed successfully]}</instruction>
+        <slimResult></slimResult>
+                <expectation>
+                    <status>error</status>
+                    <instructionId>scriptTable_2_3</instructionId>
+                              <type>ScriptActionExpectation</type>
+                                        <evaluationMessage>The instance scriptTableActor.then. does not exist</evaluationMessage>
+                  </expectation>
+              </instructionResult>
+          </instructions>
+      </result>
+      <finalCounts>
+    <right>0</right>
+    <wrong>0</wrong>
+    <ignores>0</ignores>
+    <exceptions>1</exceptions>
+  </finalCounts>
+  <totalRunTimeInMillis>151</totalRunTimeInMillis>
+  
+</testResults>
+

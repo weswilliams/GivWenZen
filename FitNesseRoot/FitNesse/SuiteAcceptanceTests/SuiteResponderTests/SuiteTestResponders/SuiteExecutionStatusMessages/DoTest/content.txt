@@ -1,8 +1,7 @@
 Create a simple test page
 
 !|script|Page Builder|
-|line|!-!path classes-!|
-|line|!-!path fitnesse.jar-!|
+|line|${SUT_PATH}|
 |line|!-!|-!fitnesse.testutil.${FIXTURE_NAME}!-|-!|
 |line|!-|blah|-!|
 |page|!-TestPage-!|
@@ -21,5 +20,4 @@ Check the status message.
 
 |Response Examiner.|
 |type  |pattern|matches?|
-|contents|<div id="execution-status">.*?${EXPECTED_STATUS_MESSAGE}.*?</div>|true|
-|contents|<div id="execution-status">.*?<img.*?src="${EXPECTED_ICON_URL}".*?/>.*?</div>|true|
+|contents|<a href=\\"ErrorLogs.TestPage\\" class=\\"${EXPECTED_STYLE}\\">${EXPECTED_STATUS_MESSAGE}</a>|true|
