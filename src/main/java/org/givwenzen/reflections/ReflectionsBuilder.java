@@ -1,15 +1,19 @@
 package org.givwenzen.reflections;
 
-import com.google.common.base.*;
-import org.givwenzen.annotations.*;
-import org.givwenzen.reflections.adapters.*;
-import org.givwenzen.reflections.scanners.*;
+import com.google.common.base.Predicate;
+import org.givwenzen.reflections.adapters.SingleThreadedParallelStrategy;
+import org.givwenzen.reflections.scanners.ClassAnnotationsScanner;
 import org.givwenzen.reflections.scanners.Scanner;
-import org.givwenzen.reflections.util.*;
+import org.givwenzen.reflections.scanners.SubTypesScanner;
+import org.givwenzen.reflections.util.AbstractConfiguration;
+import org.givwenzen.reflections.util.ClasspathHelper;
+import org.givwenzen.reflections.util.FilterBuilder;
 
-import java.lang.annotation.*;
-import java.net.*;
-import java.util.*;
+import java.lang.annotation.Annotation;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 public class ReflectionsBuilder {
    private String basePackage;
@@ -26,7 +30,7 @@ public class ReflectionsBuilder {
    }
 
    public ReflectionsBuilder classAnnotationScanner(Class<? extends Annotation> aClass) {
-      Predicate<String> annotationFilter = new FilterBuilder().include(DomainSteps.class.getName());
+      Predicate<String> annotationFilter = new FilterBuilder().include(aClass.getName());
       scanners.add(new ClassAnnotationsScanner().filterBy(annotationFilter));
       return this;
    }
