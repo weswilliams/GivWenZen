@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.givwenzen.GWZForJUnit.*;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.*;
-import static org.junit.matchers.JUnitMatchers.containsString;
 
 @DomainSteps
 public class DomainStepMethodLocatorTest {

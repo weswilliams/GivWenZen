@@ -11,10 +11,9 @@
 
    <property name="givwenzen.target.dir" value="${givwenzen.basedir}/target"/>
 
-   <property name="givwenzen.baseoutput.dir" value="${givwenzen.target.dir}/classes"/>
-   <property name="givwenzen.output.dir" value="${givwenzen.baseoutput.dir}/main"/>
-   <property name="givwenzen.testoutput.dir" value="${givwenzen.baseoutput.dir}/test"/>
-   <property name="givwenzen.examplesoutput.dir" value="${givwenzen.baseoutput.dir}/examples"/>
+   <property name="givwenzen.output.dir" value="${givwenzen.target.dir}/classes"/>
+   <property name="givwenzen.testoutput.dir" value="${givwenzen.target.dir}/test-classes"/>
+   <property name="givwenzen.examplesoutput.dir" value="${givwenzen.target.dir}/examples"/>
 
    <property name="reports.tests" value="${givwenzen.target.dir}/reports"/>
    <property name="fitnesse.port" value="8001"/>
@@ -50,15 +49,13 @@
       <path path="${givwenzen.lib.dir}/commons-logging.jar"/>
       <path path="${givwenzen.lib.dir}/javassist.jar"/>
       <path path="${givwenzen.lib.dir}/log4j-1.2.9.jar"/>
-      <path path="${givwenzen.lib.dir}/guava-r06.jar"/>
+      <path path="${givwenzen.lib.dir}/guava-18.0.jar"/>
       <path path="${givwenzen.lib.dir}/commons-vfs-1.0.jar"/>
       <path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar"/>
       <path path="${givwenzen.lib.dir}/slf4j-api-1.5.6.jar"/>
       <path path="${givwenzen.lib.dir}/slf4j-simple-1.5.6.jar"/>
       <path path="${givwenzen.lib.dir}/fitlibrary.jar"/>
       <path path="${givwenzen.lib.dir}/fitnesse.jar"/>
-      <path path="${givwenzen.lib.dir}/fest-assert-1.2.jar"/>
-      <path path="${givwenzen.lib.dir}/fest-util-1.1.jar"/>
       <path path="${givwenzen.lib.dir}/lucene-core-3.0.2.jar"/>
    </path>
 
@@ -70,9 +67,11 @@
    <path id="givwenzen.test.classpath">
       <path refid="givwenzen.classpath"/>
       <path location="${givwenzen.output.dir}"/>
-      <path path="${givwenzen.lib.dir}/hamcrest-core-1.1.jar"/>
-      <path path="${givwenzen.lib.dir}/junit-4.5.jar"/>
-      <path path="${givwenzen.lib.dir}/mockito-core-1.7.jar"/>
+      <path path="${givwenzen.lib.dir}/fest-util-1.1.6.jar"/>
+      <path path="${givwenzen.lib.dir}/fest-assert-1.4.jar"/>
+      <path path="${givwenzen.lib.dir}/hamcrest-core-1.3.jar"/>
+      <path path="${givwenzen.lib.dir}/junit-4.12.jar"/>
+      <path path="${givwenzen.lib.dir}/mockito-core-1.10.19.jar"/>
       <path path="${givwenzen.lib.dir}/objenesis-1.0.jar"/>
       <path path="${givwenzen.lib.dir}/clover-2.6.1.jar"/>
    </path>
@@ -132,12 +131,13 @@
    </target>
 
    <target name="clean.givwenzen.classes" description="cleanup compiled classes">
-      <delete dir="${givwenzen.baseoutput.dir}"/>
+      <delete dir="${givwenzen.output.dir}"/>
+      <delete dir="${givwenzen.testoutput.dir}"/>
    </target>
 
    <target name="compile.givwenzen.production" description="Compile givwenzen; production classes">
       <mkdir dir="${givwenzen.output.dir}"/>
-      <javac destdir="${givwenzen.output.dir}" debug="false" source="1.5" target="1.5" nowarn="false" fork="true"
+      <javac destdir="${givwenzen.output.dir}" includeantruntime="false" debug="false" source="1.6" target="1.6" nowarn="false" fork="true"
              executable="${jdk.bin.givwenzen}/javac">
          <bootclasspath refid="givwenzen.bootclasspath"/>
          <classpath refid="givwenzen.classpath"/>
@@ -148,7 +148,7 @@
    <target name="compile.givwenzen.tests" depends="compile.givwenzen.production"
            description="compile givwenzen; test classes" unless="skip.tests">
       <mkdir dir="${givwenzen.testoutput.dir}"/>
-      <javac destdir="${givwenzen.testoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
+      <javac destdir="${givwenzen.testoutput.dir}" includeantruntime="false" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
              executable="${jdk.bin.givwenzen}/javac">
          <classpath refid="givwenzen.test.classpath"/>
          <src refid="givwenzen.test.sourcepath"/>
@@ -158,7 +158,7 @@
    <target name="compile.givwenzen.examples" depends="compile.givwenzen.production"
            description="compile givwenzen example classes">
       <mkdir dir="${givwenzen.examplesoutput.dir}"/>
-      <javac destdir="${givwenzen.examplesoutput.dir}" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
+      <javac destdir="${givwenzen.examplesoutput.dir}" includeantruntime="false" debug="false" source="1.5" target="1.5" nowarn="true" fork="true"
              executable="${jdk.bin.givwenzen}/javac">
          <classpath refid="givwenzen.examples.classpath"/>
          <src refid="givwenzen.examples.sourcepath"/>
@@ -189,7 +189,7 @@
          <fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class"/>
          <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-logging.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/guava-r06.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/guava-18.0.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/javassist.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/log4j-1.2.9.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-vfs-1.0.jar" excludes="**/meta-inf/*.*"/>
