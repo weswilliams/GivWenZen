@@ -30,7 +30,7 @@ public class Store {
   public Set<String> get(String indexName, String... keys) {
     Set<String> result = Sets.newHashSet();
 
-    Multimap<String, String> map;
+    Multimap<String, String> map  ;
     try {
       map = loadingCache.get(indexName);
     } catch (ExecutionException e) {
