@@ -1,5 +1,7 @@
 #![](http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png)
 
+[Downloads](https://code.google.com/p/givwenzen/downloads/list)
+
 [GivWenZen](http://code.google.com/p/givwenzen) allows a user to use the [BDD](http://behaviour-driven.org/) [Given When Then](http://wiki.github.com/aslakhellesoy/cucumber/given-when-then) vocabulary and plain text sentences to help a team [get the words right](http://behaviour-driven.org/GettingTheWordsRight) and create a [ubiquitous language](http://behaviour-driven.org/UbiquitousLanguage) to describe and test a business domain.
 
 #The Idea
