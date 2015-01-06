@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class Store {
 
-	final Map<String/*indexName*/, Multimap<String, String>> store = new MapMaker().makeComputingMap(new Function<String, Multimap<String, String>>() {
+	final Map<String, Multimap<String, String>> store = new MapMaker().makeComputingMap(new Function<String, Multimap<String, String>>() {
 		public Multimap<String, String> apply(String indexName) {
 			return Multimaps.newSetMultimap(new MapMaker().<String, Collection<String>>makeMap(), new Supplier<Set<String>>() {
 				public Set<String> get() {
@@ -26,7 +26,6 @@ public class Store {
 		}
 	});
 
-    /** get all values of given keys from given indexName */
 	public Set<String> get(String indexName, String... keys) {
         Set<String> result = Sets.newHashSet();
 
@@ -42,10 +41,4 @@ public class Store {
         return store.get(indexName);
     }
 
-    /** merges given store into this */    
-	public void merge(final Store outer) {
-		for (String indexName : outer.store.keySet()) {
-			this.store.get(indexName).putAll(outer.store.get(indexName));
-		}
-	}
 }
