@@ -67,7 +67,7 @@ public class Reflections {
         time = System.currentTimeMillis() - time;
 
         Integer keys = 0, values = 0;
-        for (Multimap<String, String> multimap : store.store.values()) {
+        for (Multimap<String, String> multimap : store.values()) {
             keys += multimap.keySet().size();
             values += multimap.size();
         }
