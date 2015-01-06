@@ -6,7 +6,7 @@
 
 !path ./target/classes
 !path ./target/test-classes
-!path ./lib/junit-4.5.jar
+!path ./lib/junit-4.12.jar
 !path ./lib/commons-logging.jar
 !path ./lib/fitnesse.jar
 !path ./lib/log4j-1.2.9.jar
