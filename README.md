@@ -2,14 +2,14 @@
 
 [Downloads](https://drive.google.com/folderview?id=0B-8PJf6aZshNUW1yRUtidXhoY3c&usp=sharing)
 
-[GivWenZen](http://code.google.com/p/givwenzen) allows a user to use the [BDD](http://behaviour-driven.org/) [Given When Then](http://wiki.github.com/aslakhellesoy/cucumber/given-when-then) vocabulary and plain text sentences to help a team [get the words right](http://behaviour-driven.org/GettingTheWordsRight) and create a [ubiquitous language](http://behaviour-driven.org/UbiquitousLanguage) to describe and test a business domain.
+[GivWenZen](https://github.com/weswilliams/GivWenZen) allows a user to use the [BDD](http://behaviour-driven.org/) [Given When Then](http://wiki.github.com/aslakhellesoy/cucumber/given-when-then) vocabulary and plain text sentences to help a team [get the words right](http://behaviour-driven.org/GettingTheWordsRight) and create a [ubiquitous language](http://behaviour-driven.org/UbiquitousLanguage) to describe and test a business domain.
 
 #The Idea
 
-The idea was taken from [Cucumber](http://cukes.info/) and my desire to create [Cucumber](http://cukes.info/) like specifications and tests in [FitNesse](http://fitnesse.org/). Like [Cucumber](http://cukes.info/), [GivWenZen](http://code.google.com/p/givwenzen) does not distinguish between [Given When Then](http://wiki.github.com/aslakhellesoy/cucumber/given-when-then) or and but you should. Regular expression parsing is used to determine what step method should be executed for each given when then step in a test. Regular expression parsing is also used to find parameters to the step method. Also see how other ideas from [Cucumber](http://cukes.info/) map to [FitNesse](http://fitnesse.org/).
+The idea was taken from [Cucumber](http://cukes.info/) and my desire to create [Cucumber](http://cukes.info/) like specifications and tests in [FitNesse](http://fitnesse.org/). Like [Cucumber](http://cukes.info/), [GivWenZen](https://github.com/weswilliams/GivWenZen) does not distinguish between [Given When Then](http://wiki.github.com/aslakhellesoy/cucumber/given-when-then) or and but you should. Regular expression parsing is used to determine what step method should be executed for each given when then step in a test. Regular expression parsing is also used to find parameters to the step method. Also see how other ideas from [Cucumber](http://cukes.info/) map to [FitNesse](http://fitnesse.org/).
 
 #Example
-#### 1) Start with an example [fixture](http://code.google.com/p/givwenzen/wiki/ExampleSlimFixture) actual class found in the givwenzen_test.jar.
+#### 1) Start with an example [fixture](https://github.com/weswilliams/GivWenZen/blob/master/src/main/java/org/givwenzen/GivWenZenForSlim.java) actual class found in the givwenzen_test.jar.
 
 #### 2) In a [FitNesse](http://fitnesse.org/) table it could look like this.
 
@@ -59,8 +59,8 @@ public class ExampleSteps {
 #More Examples
 More example can be found in the [FitNesseRoot](https://github.com/weswilliams/GivWenZen/tree/master/src/examples) in source.  It is easy to [get started](https://github.com/weswilliams/GivWenZen/wiki).
 
-[Simple scenarios](http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/SimpleStepScenario)
-[More complex scenarios](http://code.google.com/p/givwenzen/source/browse/#svn/trunk/FitNesseRoot/GivWenZenTests/ComplexStepScenario)
+[Simple scenarios](https://github.com/weswilliams/GivWenZen/tree/master/FitNesseRoot/GivWenZenTests/SimpleStepScenario)
+[More complex scenarios](https://github.com/weswilliams/GivWenZen/tree/master/FitNesseRoot/GivWenZenTests/ComplexStepScenario)
 
 ##Groups
 
@@ -74,9 +74,9 @@ http://groups.google.com/group/givwenzen_developer
 
 #Running
 ```
-java -jar ./lib/fitnesse.jar
+java -jar ./lib/fitnesse.jar -p 8080
 ```
-Open http://localhost/ in the browser of your choice.
+Open http://localhost:8080/ in the browser of your choice.
 
 Here you will find an example test and a user guide for GivWenZen.
 
