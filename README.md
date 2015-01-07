@@ -85,8 +85,7 @@ License: MIT.
 Libraries required for main classes:
 
 commons-logging.jar - Apache License 2.0.
-google-collect-snapshot-20080530.jar - Apache License 2.0.
+guava-18.0.jar - Apache License 2.0.
 javassist.jar - Mozilla Public License 1.1. 
 log4j-1.2.9.jar - Apache License 2.0.
-reflections-0.9.2.jar - GNU Lesser General Public License
 ```

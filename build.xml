@@ -245,15 +245,35 @@
 
 
    <target name="zip" description="create the release zip file">
-
-      <typedef resource="org/tigris/subversion/svnant/svnantlib.xml"
-               classpath="C:/java_tools/apache-ant-1.7.0/lib/svnant.jar"/>
-
-      <svn>
-         <export
-                 srcUrl="https://givwenzen.googlecode.com/svn/trunk"
-                 destPath="${zip.temp.dir}"/>
-      </svn>
+      
+      <macrodef name = "git">
+         <attribute name = "command" />
+         <attribute name = "dir" default = "" />
+         <element name = "args" optional = "true" />
+         <sequential>
+            <echo message = "git @{command}" />
+            <exec executable = "git" dir = "@{dir}">
+               <arg value = "@{command}" />
+               <args/>
+            </exec>
+         </sequential>
+      </macrodef>
+      
+      <macrodef name = "git-clone-pull">
+         <attribute name = "repository" />
+         <attribute name = "dest" />
+         <sequential>
+            <git command = "clone">
+               <args>
+                  <arg value = "@{repository}" />
+                  <arg value = "@{dest}" />
+               </args>
+            </git>
+            <git command = "pull" dir = "@{dest}" />
+         </sequential>
+      </macrodef>
+      
+      <git-clone-pull repository="https://github.com/weswilliams/GivWenZen.git" dest="${zip.temp.dir}"/>
 
       <copy todir="${zip.temp.dir}/target">
          <fileset dir="${givwenzen.target.dir}" excludes="*.jar"/>
