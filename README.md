@@ -1,4 +1,4 @@
-#![](http://code.google.com/p/givwenzen/logo?logo_id=1253844639&nonsense=something_that_ends_with.png)
+![](https://raw.githubusercontent.com/weswilliams/GivWenZen/master/givwenzen.png)
 
 [Downloads](https://drive.google.com/folderview?id=0B-8PJf6aZshNUW1yRUtidXhoY3c&usp=sharing)
 
