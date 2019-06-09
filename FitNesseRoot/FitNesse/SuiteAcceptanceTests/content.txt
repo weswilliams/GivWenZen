@@ -15,14 +15,15 @@
 
 !2 ''Classpaths''
 !define SUT_PATH (!-
-!path classes
 !path lib/*.jar
 -!)
 ----
 !2 ''Port''
 FitNesse is running on port: ${FITNESSE_PORT}
 
-!define INTERNAL_PORT {9123}
+Use a non-default port number, so SLIM tests systems can be run as well:
+
+!define SLIM_PORT {1}
 ----
 !2 ''Utilities''
  * SuiteAcceptanceTests.PageHeader
@@ -34,3 +35,5 @@ FitNesse is running on port: ${FITNESSE_PORT}
 !2 Collapse Set Up and Tear Down
 !define COLLAPSE_SETUP {true}
 !define COLLAPSE_TEARDOWN {true}
+
+!define TITLE_TAG {li}

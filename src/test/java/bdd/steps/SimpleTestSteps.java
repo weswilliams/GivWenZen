@@ -18,12 +18,12 @@ public class SimpleTestSteps {
     this.gwz = gwz;
   }
 
-  @DomainStep("a step annotated with '(.*)' (:?.*)")
+  @DomainStep("(?s)a step annotated with '(.*)' (:?.*)")
   public void verifyStepExists(String step) throws Exception {
     gwz.given(step);
   }
 
-  @DomainStep("the step '(.*)' is called")
+  @DomainStep("(?s)the step '(.*)' is called")
   public void callStep(String stepToCall) throws Exception {
     gwz.when(stepToCall);
   }
@@ -63,5 +63,15 @@ public class SimpleTestSteps {
   @DomainStep("the CustomType has a CustomTypeEditor in the same package as the CustomType")
   public void checkTheCustomTypeHasAPropertyEditor() {
     assert(CustomType.class.getPackage().equals(CustomTypeEditor.class.getPackage()));
+  }
+
+  @DomainStep("(?s)simple step with hash table parameter (.*)")
+  public void simpleHashTableParameterStep(Map <String, String> data) {
+    paramValue = data;
+  }
+
+  @DomainStep("the hash table is passed as a parameter")
+  public boolean verifyHashTableParamValue() {
+    return paramValue instanceof Map;
   }
 }

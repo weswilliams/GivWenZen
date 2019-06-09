@@ -1,6 +1,6 @@
 !2 Defining and Expressing Variables.
 You can define a variable to represent any amount of text.
- * Variable names may contain letters, numbers, and periods; e.g., MYTEST.someVar or user.name
+ * Variable names may contain letters, numbers, periods and underscores; e.g., MYTEST.someVar or user.name or USER_NAME 
  * You can define a variable in three ways: 
   * !style_code(!-!define var {text}-!) - as a delimited block of text 
   * !style_code[!-!define var othervar-!] - by copying the value of another variable 
@@ -59,6 +59,12 @@ IMPORTANT: If the variables used in the expression change than also the result c
 !3 Variable Scope
 If a variable is expressed on a page, but is not found, then its parent pages are searched in order.
 If the variable is not found in any ancestor pages, FitNesse will inspect System.properties.
+
+!3 Defining Variables In URL Input
+You can define variables in the URL input by using the format of ''key''=''value'' (''key'' as variable name & ''value'' as variable value).  ''key'' and ''value'' can be any string values.  Multiple variables can be specified separated by ''&''.
+Variable values specified in the URL input are given precedence over variables defined on the page or in System.properties for the same key.
+
+See [[Restful Services][<UserGuide.AdministeringFitNesse.RestfulServices]]
 
 !3 Variables on [[included pages][MarkupPageInclude]]
  * if you include a sub page into a  main page than you can use the variables define on the main page also in the included pages.
