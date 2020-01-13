@@ -1,0 +1,7 @@
+-|script|
+|given|a step annotated with 'simple step with hash table parameter !{name:Bob}' that takes a hash table as a parameter|
+|when |the step 'simple step with hash table parameter !{name:Bob}' is called                                          |
+|then |the hash table is passed as a parameter                                                                         |
+
+!3 See also:
+ * http://code.google.com/p/givwenzen/source/browse/trunk/src/test/java/bdd/steps/SimpleTestSteps.java

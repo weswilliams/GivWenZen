@@ -1,11 +1,8 @@
 package org.givwenzen.annotations;
 
-import static junit.framework.Assert.assertEquals;
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertSame;
-
-import org.givwenzen.annotations.MarkedClass;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class MarkedClassTest {
 

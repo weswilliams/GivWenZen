@@ -4,6 +4,7 @@ import com.google.common.base.Predicate;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.givwenzen.reflections.ReflectionsException;
 
 import java.util.ArrayList;
@@ -99,5 +100,10 @@ public class FilterBuilder implements Predicate<String> {
         } else {
             return new FilterBuilder();
         }
+    }
+
+    @Override
+    public boolean test(@Nullable String input) {
+        return this.apply(input);
     }
 }
