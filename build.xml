@@ -202,7 +202,8 @@
          <zipfileset src="${givwenzen.lib.dir}/commons-logging-1.2.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/javassist-3.25.0-GA.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/guava-27.1-jre.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/log4j-1.2.17.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/log4j-api-2.13.3.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/log4j-core-2.13.3.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-vfs-20050307052300.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.7.26.jar" excludes="**/meta-inf/*.*"/>
