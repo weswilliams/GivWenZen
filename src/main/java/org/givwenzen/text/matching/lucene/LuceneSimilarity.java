@@ -1,9 +1,10 @@
 package org.givwenzen.text.matching.lucene;
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.*;
 import org.apache.lucene.document.*;
 import org.apache.lucene.index.*;
-import org.apache.lucene.queryParser.*;
+import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.*;
 import org.apache.lucene.store.*;
 import org.givwenzen.*;
@@ -12,24 +13,19 @@ import org.givwenzen.text.matching.Similarity;
 import java.io.*;
 import java.util.*;
 
-import static org.apache.lucene.document.Field.Index.*;
-import static org.apache.lucene.document.Field.Store.*;
-import static org.apache.lucene.index.IndexWriter.MaxFieldLength.*;
-import static org.apache.lucene.util.Version.*;
-
 public class LuceneSimilarity implements Similarity {
 
-   StandardAnalyzer analyzer = new StandardAnalyzer(LUCENE_30);
+   final Analyzer analyzer = new StandardAnalyzer();
    String contentFieldName = "contents";
 
    @Override
    public Collection<String> findSimilarMethods(String methodString, Collection<MethodAndInvocationTarget> steps) {
-      Collection<String> methodAnnotations = new ArrayList<String>();
+      Collection<String> methodAnnotations = new ArrayList<>();
       try {
          Directory indexDir = buildLuceneIndexFrom(steps);
-         IndexReader reader = IndexReader.open(indexDir, true);
-         final Searcher searcher = new IndexSearcher(reader);
-         ScoreDoc[] methods = findSimilarMethods(methodString, indexDir, new IndexSearcher(reader));
+         DirectoryReader reader = DirectoryReader.open(indexDir);
+         IndexSearcher searcher = new IndexSearcher(reader);
+         ScoreDoc[] methods = findSimilarMethods(methodString, searcher);
          methodAnnotations = translateToMethodAnnotationStrings(methods, searcher);
       } catch (IOException e) {
          // using an in memory directory and not doing IO, problem with lucene interface
@@ -38,8 +34,8 @@ public class LuceneSimilarity implements Similarity {
       return methodAnnotations;
    }
 
-   private Collection<String> translateToMethodAnnotationStrings(ScoreDoc[] methods, Searcher searcher) {
-      List<String> methodAnnotations = new ArrayList<String>();
+   private Collection<String> translateToMethodAnnotationStrings(ScoreDoc[] methods, IndexSearcher searcher) {
+      List<String> methodAnnotations = new ArrayList<>();
       try {
          for (ScoreDoc method : methods) {
             methodAnnotations.add(searcher.doc(method.doc).get(contentFieldName));
@@ -51,14 +47,12 @@ public class LuceneSimilarity implements Similarity {
       return methodAnnotations;
    }
 
-   private ScoreDoc[] findSimilarMethods(String methodString, Directory indexDir, Searcher searcher) {
+   private ScoreDoc[] findSimilarMethods(String methodString, IndexSearcher searcher) {
       ScoreDoc[] hits = new ScoreDoc[0];
       try {
-         QueryParser parser = new QueryParser(LUCENE_30, contentFieldName, analyzer);
+         QueryParser parser = new QueryParser(contentFieldName, analyzer);
          Query query = parser.parse(methodString);
-         TopScoreDocCollector collector = TopScoreDocCollector.create(5, true);
-         searcher.search(query, collector);
-         hits = collector.topDocs().scoreDocs;
+         hits = searcher.search(query, 5).scoreDocs;
       } catch (Exception e) {
          // using an in memory directory and not doing IO, problem with lucene interface
          e.printStackTrace();
@@ -69,13 +63,13 @@ public class LuceneSimilarity implements Similarity {
    private Directory buildLuceneIndexFrom(Collection<MethodAndInvocationTarget> steps) {
       final Directory indexDir = new RAMDirectory();
       try {
-         IndexWriter writer = new IndexWriter(indexDir, analyzer, true, LIMITED);
+         IndexWriterConfig config = new IndexWriterConfig(analyzer);
+         IndexWriter writer = new IndexWriter(indexDir, config);
          for (MethodAndInvocationTarget step : steps) {
             Document documentA = new Document();
-            documentA.add(new Field(contentFieldName, step.getDomainStepPattern(), YES, ANALYZED));
+            documentA.add(new Field(contentFieldName, step.getDomainStepPattern(), TextField.TYPE_STORED));
             writer.addDocument(documentA);
          }
-         writer.optimize();
          writer.close();
       } catch (Exception e) {
          // using an in memory directory and not doing IO, problem with lucene interface
