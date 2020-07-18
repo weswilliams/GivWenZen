@@ -1,0 +1,10 @@
+---
+Help: Lists tests failed during last run, so they can be run again (without running all tests that passed).
+Suite
+---
+
+!note This page is automatically generated when running tests. It will be overwritten by the next Suite or Test execution.
+
+Tests failed (first failure was at 2020-07-17T17:18:07.792570):
+
+!see [[FitNesse.UserGuide.TwoMinuteExample][.FitNesse.UserGuide.TwoMinuteExample]]

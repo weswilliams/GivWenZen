@@ -1,0 +1,6 @@
+![: script
+given: a native array method 1,2,3
+then: native array 0 has 1
+and: native array 1 has 2
+and: native array 2 has 3
+]!

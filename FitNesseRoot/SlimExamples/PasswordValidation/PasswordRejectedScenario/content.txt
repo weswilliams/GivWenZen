@@ -1,0 +1,3 @@
+|scenario|when a new account is created with a bad password|password|then it is rejected because|rejectedReason|
+|when|a new account is created with a password of @password|
+|then|the password is rejected because @rejectedReason|

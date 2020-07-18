@@ -1,0 +1,6 @@
+![: script
+given: a var arg method of !-TestObjects-! o1,o2,o3
+then: var arg 0 is o1
+and: var arg 1 is o2
+and: var arg 2 is o3
+]!

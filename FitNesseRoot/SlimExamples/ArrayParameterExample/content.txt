@@ -1,0 +1,6 @@
+![: script
+given: an array parameter method a,b,c
+then: array 0 has a
+and: array 1 has b
+and: array 2 has c
+]!
