@@ -1,16 +1,14 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <properties>
-	<Edit/>
-	<Files/>
-	<Help/>
-	<Properties/>
-	<RecentChanges/>
-	<Refactor/>
-	<Search/>
-	<Suite/>
-	<Suites/>
-	<Versions/>
-	<WhereUsed/>
-	<saveId>1252651628780</saveId>
-	<ticketId>835470048683680237</ticketId>
+    <Edit/>
+    <Files/>
+    <Properties/>
+    <RecentChanges/>
+    <Refactor/>
+    <Search/>
+    <Suite/>
+    <Versions/>
+    <WhereUsed/>
+    <saveId>1252651628780</saveId>
+    <ticketId>835470048683680237</ticketId>
 </properties>

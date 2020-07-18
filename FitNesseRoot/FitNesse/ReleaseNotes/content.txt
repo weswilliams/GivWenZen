@@ -1,4 +1,54 @@
 !2 ${FITNESSE_VERSION}
+ * Bugfix: very slow rendering of pages having multiple tables defined via symbols ([[1280][https://github.com/unclebob/fitnesse/issues/1280]]).
+
+!2 20200404
+ * Ensure FitNesseRunner takes suite partitioning into account when determining children ([[1275][https://github.com/unclebob/fitnesse/issues/1275]]).
+
+!2 20200307
+ * Bugfixes in splitting suite in partitions.
+
+!2 20200307
+ * Fix bug in page rendering when using custom (not '/') content root ([[1272][https://github.com/unclebob/fitnesse/pull/1272]]).
+ * Simplify (and improve) Slim's table colouring ([[1271][https://github.com/unclebob/fitnesse/pull/1271]]).
+ * Minor performance enhancements.
+
+!2 20200304
+ * New feature to split a suite of tests in partitions, which could be used to split test execution across multiple workers, without having the change the content or structure of the test pages ([[1268][https://github.com/unclebob/fitnesse/pull/1268]]).
+ * Exclude page names from test history which start with same substring ([[1263][https://github.com/unclebob/fitnesse/pull/1263]]).
+ * Minor: Speed-up test startup by using less Java reflection generating pages.
+
+!2 20200205
+ * Added ability to customize HTML generated for Slim tables, using 'symbol decorators' ([[1255][https://github.com/unclebob/fitnesse/pull/1255]]).
+ * Ensured proper validation messages when user forgets to specify a target page for a symbolic link ([[1260][https://github.com/unclebob/fitnesse/pull/1260]]).
+ * Updated Slack channel invite to point to https://fitnesse-community-inviter.herokuapp.com ([[1261][https://github.com/unclebob/fitnesse/pull/1261]]).
+
+!2 20200128
+ * Update documentation replace references to Yahoo Group with Slack channel ([[1259][https://github.com/unclebob/fitnesse/pull/1259]]).
+
+!2 20200108
+ * Bugfix for pretty printed exceptions ending with '<' ([[1252][https://github.com/unclebob/fitnesse/issues/1252]]).
+
+!2 20191229
+ * Add support calling static methods from Slim script tables ([[1245][https://github.com/unclebob/fitnesse/pull/1245]]).
+
+!2 20191217
+ * Support importing remote wiki pages over https (not just http) ([[1086][https://github.com/unclebob/fitnesse/issues/1086]])
+
+!2 20191110
+ * Improved failure navigator at top-right after running tests: some tests were missed, others were counted twice. #1246
+
+!2 20190716
+ * Fixed issue allowing multiple symbolic links to point from a single page the same target page ([[1234][https://github.com/unclebob/fitnesse/issues/1234]])
+ * Allow 'Where Used' to also find pages having a symbolic link to the current page. ([[1237][https://github.com/unclebob/fitnesse/pull/1237]])
+ * Make page 'Rename' and 'Move' also update symbolic links affected by the change. ([[1238][https://github.com/unclebob/fitnesse/pull/1238]])
+
+!2 20190628
+ * Allow all uncle !-SuiteSetUp-! and !-SuiteTearDown-! pages to be run, instead of only the nearest one, by setting ALL_UNCLE_SUITE_SETUPS ([[1233][https://github.com/unclebob/fitnesse/pull/1233]]). This also ensures that all tests are executed in order, fixing ([[1229][https://github.com/unclebob/fitnesse/issues/1229]]).
+
+!2 20190620
+ * Allow plugins to override the default wiki theme (i.e. bootstrap) ([[1227][https://github.com/unclebob/fitnesse/pull/1227]])
+
+!2 20190508
  * Optimized performance of Slim (javascript) expressions ([[1220][https://github.com/unclebob/fitnesse/pull/1220]])
  * Issues fixed:
    * Do not set exit code to error when creating a symbolic link from command line ([[1223][https://github.com/unclebob/fitnesse/issues/1223]])

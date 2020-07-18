@@ -7,8 +7,9 @@
 
 !define TEST_SYSTEM {slim}
 
-!path ./target/classes/main
-!path ./target/classes/examples
+
+!path ./target/classes
+!path ./target/examples
 
 !path ./lib/commons-logging-1.2.jar
 !path ./lib/javassist-3.25.0-GA.jar
