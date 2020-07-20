@@ -10,7 +10,7 @@
 
 !path ./lib/junit-4.13.jar
 !path ./lib/commons-logging-1.2.jar
-!path ./lib/javassist-3.25.0-GA.jar
+!path ./lib/javassist-3.27.0-GA.jar
 !path ./lib/log4j-1.2.17.jar
 !path ./lib/guava-29.0-jre.jar
 !path ./lib/failureaccess-1.0.1.jar

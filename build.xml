@@ -47,7 +47,7 @@
 
    <path id="givwenzen.classpath">
       <path path="${givwenzen.lib.dir}/commons-logging-1.2.jar"/>
-      <path path="${givwenzen.lib.dir}/javassist-3.25.0-GA.jar"/>
+      <path path="${givwenzen.lib.dir}/javassist-3.27.0-GA.jar"/>
       <path path="${givwenzen.lib.dir}/log4j-1.2.17.jar"/>
       <path path="${givwenzen.lib.dir}/guava-29.0-jre.jar"/>
       <path path="${givwenzen.lib.dir}/failureaccess-1.0.1.jar"/>
@@ -200,7 +200,7 @@
          <fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class"/>
          <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-logging-1.2.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/javassist-3.25.0-GA.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/javassist-3.27.0-GA.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/guava-29.0-jre.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/error_prone_annotations-2.3.4.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/j2objc-annotations-1.3.jar" excludes="**/meta-inf/*.*"/>
