@@ -31,5 +31,4 @@
 !path ./lib/lucene-sandbox-7.1.0.jar
 
 
-
 *!
