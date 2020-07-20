@@ -49,13 +49,13 @@
       <path path="${givwenzen.lib.dir}/commons-logging-1.2.jar"/>
       <path path="${givwenzen.lib.dir}/javassist-3.25.0-GA.jar"/>
       <path path="${givwenzen.lib.dir}/log4j-1.2.17.jar"/>
-      <path path="${givwenzen.lib.dir}/guava-27.1-jre.jar"/>
+      <path path="${givwenzen.lib.dir}/guava-29.0-jre.jar"/>
       <path path="${givwenzen.lib.dir}/failureaccess-1.0.1.jar"/>
       <path path="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
-      <path path="${givwenzen.lib.dir}/error_prone_annotations-2.2.0.jar"/>
-      <path path="${givwenzen.lib.dir}/j2objc-annotations-1.1.jar"/>
+      <path path="${givwenzen.lib.dir}/error_prone_annotations-2.3.4.jar"/>
+      <path path="${givwenzen.lib.dir}/j2objc-annotations-1.3.jar"/>
       <path path="${givwenzen.lib.dir}/animal-sniffer-annotations-1.17.jar"/>
-      <path path="${givwenzen.lib.dir}/checker-qual-2.5.2.jar"/>
+      <path path="${givwenzen.lib.dir}/checker-qual-2.11.1.jar"/>
       <path path="${givwenzen.lib.dir}/commons-vfs-20050307052300.jar"/>
       <path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar"/>
       <path path="${givwenzen.lib.dir}/slf4j-api-1.7.26.jar"/>
@@ -201,19 +201,19 @@
          <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-logging-1.2.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/javassist-3.25.0-GA.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/guava-27.1-jre.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/guava-29.0-jre.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/error_prone_annotations-2.3.4.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/j2objc-annotations-1.3.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/checker-qual-2.11.1.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/log4j-api-2.13.3.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/log4j-core-2.13.3.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-vfs-20050307052300.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/dom4j-1.6.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.7.26.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.7.26.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/failureaccess-1.0.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/error_prone_annotations-2.2.0.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/j2objc-annotations-1.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/animal-sniffer-annotations-1.17.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/checker-qual-2.5.2.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/lucene-core-7.1.0.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/lucene-queries-7.1.0.jar" excludes="**/meta-inf/*.*"/>
