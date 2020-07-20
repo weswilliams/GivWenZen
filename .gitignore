@@ -24,6 +24,7 @@ target/
 #FitNesse generated files
 FitNesseRoot/ErrorLogs/
 FitNesseRoot/files/
+FitNesseRoot/**/*.zip
 
 # MAC
 *.DS_Store
