@@ -23,8 +23,8 @@
 !path ./lib/checker-qual-2.11.1.jar
 !path ./lib/commons-vfs-20050307052300.jar
 !path ./lib/dom4j-1.6.1.jar
-!path ./lib/slf4j-api-1.7.26.jar
-!path ./lib/slf4j-simple-1.7.26.jar
+!path ./lib/slf4j-api-1.7.30.jar
+!path ./lib/slf4j-simple-1.7.30.jar
 !path ./lib/fitnesse-standalone.jar
 !path ./lib/velocity-engine-core-2.0.jar
 !path ./lib/lucene-core-7.1.0.jar

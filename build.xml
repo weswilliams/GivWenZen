@@ -58,8 +58,8 @@
       <path path="${givwenzen.lib.dir}/checker-qual-2.11.1.jar"/>
       <path path="${givwenzen.lib.dir}/commons-vfs-20050307052300.jar"/>
       <path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar"/>
-      <path path="${givwenzen.lib.dir}/slf4j-api-1.7.26.jar"/>
-      <path path="${givwenzen.lib.dir}/slf4j-simple-1.7.26.jar"/>
+      <path path="${givwenzen.lib.dir}/slf4j-api-1.7.30.jar"/>
+      <path path="${givwenzen.lib.dir}/slf4j-simple-1.7.30.jar"/>
       <path path="${givwenzen.lib.dir}/fitnesse-20190508.jar"/>
       <path path="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar"/>
       <path path="${givwenzen.lib.dir}/lucene-core-7.1.0.jar"/>
@@ -209,8 +209,8 @@
          <zipfileset src="${givwenzen.lib.dir}/log4j-api-2.13.3.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/log4j-core-2.13.3.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/commons-vfs-20050307052300.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.7.26.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.7.26.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/slf4j-api-1.7.30.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/slf4j-simple-1.7.30.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/failureaccess-1.0.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/animal-sniffer-annotations-1.17.jar" excludes="**/meta-inf/*.*"/>
