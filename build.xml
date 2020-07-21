@@ -46,9 +46,11 @@
    </path>
 
    <path id="givwenzen.classpath">
-      <path path="${givwenzen.lib.dir}/commons-logging-1.2.jar"/>
+      <path path="${givwenzen.lib.dir}/commons-lang3-3.9.jar"/>
       <path path="${givwenzen.lib.dir}/javassist-3.27.0-GA.jar"/>
-      <path path="${givwenzen.lib.dir}/log4j-1.2.17.jar"/>
+      <path path="${givwenzen.lib.dir}/commons-logging-1.2.jar"/>
+      <path path="${givwenzen.lib.dir}/log4j-api-2.13.3.jar"/>
+      <path path="${givwenzen.lib.dir}/log4j-core-2.13.3.jar"/>
       <path path="${givwenzen.lib.dir}/guava-29.0-jre.jar"/>
       <path path="${givwenzen.lib.dir}/failureaccess-1.0.1.jar"/>
       <path path="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
@@ -60,8 +62,9 @@
       <path path="${givwenzen.lib.dir}/dom4j-1.6.1.jar"/>
       <path path="${givwenzen.lib.dir}/slf4j-api-1.7.30.jar"/>
       <path path="${givwenzen.lib.dir}/slf4j-simple-1.7.30.jar"/>
-      <path path="${givwenzen.lib.dir}/fitnesse-20190508.jar"/>
-      <path path="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar"/>
+      <path path="${givwenzen.lib.dir}/fitnesse-20200501.jar"/>
+      <path path="${givwenzen.lib.dir}/velocity-engine-core-2.2.jar"/>
+      <path path="${givwenzen.lib.dir}/json-20190722.jar"/>
       <path path="${givwenzen.lib.dir}/lucene-core-8.6.0.jar"/>
       <path path="${givwenzen.lib.dir}/lucene-queries-8.6.0.jar"/>
       <path path="${givwenzen.lib.dir}/lucene-queryparser-8.6.0.jar"/>
@@ -199,7 +202,7 @@
       <jar destfile="${givwenzen.target.dir}/${jar.with.dependencies.file.name}">
          <fileset dir="${givwenzen.output.dir}" excludes="bdd/**/*Test*.class"/>
          <fileset dir="${givwenzen.basedir}" includes="LICENSE README"/>
-         <zipfileset src="${givwenzen.lib.dir}/commons-logging-1.2.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/commons-lang3-3.9.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/javassist-3.27.0-GA.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/guava-29.0-jre.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/error_prone_annotations-2.3.4.jar" excludes="**/meta-inf/*.*"/>
@@ -214,7 +217,8 @@
          <zipfileset src="${givwenzen.lib.dir}/failureaccess-1.0.1.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/animal-sniffer-annotations-1.17.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/velocity-engine-core-2.2.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/json-20190722.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/lucene-core-8.6.0.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/lucene-queries-8.6.0.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/lucene-queryparser-8.6.0.jar" excludes="**/meta-inf/*.*"/>
@@ -239,17 +243,17 @@
 
    <target name="execute-fitnesse-tests"
            description="NOT READY - DO NOT USE FOR BUILD MACHINE - SERVERLESS FITNESSE RUNNER">
-      <java jar="lib/fitnesse-20190508.jar" failonerror="true" fork="true"
+      <java jar="lib/fitnesse-20200501.jar" failonerror="true" fork="true"
             output="${givwenzen.target.dir}/gwz-slim-examples-results.xml">
          <arg value="-c"/>
          <arg value="SlimExamples?suite&amp;format=xml"/>
       </java>
-      <java jar="lib/fitnesse-20190508.jar" failonerror="true" fork="true"
+      <java jar="lib/fitnesse-20200501.jar" failonerror="true" fork="true"
             output="${givwenzen.target.dir}/gwz-tests-results.xml">
          <arg value="-c"/>
          <arg value="GWZTests?suite&amp;format=xml"/>
       </java>
-      <java jar="lib/fitnesse-20190508.jar" failonerror="true" fork="true"
+      <java jar="lib/fitnesse-20200501.jar" failonerror="true" fork="true"
             output="${givwenzen.target.dir}/gwz-fitlibrary-examples-results.xml">
          <arg value="-c"/>
          <arg value="FitLibraryExamples?suite&amp;format=xml"/>
