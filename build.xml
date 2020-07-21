@@ -62,10 +62,10 @@
       <path path="${givwenzen.lib.dir}/slf4j-simple-1.7.30.jar"/>
       <path path="${givwenzen.lib.dir}/fitnesse-20190508.jar"/>
       <path path="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar"/>
-      <path path="${givwenzen.lib.dir}/lucene-core-7.1.0.jar"/>
-      <path path="${givwenzen.lib.dir}/lucene-queries-7.1.0.jar"/>
-      <path path="${givwenzen.lib.dir}/lucene-queryparser-7.1.0.jar"/>
-      <path path="${givwenzen.lib.dir}/lucene-sandbox-7.1.0.jar"/>
+      <path path="${givwenzen.lib.dir}/lucene-core-8.6.0.jar"/>
+      <path path="${givwenzen.lib.dir}/lucene-queries-8.6.0.jar"/>
+      <path path="${givwenzen.lib.dir}/lucene-queryparser-8.6.0.jar"/>
+      <path path="${givwenzen.lib.dir}/lucene-sandbox-8.6.0.jar"/>
    </path>
 
    <path id="givwenzen.examples.classpath">
@@ -215,10 +215,10 @@
          <zipfileset src="${givwenzen.lib.dir}/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/animal-sniffer-annotations-1.17.jar" excludes="**/meta-inf/*.*"/>
          <zipfileset src="${givwenzen.lib.dir}/velocity-engine-core-2.0.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/lucene-core-7.1.0.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/lucene-queries-7.1.0.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/lucene-queryparser-7.1.0.jar" excludes="**/meta-inf/*.*"/>
-         <zipfileset src="${givwenzen.lib.dir}/lucene-sandbox-7.1.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/lucene-core-8.6.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/lucene-queries-8.6.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/lucene-queryparser-8.6.0.jar" excludes="**/meta-inf/*.*"/>
+         <zipfileset src="${givwenzen.lib.dir}/lucene-sandbox-8.6.0.jar" excludes="**/meta-inf/*.*"/>
          <fileset dir="${givwenzen.basedir}" includes="src/**/*.*" excludes="**/.svn/*.*,**/test/*.*"/>
       </jar>
    </target>
