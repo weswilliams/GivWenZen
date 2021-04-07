@@ -18,6 +18,7 @@ public class DomainStepFactoryTest {
   private Class<?> domainStepClass;
   private List<?> stepDefinitions;
   private MarkedClass markedClass;
+  private GivWenZenExecutor executor;
 
   @Before
   public void setUp() throws Exception {
@@ -34,7 +35,7 @@ public class DomainStepFactoryTest {
     when  ( "step definitions are created with constructor object " + constructorObjectClassName );
     then  ( "an instance of the class " + className + " is created" );
   }
-  
+
   @Test
   public void testFindStepsWithObjectParameterConstructor() throws Exception {
     String className = StepsClassWithObjectConstructorForUnitTesting.class.getName();
@@ -46,10 +47,26 @@ public class DomainStepFactoryTest {
   }
 
   @Test
+  public void testThrowsStopTestException() throws Exception {
+    ArrayList<String> list = new ArrayList<String>();
+    executor = GivWenZenExecutorCreator.instance()
+            .customStepState(list)
+            .stepClassBasePackage("bdd.")
+            .create();
+    try {
+      executor.given("simple step that throws an exception that should stop the test");
+      fail("should throw exception");
+    } catch (Exception e) {
+      assertTrue(e.toString().contains("stop test example"));
+      assertTrue(e.getClass().getName().contains("StopTestGivWenZenException"));
+    }
+  }
+
+  @Test
   public void testFindStepsWithInterfaceParameterConstructor() throws Exception {
     String stepClassName = StepClassWithInterfaceConstructorForUnitTesting.class.getName();
     String constructorObjectClassName = SerializableClassForConstructorTest.class.getName();
-    
+
     given ( "a step class " + stepClassName + " with constructor that takes a Serializable as a parameter" );
     when  ( "step definitions are created with constructor object " + constructorObjectClassName);
     then  ( "an instance of the class " + stepClassName + " is created" );
@@ -59,7 +76,7 @@ public class DomainStepFactoryTest {
   public void testFindStepsWithGivWenZenParameterConstructor() throws Exception {
     String stepClassName = StepsClassWithGivWenZenConstructor.class.getName();
     String constructorObjectClassName = GivWenZenDummy.class.getName();
-    
+
     given ( "a step class " + stepClassName + " with constructor that takes a GivWenZen interface as a parameter" );
     when  ( "step definitions are created with constructor object " + constructorObjectClassName);
     then  ( "an instance of the class " + stepClassName + " is created" );
@@ -70,7 +87,7 @@ public class DomainStepFactoryTest {
     String stepClassName = StepClassWhoseOnlyConstructorIsUnrelatedToAnythingStepFinderKnowsAbout.class.getName();
     String constructorObjectClassName = DomainStepFactoryTest.class.getName();
     String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
-    
+
     given ( "a step class " + stepClassName + " with constructor that the domain step finder cannot handle" );
     when  ( "step definitions are created with constructor object " + constructorObjectClassName);
     then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
@@ -80,7 +97,7 @@ public class DomainStepFactoryTest {
   public void testCreateDoesNotScreamWhenClassThrowsAnException() throws Exception {
     String stepClassName = TestMarkedClass.class.getName();
     String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
-    
+
     given ("a marked class " + stepClassName + " that the constructor throws an exception");
     when  ("the marked class is created");
     then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
@@ -90,7 +107,7 @@ public class DomainStepFactoryTest {
   public void testCreateDoesNotScreamWhenClassDoesNotHaveMatchConstructor() throws Exception {
     String stepClassName = TestMarkedClassWithInvalidConstructor.class.getName();
     String dummyMarkedClassName = MarkedClass.DummyMarkedClass.class.getName();
-    
+
     given ("a marked class " + stepClassName + " that the constructor cannot be handled");
     when  ("the marked class is created");
     then  ( "an instance of the class " + dummyMarkedClassName + " is created" );
@@ -100,17 +117,17 @@ public class DomainStepFactoryTest {
   public void createMarkedClass(Class<?> clazz) {
     markedClass = new MarkedClass(clazz);
   }
-  
+
   @DomainStep("the marked class is created")
   public void callCreate() {
     stepDefinitions = Collections.singletonList(getDSFactory().create(markedClass, this));
   }
-  
+
   @DomainStep("a step class (.*) with (?:.*)")
   public void stepClassForDomainStepFactory(Class<?> clazz) {
     this.domainStepClass = clazz;
   }
-  
+
   @DomainStep("step definitions are created with constructor object (.*)")
   public void createStepDefinitions(Class<?> constructorObjectClass) throws InstantiationException, IllegalAccessException {
     Set<MarkedClass> classes = createMarkedClasses(domainStepClass);
@@ -124,7 +141,7 @@ public class DomainStepFactoryTest {
     assertTrue(aClass.isInstance(stepDefinitions.get(0)));
     assertNotNull(stepDefinitions.get(0));
   }
-  
+
   private Object createObject(Class<?> constructorObjectClass) {
     try {
       return constructorObjectClass.newInstance();
@@ -176,7 +193,7 @@ public class DomainStepFactoryTest {
       }
     }
   }
-  
+
   @DomainSteps
   public class StepsClassForUnitTest {
   }
@@ -184,7 +201,7 @@ public class DomainStepFactoryTest {
   public static class SerializableClassForConstructorTest implements Serializable {
     private static final long serialVersionUID = -8578525041848530267L;
   }
-  
+
   public static class GivWenZenDummy implements GivWenZen {
     public Object and(String methodString) throws Exception {
       return null;

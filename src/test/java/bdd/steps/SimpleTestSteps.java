@@ -74,4 +74,14 @@ public class SimpleTestSteps {
   public boolean verifyHashTableParamValue() {
     return paramValue instanceof Map;
   }
+
+  @DomainStep("simple step that throws an exception that should stop the test")
+  public boolean throwException() {
+    throw new StopTestExceptionForTesting("stop test example");
+  }
+
+  @DomainStep("simple step returns true")
+  public boolean returnTrue(){
+    return true;
+  }
 }

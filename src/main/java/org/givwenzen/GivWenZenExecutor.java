@@ -6,6 +6,9 @@ import org.givwenzen.annotations.MarkedClass;
 import java.util.List;
 import java.util.Set;
 
+import static fitnesse.slim.SlimException.isStopSuiteException;
+import static fitnesse.slim.SlimException.isStopTestException;
+
 public class GivWenZenExecutor implements GivWenZen {
     DomainStepMethodLocator methodLocator;
 
@@ -14,6 +17,7 @@ public class GivWenZenExecutor implements GivWenZen {
     IDomainStepFinder domainStepFinder;
     IDomainStepFactory domainStepFactory;
     ICustomParserFinder customParserFinder;
+    private boolean stopRequested = false;
 
     @Deprecated
     /**
@@ -37,23 +41,29 @@ public class GivWenZenExecutor implements GivWenZen {
 
     //GivWenZenExecutorSettings
     GivWenZenExecutor(IDomainStepFinder domainStepFinder, IDomainStepFactory factory, ICustomParserFinder customParserFinder, Object... stepState) {
+
         super();
-        this.domainStepFinder = domainStepFinder;
-        this.domainStepFactory = factory;
-        this.customParserFinder = customParserFinder;
+        try {
+            this.domainStepFinder = domainStepFinder;
+            this.domainStepFactory = factory;
+            this.customParserFinder = customParserFinder;
 
-        this.stepState = stepState == null || stepState.length == 0 ? new Object[]{this} : stepState;
-        int adaptersLength = this.stepState.length + 1;
-        Object[] adapters = new Object[adaptersLength];
-        System.arraycopy(this.stepState, 0, adapters, 0, adaptersLength - 1);
-        adapters[adaptersLength - 1] = this;
+            this.stepState = stepState == null || stepState.length == 0 ? new Object[]{this} : stepState;
+            int adaptersLength = this.stepState.length + 1;
+            Object[] adapters = new Object[adaptersLength];
+            System.arraycopy(this.stepState, 0, adapters, 0, adaptersLength - 1);
+            adapters[adaptersLength - 1] = this;
 
-        Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
-        List<Object> stepDefinitions = factory.createStepDefinitions(classes, adapters);
-        stepDefinitions.add(0, this.stepState);
+            Set<MarkedClass> classes = domainStepFinder.findStepDefinitions();
+            List<Object> stepDefinitions = factory.createStepDefinitions(classes, adapters);
+            stepDefinitions.add(0, this.stepState);
 
-        //inject DomainStepMethodLocator
-        methodLocator = new DomainStepMethodLocator(stepDefinitions, customParserFinder);
+            //inject DomainStepMethodLocator
+            methodLocator = new DomainStepMethodLocator(stepDefinitions, customParserFinder);
+        } catch (Throwable e) { // NOSONAR
+            checkExceptionForStop(e);
+            throw new GivWenZenException(e);
+        }
     }
 
     @Deprecated
@@ -103,5 +113,15 @@ public class GivWenZenExecutor implements GivWenZen {
 
     public Object[] getCustomStepState() {
         return stepState;
+    }
+
+    private void checkExceptionForStop(Throwable exception) {
+        if (isStopTestException(exception) || isStopSuiteException(exception)) {
+            stopRequested = true;
+        }
+    }
+
+    public void reset() {
+        stopRequested = false;
     }
 }
