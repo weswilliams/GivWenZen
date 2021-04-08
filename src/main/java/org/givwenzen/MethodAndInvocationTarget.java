@@ -28,7 +28,12 @@ public class MethodAndInvocationTarget {
         try {
             return method.invoke(target, getParametersFromMethodString(methodString));
         } catch (InvocationTargetException e) {
-            throw new GivWenZenExecutionException(buildExceptionMessage("Error while executing step", methodString), e);
+            if(e.getTargetException().getClass().getName().contains("StopTest")){
+                String errorMsg = e.getTargetException().getClass().getName() + ": " + e.getTargetException().toString();
+                throw new StopTestGivWenZenException(errorMsg);
+            } else {
+                throw new GivWenZenExecutionException(buildExceptionMessage("Error while executing step", methodString), e);
+            }
         } catch (Exception e) {
             throw new InvalidDomainStepParameterException(buildExceptionMessage("Invalid step parameters in method pattern", methodString), e);
         }
