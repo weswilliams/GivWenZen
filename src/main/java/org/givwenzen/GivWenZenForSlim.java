@@ -7,6 +7,10 @@ public class GivWenZenForSlim implements GivWenZen {
       this(GivWenZenExecutorCreator.instance().create());
    }
 
+   public GivWenZenForSlim(String packageName) {
+      this(GivWenZenExecutorCreator.instance().stepClassBasePackage(packageName).create());
+   }
+
    public GivWenZenForSlim(GivWenZenExecutor executor) {
       this.executor = executor;
    }
