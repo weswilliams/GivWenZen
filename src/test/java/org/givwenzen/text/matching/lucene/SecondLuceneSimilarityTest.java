@@ -23,27 +23,24 @@ import static org.fest.assertions.Assertions.*;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
 
-public class LuceneSimilarityTest {
+public class SecondLuceneSimilarityTest {
    private String helloTestAnnotation = "hello test";
    private String helloWorldAnnotation = "hello world";
    private List<MethodAndInvocationTarget> steps = new ArrayList<MethodAndInvocationTarget>();
    private LuceneSimilarity luceneSimilarity;
    private MethodAndInvocationTarget helloTest;
    private MethodAndInvocationTarget helloWorld;
-   
-   @Test
-   public void shouldListClosestNameFirst() throws Exception {
-      //given
-      steps.add(helloTest);
-      steps.add(helloWorld);
 
-      // when
-      Collection<String> methods = luceneSimilarity.findSimilarMethods("hello lah world", steps);
+   @Test
+   public void shouldFindMethodWithAtLeastOneWordInCommon() throws Exception {
+      // given
+      steps.add(helloTest);
+
+      //when
+      Collection<String> methods = luceneSimilarity.findSimilarMethods("hello world", steps);
 
       //then
-      List<String> methodList = new ArrayList<String>(methods);
-      assertThat(methodList.get(0)).isEqualTo(helloWorldAnnotation);
-      assertThat(methodList.get(1)).isEqualTo(helloTestAnnotation);
+      assertThat(methods).contains(helloTestAnnotation);
    }
    
    @Before
@@ -53,8 +50,6 @@ public class LuceneSimilarityTest {
       when(helloTest.getDomainStepPattern()).thenReturn(helloTestAnnotation);
 
       helloWorld = mock(MethodAndInvocationTarget.class);
-      when(helloWorld.getDomainStepPattern()).thenReturn(helloWorldAnnotation);
-
       luceneSimilarity = new LuceneSimilarity();
    }
 }
