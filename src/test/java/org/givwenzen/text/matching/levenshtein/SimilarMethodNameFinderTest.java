@@ -36,8 +36,6 @@ public class SimilarMethodNameFinderTest {
       when(mockMethod1.getDomainStepPattern()).thenReturn(TEST_NAME + "!");
 
       MethodAndInvocationTarget mockMethod2 = mock(MethodAndInvocationTarget.class);
-      when(mockMethod2.getDomainStepPattern()).thenReturn(TEST_NAME + "!0@#$%^");
-
       Collection<MethodAndInvocationTarget> steps = new ArrayList<MethodAndInvocationTarget>();
       steps.add(mockMethod1);
 
